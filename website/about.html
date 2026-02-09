@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AJ Oud — من نحن. قصة عطر المدينة، من قلب المدينة المنورة إلى العالم. About AJ Oud, premium oud, incense & musk.">
+  <title>AJ Oud | من نحن — About Us</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       CSS Custom Properties — AJ Oud Brand
+       ======================================== */
+    :root {
+      --deep-plum: #4A2D5E;
+      --lavender: #8B6FAE;
+      --cream: #F8F4F0;
+      --desert-sand: #D4A574;
+      --night-dark: #1A1520;
+      --soft-lavender: #C8B8D8;
+      --sage-green: #8FA87A;
+      --warm-taupe: #A69080;
+
+      --font-en-display: 'Playfair Display', Georgia, serif;
+      --font-en-body: 'Montserrat', 'Helvetica Neue', sans-serif;
+      --font-ar-display: 'Amiri', serif;
+      --font-ar-body: 'Tajawal', sans-serif;
+    }
+
+    /* ========================================
+       Reset & Base
+       ======================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-ar-body);
+      color: var(--night-dark);
+      background: var(--cream);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul { list-style: none; }
+
+    .ar-heading {
+      font-family: var(--font-ar-display);
+    }
+
+    .en-heading {
+      font-family: var(--font-en-display);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    /* ========================================
+       Geometric Pattern Overlay
+       ======================================== */
+    .geometric-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%238B6FAE' stroke-width='0.5'%3E%3Cpolygon points='60,0 120,30 120,90 60,120 0,90 0,30'/%3E%3Cpolygon points='60,15 105,37.5 105,82.5 60,105 15,82.5 15,37.5'/%3E%3Cline x1='60' y1='0' x2='60' y2='120'/%3E%3Cline x1='0' y1='30' x2='120' y2='90'/%3E%3Cline x1='120' y1='30' x2='0' y2='90'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Cpolygon points='60,10 110,60 60,110 10,60'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 120px 120px;
+    }
+
+    /* ========================================
+       Fade-in Animation
+       ======================================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Stagger children */
+    .stagger-children .fade-in:nth-child(1) { transition-delay: 0.1s; }
+    .stagger-children .fade-in:nth-child(2) { transition-delay: 0.2s; }
+    .stagger-children .fade-in:nth-child(3) { transition-delay: 0.3s; }
+    .stagger-children .fade-in:nth-child(4) { transition-delay: 0.4s; }
+    .stagger-children .fade-in:nth-child(5) { transition-delay: 0.5s; }
+    .stagger-children .fade-in:nth-child(6) { transition-delay: 0.6s; }
+
+    /* ========================================
+       Dividers
+       ======================================== */
+    .divider {
+      width: 80px;
+      height: 2px;
+      background: var(--desert-sand);
+      margin: 20px auto;
+    }
+
+    .divider-wide {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--lavender), transparent);
+    }
+
+    /* ========================================
+       1. HEADER / NAVIGATION
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(26, 21, 32, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(139, 111, 174, 0.15);
+      transition: all 0.4s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(26, 21, 32, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 72px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Logo */
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    .header-logo-text {
+      font-family: var(--font-en-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--soft-lavender);
+      letter-spacing: 0.05em;
+    }
+
+    /* Nav Links */
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-ar-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: rgba(200, 184, 216, 0.7);
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: var(--desert-sand);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--soft-lavender);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* Cart Icon */
+    .cart-icon {
+      position: relative;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .cart-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--soft-lavender);
+      fill: none;
+      stroke-width: 1.5;
+      transition: stroke 0.3s ease;
+    }
+
+    .cart-icon:hover svg {
+      stroke: var(--desert-sand);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: 2px;
+      left: -4px;
+      width: 18px;
+      height: 18px;
+      background: var(--desert-sand);
+      color: #fff;
+      font-family: var(--font-en-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.3s ease;
+    }
+
+    .cart-badge.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--soft-lavender);
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(26, 21, 32, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 999;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-ar-body);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--soft-lavender);
+      transition: color 0.3s ease;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a.active {
+      color: var(--desert-sand);
+    }
+
+    /* ========================================
+       2. HERO SECTION
+       ======================================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 72px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=1920&h=800&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(26, 21, 32, 0.75) 0%,
+        rgba(74, 45, 94, 0.6) 50%,
+        rgba(26, 21, 32, 0.85) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-ar-display);
+      font-size: 3.5rem;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .hero-content .hero-subtitle {
+      font-family: var(--font-en-display);
+      font-size: 1.6rem;
+      color: var(--desert-sand);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: var(--font-ar-body);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--desert-sand);
+    }
+
+    .breadcrumb .separator {
+      color: var(--desert-sand);
+      font-size: 0.7rem;
+    }
+
+    .breadcrumb .current {
+      color: var(--soft-lavender);
+    }
+
+    /* ========================================
+       3. OUR STORY SECTION
+       ======================================== */
+    .our-story {
+      background: var(--cream);
+      position: relative;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-heading .ar-title {
+      font-family: var(--font-ar-display);
+      font-size: 2.5rem;
+      color: var(--deep-plum);
+      line-height: 1.4;
+    }
+
+    .section-heading .en-title {
+      font-family: var(--font-en-display);
+      font-size: 1.6rem;
+      color: var(--warm-taupe);
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .story-text-ar {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .story-text-ar p {
+      font-family: var(--font-ar-body);
+      font-size: 1.1rem;
+      line-height: 2.1;
+      color: #4a4040;
+    }
+
+    .story-text-en {
+      direction: ltr;
+      text-align: left;
+    }
+
+    .story-text-en p {
+      font-family: var(--font-en-body);
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #5a5050;
+      font-weight: 300;
+    }
+
+    .story-image {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(74, 45, 94, 0.15);
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-image-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      border: 1px solid rgba(139, 111, 174, 0.2);
+      pointer-events: none;
+    }
+
+    /* ========================================
+       4. OUR VALUES SECTION
+       ======================================== */
+    .our-values {
+      background: var(--night-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .our-values .section-heading .ar-title {
+      color: var(--soft-lavender);
+    }
+
+    .our-values .section-heading .en-title {
+      color: var(--desert-sand);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .value-card {
+      background: rgba(74, 45, 94, 0.15);
+      border: 1px solid rgba(139, 111, 174, 0.15);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--desert-sand);
+      border-radius: 0 0 4px 4px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .value-card:hover {
+      background: rgba(74, 45, 94, 0.25);
+      border-color: rgba(139, 111, 174, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .value-card:hover::before {
+      opacity: 1;
+    }
+
+    .value-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(139, 111, 174, 0.1);
+      border-radius: 50%;
+      border: 1px solid rgba(139, 111, 174, 0.2);
+    }
+
+    .value-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .value-name-ar {
+      font-family: var(--font-ar-display);
+      font-size: 1.5rem;
+      color: var(--soft-lavender);
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+
+    .value-name-en {
+      font-family: var(--font-en-display);
+      font-size: 1rem;
+      color: var(--desert-sand);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .value-desc {
+      font-family: var(--font-ar-body);
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: rgba(200, 184, 216, 0.7);
+    }
+
+    /* ========================================
+       5. OUR JOURNEY / TIMELINE
+       ======================================== */
+    .our-journey {
+      background: var(--cream);
+      position: relative;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    /* Center line */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--lavender), var(--deep-plum), var(--lavender), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      margin-right: 50%;
+      text-align: left;
+      direction: ltr;
+      padding-left: 40px;
+      padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      margin-left: 0;
+      text-align: right;
+      direction: rtl;
+      padding-right: 40px;
+      padding-left: 0;
+    }
+
+    /* Dot on timeline */
+    .timeline-dot {
+      position: absolute;
+      top: 28px;
+      width: 16px;
+      height: 16px;
+      background: var(--deep-plum);
+      border: 3px solid var(--desert-sand);
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      left: -8px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      right: -8px;
+    }
+
+    .timeline-year {
+      font-family: var(--font-en-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--deep-plum);
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-family: var(--font-ar-display);
+      font-size: 1.3rem;
+      color: var(--lavender);
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    .timeline-desc {
+      font-family: var(--font-ar-body);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #6a5a5a;
+    }
+
+    /* Mobile timeline */
+    @media (max-width: 767px) {
+      .timeline::before {
+        right: 20px;
+        transform: none;
+      }
+
+      .timeline-item {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding-right: 50px !important;
+        padding-left: 0 !important;
+        text-align: right !important;
+        direction: rtl !important;
+      }
+
+      .timeline-item .timeline-dot {
+        right: 12px !important;
+        left: auto !important;
+      }
+    }
+
+    /* ========================================
+       6. CRAFTSMANSHIP SECTION
+       ======================================== */
+    .craftsmanship {
+      position: relative;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .craftsmanship-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=1920&h=600&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .craftsmanship-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(26, 21, 32, 0.8) 0%,
+        rgba(74, 45, 94, 0.65) 50%,
+        rgba(26, 21, 32, 0.85) 100%
+      );
+    }
+
+    .craftsmanship-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 24px;
+    }
+
+    .craftsmanship-content h2 {
+      font-family: var(--font-ar-display);
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .craftsmanship-content h3 {
+      font-family: var(--font-en-display);
+      font-size: 1.4rem;
+      color: var(--desert-sand);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+
+    .craftsmanship-content p {
+      font-family: var(--font-ar-body);
+      font-size: 1.1rem;
+      line-height: 2;
+      color: rgba(255, 255, 255, 0.85);
+      direction: rtl;
+    }
+
+    .craftsmanship-content .en-text {
+      font-family: var(--font-en-body);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(200, 184, 216, 0.8);
+      font-weight: 300;
+      direction: ltr;
+      margin-top: 16px;
+    }
+
+    /* ========================================
+       7. STATS / NUMBERS SECTION
+       ======================================== */
+    .our-numbers {
+      background: linear-gradient(135deg, var(--deep-plum) 0%, var(--night-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .our-numbers .geometric-overlay {
+      opacity: 0.03;
+    }
+
+    .our-numbers .section-heading .ar-title {
+      color: #fff;
+    }
+
+    .our-numbers .section-heading .en-title {
+      color: var(--desert-sand);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 30px 16px;
+      border-radius: 16px;
+      background: rgba(139, 111, 174, 0.08);
+      border: 1px solid rgba(139, 111, 174, 0.12);
+      transition: all 0.4s ease;
+    }
+
+    .stat-item:hover {
+      background: rgba(139, 111, 174, 0.15);
+      border-color: rgba(212, 165, 116, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .stat-number {
+      font-family: var(--font-en-display);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--desert-sand);
+      line-height: 1;
+      margin-bottom: 8px;
+      direction: ltr;
+    }
+
+    .stat-label {
+      font-family: var(--font-ar-body);
+      font-size: 1rem;
+      color: var(--soft-lavender);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       8. CTA SECTION
+       ======================================== */
+    .cta-section {
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-inner {
+      background: linear-gradient(135deg, var(--deep-plum) 0%, rgba(74, 45, 94, 0.9) 100%);
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(139, 111, 174, 0.2);
+    }
+
+    .cta-inner .geometric-overlay {
+      opacity: 0.03;
+    }
+
+    .cta-inner h2 {
+      font-family: var(--font-ar-display);
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 2;
+      line-height: 1.4;
+    }
+
+    .cta-inner h3 {
+      font-family: var(--font-en-display);
+      font-size: 1.2rem;
+      color: var(--desert-sand);
+      font-weight: 400;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      font-family: var(--font-ar-body);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--night-dark);
+      background: var(--desert-sand);
+      border: 2px solid var(--desert-sand);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--desert-sand);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      font-family: var(--font-ar-body);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--soft-lavender);
+      background: transparent;
+      border: 2px solid rgba(200, 184, 216, 0.4);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--soft-lavender);
+      background: rgba(200, 184, 216, 0.1);
+    }
+
+    .btn-secondary svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* ========================================
+       9. FOOTER
+       ======================================== */
+    .footer {
+      background: var(--night-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer .geometric-overlay {
+      opacity: 0.02;
+    }
+
+    .footer-top-border {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--lavender), transparent);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand {
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-ar-display);
+      font-size: 1.1rem;
+      color: var(--soft-lavender);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(139, 111, 174, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--desert-sand);
+      background: rgba(139, 111, 174, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--soft-lavender);
+    }
+
+    .footer-links {
+      text-align: center;
+    }
+
+    .footer-links h4 {
+      font-family: var(--font-ar-display);
+      font-size: 1.2rem;
+      color: var(--desert-sand);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-family: var(--font-ar-body);
+      font-size: 0.9rem;
+      color: rgba(200, 184, 216, 0.6);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--soft-lavender);
+    }
+
+    .footer-contact {
+      text-align: center;
+    }
+
+    .footer-contact h4 {
+      font-family: var(--font-ar-display);
+      font-size: 1.2rem;
+      color: var(--desert-sand);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-contact p {
+      font-family: var(--font-ar-body);
+      font-size: 0.9rem;
+      color: rgba(200, 184, 216, 0.6);
+      line-height: 1.9;
+      margin-bottom: 6px;
+    }
+
+    .footer-contact a {
+      color: var(--soft-lavender);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(139, 111, 174, 0.1);
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-copyright {
+      font-family: var(--font-en-body);
+      font-size: 0.8rem;
+      color: rgba(200, 184, 216, 0.4);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-payments {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer-payments svg {
+      height: 24px;
+      width: auto;
+      opacity: 0.5;
+    }
+
+    .payment-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 4px;
+      font-family: var(--font-en-body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: rgba(200, 184, 216, 0.5);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ========================================
+       RESPONSIVE: Tablet (768px+)
+       ======================================== */
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .hero {
+        height: 65vh;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+
+      .story-grid.reverse {
+        direction: ltr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        text-align: right;
+        gap: 30px;
+      }
+
+      .footer-brand {
+        text-align: right;
+      }
+
+      .footer-social {
+        justify-content: flex-start;
+      }
+
+      .footer-links {
+        text-align: right;
+      }
+
+      .footer-contact {
+        text-align: right;
+      }
+
+      .footer-bottom {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE: Desktop (1024px+)
+       ======================================== */
+    @media (min-width: 1024px) {
+      .hero {
+        height: 70vh;
+      }
+
+      .hero-content h1 {
+        font-size: 4.5rem;
+      }
+
+      .hero-content .hero-subtitle {
+        font-size: 1.8rem;
+      }
+
+      .section-heading .ar-title {
+        font-size: 2.8rem;
+      }
+
+      .section-heading .en-title {
+        font-size: 1.8rem;
+      }
+
+      .section-padding {
+        padding: 120px 0;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+      }
+
+      .craftsmanship {
+        height: 550px;
+      }
+
+      .craftsmanship-content h2 {
+        font-size: 3rem;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE: Large (1440px+)
+       ======================================== */
+    @media (min-width: 1440px) {
+      .container {
+        max-width: 1320px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       1. HEADER / NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="header-logo">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="AJ Oud Logo">
+          <g fill="none" stroke="#8B6FAE" stroke-width="1.5">
+            <rect x="35" y="35" width="130" height="130" rx="2"/>
+            <rect x="35" y="35" width="130" height="130" rx="2" transform="rotate(45 100 100)"/>
+          </g>
+          <circle cx="100" cy="100" r="52" fill="none" stroke="#8B6FAE" stroke-width="0.5" opacity="0.5"/>
+          <g fill="#C8B8D8">
+            <polygon points="74,138 90,68 94,68 78,138"/>
+            <polygon points="106,68 110,68 126,138 122,138"/>
+            <path d="M82,108 Q84,95 92,90 Q100,86 108,90 Q116,95 118,108 L115,108 Q113,97 108,93 Q100,88 92,93 Q87,97 85,108 Z"/>
+          </g>
+          <g fill="#C8B8D8">
+            <rect x="125" y="62" width="5" height="52" rx="1"/>
+            <rect x="118" y="60" width="20" height="4" rx="1"/>
+            <path d="M130,114 Q130,130 120,138 Q112,144 104,142 Q98,140 96,135 L99,133 Q101,138 106,140 Q114,142 120,136 Q127,129 127,114 Z"/>
+          </g>
+        </svg>
+        <span class="header-logo-text">AJ</span>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <nav class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="about.html" class="active">من نحن</a>
+        <a href="cart.html">السلة</a>
+      </nav>
+
+      <!-- Right side: Cart + Menu -->
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <!-- Cart Icon -->
+        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">الرئيسية</a>
+      <a href="shop.html">المتجر</a>
+      <a href="about.html" class="active">من نحن</a>
+      <a href="cart.html">السلة</a>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>من نحن</h1>
+      <div class="hero-subtitle">About AJ</div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span class="separator">/</span>
+        <span class="current">من نحن</span>
+      </nav>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       3. OUR STORY SECTION
+       ========================================== -->
+  <section class="our-story section-padding">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <h2 class="ar-title">قصتنا</h2>
+        <div class="divider"></div>
+        <h3 class="en-title">Our Story</h3>
+      </div>
+
+      <div class="story-grid">
+        <!-- Arabic Text (Right) -->
+        <div class="story-text-ar fade-in-left">
+          <p>
+            من قلب المدينة المنورة، وُلدت AJ لتحمل إرث عطور المدينة إلى العالم. بدأت رحلتنا من حب عميق لفن العطارة العربية الأصيلة، حيث يلتقي عبق العود بروحانية المكان. نختار أجود أنواع العود من غابات كمبوديا وإندونيسيا، ونمزج البخور بأيدي حرفيين توارثوا هذه الصنعة أباً عن جد. كل قطعة من منتجاتنا تحمل قصة — قصة تراث عريق وذوق رفيع.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="story-image fade-in-right">
+          <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800&h=600&fit=crop" alt="AJ Oud craftsmanship - premium oud and incense" loading="lazy">
+          <div class="story-image-overlay"></div>
+        </div>
+      </div>
+
+      <!-- English Text below on mobile, beside on desktop -->
+      <div style="max-width: 800px; margin: 50px auto 0;">
+        <div class="story-text-en fade-in">
+          <p>
+            Born from the heart of Al-Madinah Al-Munawwarah, AJ was created to carry the legacy of Madinah's perfumery to the world. Our journey began with a deep love for the authentic art of Arabian perfumery, where the essence of oud meets the spirituality of place. We select the finest oud from the forests of Cambodia and Indonesia, and blend our incense by the hands of artisans who have inherited this craft from generation to generation. Every piece we create carries a story — a story of rich heritage and refined taste.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. OUR VALUES SECTION
+       ========================================== -->
+  <section class="our-values section-padding">
+    <div class="geometric-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-heading fade-in">
+        <h2 class="ar-title">قيمنا</h2>
+        <div class="divider"></div>
+        <h3 class="en-title">Our Values</h3>
+      </div>
+
+      <div class="values-grid stagger-children">
+        <!-- Authenticity -->
+        <div class="value-card fade-in">
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4L28 16H40L30 24L34 36L24 28L14 36L18 24L8 16H20L24 4Z" stroke="#D4A574" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="24" cy="24" r="8" stroke="#8B6FAE" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="value-name-ar">الأصالة</div>
+          <div class="value-name-en">Authenticity</div>
+          <p class="value-desc">أصالة المكونات وعراقة التراث في كل منتج نقدمه</p>
+        </div>
+
+        <!-- Quality -->
+        <div class="value-card fade-in">
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4C24 4 30 14 30 22C30 25.18 28.21 27.93 25.6 29.33L28 44H20L22.4 29.33C19.79 27.93 18 25.18 18 22C18 14 24 4 24 4Z" stroke="#D4A574" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M20 20H28" stroke="#8B6FAE" stroke-width="1" opacity="0.5"/>
+              <path d="M21 24H27" stroke="#8B6FAE" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="value-name-ar">الجودة</div>
+          <div class="value-name-en">Quality</div>
+          <p class="value-desc">أجود أنواع العود والبخور والمسك من أفضل المصادر</p>
+        </div>
+
+        <!-- Craftsmanship -->
+        <div class="value-card fade-in">
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 36L8 40L12 44" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M36 36L40 40L36 44" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 4V12" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 8L24 12L32 8" stroke="#8B6FAE" stroke-width="1" opacity="0.6"/>
+              <rect x="14" y="16" width="20" height="16" rx="3" stroke="#D4A574" stroke-width="1.5"/>
+              <path d="M20 22H28M20 26H26" stroke="#8B6FAE" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="value-name-ar">الحرفية</div>
+          <div class="value-name-en">Craftsmanship</div>
+          <p class="value-desc">صنعة يدوية بإتقان توارثها حرفيونا جيلاً بعد جيل</p>
+        </div>
+
+        <!-- Sustainability -->
+        <div class="value-card fade-in">
+          <div class="value-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 44V24" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M24 24C24 24 16 20 16 12C16 8 20 4 24 4C28 4 32 8 32 12C32 20 24 24 24 24Z" stroke="#D4A574" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M18 30C14 28 10 30 10 34C10 38 18 38 24 36" stroke="#8B6FAE" stroke-width="1" opacity="0.6"/>
+              <path d="M30 30C34 28 38 30 38 34C38 38 30 38 24 36" stroke="#8B6FAE" stroke-width="1" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="value-name-ar">الاستدامة</div>
+          <div class="value-name-en">Sustainability</div>
+          <p class="value-desc">نحافظ على البيئة ومصادرنا الطبيعية للأجيال القادمة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       5. OUR JOURNEY / TIMELINE
+       ========================================== -->
+  <section class="our-journey section-padding">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <h2 class="ar-title">رحلتنا</h2>
+        <div class="divider"></div>
+        <h3 class="en-title">Our Journey</h3>
+      </div>
+
+      <div class="timeline">
+        <!-- 2020 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2020</div>
+          <div class="timeline-title">بداية الرحلة</div>
+          <div class="timeline-desc">تأسيس AJ في المدينة المنورة، انطلاقاً من شغف عميق بفن العطارة العربية الأصيلة</div>
+        </div>
+
+        <!-- 2021 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2021</div>
+          <div class="timeline-title">أول متجر</div>
+          <div class="timeline-desc">افتتاح أول فرع لنا في المدينة المنورة، ليكون بوابة عبق الأصالة</div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2022</div>
+          <div class="timeline-title">التوسع</div>
+          <div class="timeline-desc">إطلاق المتجر الإلكتروني لنصل إلى عملائنا في كل مكان</div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-title">عالمياً</div>
+          <div class="timeline-desc">شحن منتجاتنا لأكثر من 15 دولة حول العالم</div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-title">الابتكار</div>
+          <div class="timeline-desc">إطلاق مجموعة الخزامى الحصرية بتركيبات فريدة من نوعها</div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026</div>
+          <div class="timeline-title">المستقبل</div>
+          <div class="timeline-desc">نحو آفاق جديدة، ابتكارات متجددة ورؤية تحمل عبق الماضي وروح المستقبل</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       6. CRAFTSMANSHIP SECTION
+       ========================================== -->
+  <section class="craftsmanship">
+    <div class="craftsmanship-bg"></div>
+    <div class="craftsmanship-overlay"></div>
+    <div class="craftsmanship-content fade-in">
+      <h2>حرفيونا</h2>
+      <h3>Our Craftsmen</h3>
+      <p>
+        خلف كل قطعة من منتجات AJ أيدٍ ماهرة توارثت سر العطارة جيلاً بعد جيل.
+        حرفيونا يختارون كل مكوّن بعناية فائقة، ويمزجون الروائح بحسٍّ فني يجمع بين علم العطور وفن الإحساس.
+        من غابات كمبوديا إلى مشاغل المدينة، كل خطوة تُصنع بحب وإتقان.
+      </p>
+      <p class="en-text">
+        Behind every AJ creation are skilled hands that have inherited the secrets of perfumery across generations.
+        Our artisans carefully select each ingredient, blending scents with an artistic sense that merges the science
+        of fragrance with the art of feeling. From the forests of Cambodia to the workshops of Madinah,
+        every step is crafted with love and precision.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       7. STATS / NUMBERS SECTION
+       ========================================== -->
+  <section class="our-numbers section-padding">
+    <div class="geometric-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-heading fade-in">
+        <h2 class="ar-title">أرقامنا</h2>
+        <div class="divider"></div>
+        <h3 class="en-title">By The Numbers</h3>
+      </div>
+
+      <div class="stats-grid stagger-children">
+        <div class="stat-item fade-in">
+          <div class="stat-number" data-count="5000">+5000</div>
+          <div class="stat-label">عميل سعيد</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number" data-count="200">+200</div>
+          <div class="stat-label">منتج</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number" data-count="15">+15</div>
+          <div class="stat-label">دولة نشحن لها</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number" data-count="6">6</div>
+          <div class="stat-label">سنوات خبرة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       8. CTA SECTION
+       ========================================== -->
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-inner fade-in">
+        <div class="geometric-overlay"></div>
+        <h2>اكتشف عالم AJ</h2>
+        <h3>Discover the World of AJ</h3>
+        <div class="cta-buttons">
+          <a href="shop.html" class="btn-primary">
+            اكتشف مجموعتنا
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/966XXXXXXXXX" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            تواصل معنا
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       9. FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="geometric-overlay"></div>
+    <div class="footer-top-border"></div>
+
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="AJ Oud Logo">
+              <g fill="none" stroke="#8B6FAE" stroke-width="1.5">
+                <rect x="35" y="35" width="130" height="130" rx="2"/>
+                <rect x="35" y="35" width="130" height="130" rx="2" transform="rotate(45 100 100)"/>
+              </g>
+              <circle cx="100" cy="100" r="52" fill="none" stroke="#8B6FAE" stroke-width="0.5" opacity="0.5"/>
+              <g fill="#C8B8D8">
+                <polygon points="74,138 90,68 94,68 78,138"/>
+                <polygon points="106,68 110,68 126,138 122,138"/>
+                <path d="M82,108 Q84,95 92,90 Q100,86 108,90 Q116,95 118,108 L115,108 Q113,97 108,93 Q100,88 92,93 Q87,97 85,108 Z"/>
+              </g>
+              <g fill="#C8B8D8">
+                <rect x="125" y="62" width="5" height="52" rx="1"/>
+                <rect x="118" y="60" width="20" height="4" rx="1"/>
+                <path d="M130,114 Q130,130 120,138 Q112,144 104,142 Q98,140 96,135 L99,133 Q101,138 106,140 Q114,142 120,136 Q127,129 127,114 Z"/>
+              </g>
+            </svg>
+          </div>
+          <p class="footer-tagline">من قلب المدينة المنورة — عطر الأصالة</p>
+          <div class="footer-social">
+            <!-- Instagram -->
+            <a href="https://instagram.com/AJ_Oud.SA" target="_blank" rel="noopener noreferrer" aria-label="Instagram @AJ_Oud.SA">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://twitter.com/AJ_Oud_SA" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Snapchat -->
+            <a href="https://snapchat.com/add/AJ_Oud.SA" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12.959-.289.105-.06.21-.09.315-.09.21 0 .42.12.51.3.12.24.105.51-.045.69a3.032 3.032 0 01-.345.3c-.135.12-.405.27-.615.42-.225.165-.435.36-.525.555-.06.12-.075.24-.03.42.36 1.395 1.08 2.58 2.13 3.48.21.18.405.33.6.45.12.075.255.195.33.36a.587.587 0 01-.06.555c-.21.39-.69.615-1.47.705-.135.015-.27.015-.42.03-.195.015-.42.03-.69.075-.255.045-.39.195-.555.405-.12.165-.285.39-.51.615-.33.33-.72.495-1.155.495-.255 0-.54-.06-.84-.18-.57-.24-1.11-.36-1.65-.36-.555 0-1.095.12-1.65.345a3.308 3.308 0 01-.84.18c-.45 0-.84-.165-1.17-.51-.225-.225-.39-.435-.51-.6-.165-.225-.3-.375-.555-.42-.27-.045-.495-.06-.69-.075-.15-.015-.285-.015-.42-.03-.78-.09-1.26-.315-1.47-.705a.587.587 0 01-.06-.555c.075-.165.21-.285.33-.36.195-.12.39-.27.6-.45 1.05-.9 1.77-2.085 2.13-3.48.045-.18.03-.3-.03-.42-.09-.195-.3-.39-.525-.555-.21-.15-.48-.3-.615-.42a3.032 3.032 0 01-.345-.3c-.15-.18-.165-.45-.045-.69.09-.18.3-.3.51-.3.105 0 .21.03.315.09.3.165.66.273.96.289.195 0 .33-.045.405-.09l-.03-.51-.003-.06c-.105-1.628-.23-3.654.3-4.847C7.86 1.069 11.216.793 12.206.793z"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@AJ_Oud.SA" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.17v-3.44a4.85 4.85 0 01-3.77-1.52V6.69h3.77z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="cart.html">السلة</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <p>المدينة المنورة، المملكة العربية السعودية</p>
+          <p><a href="https://instagram.com/AJ_Oud.SA" target="_blank" rel="noopener noreferrer">@AJ_Oud.SA</a></p>
+          <p><a href="mailto:info@ajoud.com">info@ajoud.com</a></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-payments">
+          <span class="payment-icon">Visa</span>
+          <span class="payment-icon">Mastercard</span>
+          <span class="payment-icon">Mada</span>
+          <span class="payment-icon">Apple Pay</span>
+          <span class="payment-icon">STC Pay</span>
+        </div>
+        <p class="footer-copyright">&copy; 2026 AJ Oud &mdash; All Rights Reserved | جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       JAVASCRIPT
+       ========================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // ---- Cart Badge from localStorage ----
+      function updateCartBadge() {
+        var badge = document.getElementById('cartBadge');
+        if (!badge) return;
+        var cart = [];
+        try {
+          cart = JSON.parse(localStorage.getItem('aj_cart') || '[]');
+        } catch (e) {
+          cart = [];
+        }
+        var count = 0;
+        if (Array.isArray(cart)) {
+          cart.forEach(function (item) {
+            count += (item.qty || item.quantity || 1);
+          });
+        }
+        badge.textContent = count;
+        if (count > 0) {
+          badge.classList.add('show');
+        } else {
+          badge.classList.remove('show');
+        }
+      }
+      updateCartBadge();
+
+      // ---- Mobile Menu Toggle ----
+      var menuToggle = document.getElementById('menuToggle');
+      var mobileMenu = document.getElementById('mobileMenu');
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function () {
+          menuToggle.classList.toggle('open');
+          mobileMenu.classList.toggle('open');
+          document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+      }
+
+      // ---- Header scroll effect ----
+      var header = document.getElementById('header');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 60) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // ---- Fade-in on scroll (Intersection Observer) ----
+      var fadeEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -60px 0px'
+        });
+
+        fadeEls.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: show all
+        fadeEls.forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // ---- Smooth scroll for anchor links ----
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu if open
+            if (mobileMenu && mobileMenu.classList.contains('open')) {
+              menuToggle.classList.remove('open');
+              mobileMenu.classList.remove('open');
+              document.body.style.overflow = '';
+            }
+          }
+        });
+      });
+
+      // ---- Counter animation for stats ----
+      var statNumbers = document.querySelectorAll('.stat-number');
+      var statsObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      statNumbers.forEach(function (el) {
+        statsObserver.observe(el);
+      });
+
+      function animateCounter(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        if (!target) return;
+        var prefix = el.textContent.charAt(0) === '+' ? '+' : '';
+        var duration = 2000;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var easeOut = 1 - Math.pow(1 - progress, 3);
+          var current = Math.floor(easeOut * target);
+          el.textContent = prefix + current.toLocaleString();
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = prefix + target.toLocaleString();
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+    });
+  </script>
+
+</body>
+</html>

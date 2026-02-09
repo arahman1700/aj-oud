@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AJ Oud — تسوق أجود أنواع العود والبخور والمسك ودهن العود من المدينة المنورة. Premium Oud, Incense & Musk.">
+  <title>AJ Oud | المتجر — Shop Our Collection</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       CSS Custom Properties
+       ======================================== */
+    :root {
+      --deep-plum: #4A2D5E;
+      --lavender: #8B6FAE;
+      --cream: #F8F4F0;
+      --desert-sand: #D4A574;
+      --night-dark: #1A1520;
+      --soft-lavender: #C8B8D8;
+      --sage-green: #8FA87A;
+      --warm-taupe: #A69080;
+
+      --font-ar-display: 'Amiri', serif;
+      --font-ar-body: 'Tajawal', sans-serif;
+      --font-en-display: 'Playfair Display', Georgia, serif;
+      --font-en-body: 'Montserrat', 'Helvetica Neue', sans-serif;
+    }
+
+    /* ========================================
+       Reset & Base
+       ======================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-ar-body);
+      color: var(--night-dark);
+      background: var(--cream);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      direction: rtl;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    /* ========================================
+       Geometric Pattern Overlay
+       ======================================== */
+    .geometric-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%238B6FAE' stroke-width='0.5'%3E%3Cpolygon points='60,0 120,30 120,90 60,120 0,90 0,30'/%3E%3Cpolygon points='60,15 105,37.5 105,82.5 60,105 15,82.5 15,37.5'/%3E%3Cline x1='60' y1='0' x2='60' y2='120'/%3E%3Cline x1='0' y1='30' x2='120' y2='90'/%3E%3Cline x1='120' y1='30' x2='0' y2='90'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Cpolygon points='60,10 110,60 60,110 10,60'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 120px 120px;
+    }
+
+    /* ========================================
+       1. STICKY HEADER / NAVIGATION
+       ======================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(26, 21, 32, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(139, 111, 174, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(26, 21, 32, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Logo */
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    .header-logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-logo-text .brand-en {
+      font-family: var(--font-en-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--soft-lavender);
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .header-logo-text .brand-ar {
+      font-family: var(--font-ar-display);
+      font-size: 0.85rem;
+      color: var(--desert-sand);
+      line-height: 1.4;
+    }
+
+    /* Desktop Nav */
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-desktop a {
+      font-family: var(--font-ar-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: rgba(200, 184, 216, 0.8);
+      transition: color 0.3s ease;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-desktop a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: var(--desert-sand);
+      transition: width 0.3s ease;
+    }
+
+    .nav-desktop a:hover,
+    .nav-desktop a.active {
+      color: var(--soft-lavender);
+    }
+
+    .nav-desktop a:hover::after,
+    .nav-desktop a.active::after {
+      width: 100%;
+    }
+
+    .nav-desktop a.active {
+      color: var(--desert-sand);
+    }
+
+    .nav-desktop a.active::after {
+      background: var(--desert-sand);
+      width: 100%;
+    }
+
+    /* Cart Icon */
+    .cart-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: 1px solid rgba(139, 111, 174, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cart-btn:hover {
+      border-color: var(--desert-sand);
+      background: rgba(139, 111, 174, 0.1);
+    }
+
+    .cart-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--soft-lavender);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 20px;
+      height: 20px;
+      background: var(--desert-sand);
+      color: var(--night-dark);
+      font-family: var(--font-en-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .cart-badge.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      gap: 5px;
+      padding: 0;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--soft-lavender);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    .mobile-nav {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(26, 21, 32, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .mobile-nav.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .mobile-nav a {
+      font-family: var(--font-ar-body);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--soft-lavender);
+      transition: color 0.3s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: var(--desert-sand);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ========================================
+       2. PAGE HERO BANNER
+       ======================================== */
+    .page-hero {
+      position: relative;
+      width: 100%;
+      padding-top: 72px; /* offset for fixed header */
+      background: linear-gradient(160deg, var(--night-dark) 0%, #2A1D38 40%, var(--deep-plum) 80%, #3A2248 100%);
+      overflow: hidden;
+    }
+
+    .page-hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 60px 24px 50px;
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-ar-display);
+      font-size: 2.8rem;
+      color: var(--soft-lavender);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .page-hero .hero-subtitle {
+      font-family: var(--font-en-display);
+      font-size: 1.2rem;
+      color: var(--desert-sand);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-ar-body);
+      font-size: 0.85rem;
+      color: rgba(200, 184, 216, 0.6);
+    }
+
+    .breadcrumb a {
+      color: rgba(200, 184, 216, 0.6);
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--desert-sand);
+    }
+
+    .breadcrumb .sep {
+      color: rgba(200, 184, 216, 0.3);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb .current {
+      color: var(--desert-sand);
+    }
+
+    .page-hero-divider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--lavender), transparent);
+    }
+
+    /* Smoke effect on hero */
+    .page-hero .smoke-1,
+    .page-hero .smoke-2 {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .page-hero .smoke-1 {
+      width: 500px;
+      height: 500px;
+      top: -20%;
+      left: 10%;
+      background: radial-gradient(ellipse at center, rgba(139, 111, 174, 0.08) 0%, transparent 70%);
+      animation: smokeFloat1 12s ease-in-out infinite;
+    }
+
+    .page-hero .smoke-2 {
+      width: 400px;
+      height: 400px;
+      bottom: -10%;
+      right: 5%;
+      background: radial-gradient(ellipse at center, rgba(212, 165, 116, 0.06) 0%, transparent 70%);
+      animation: smokeFloat2 15s ease-in-out infinite;
+    }
+
+    @keyframes smokeFloat1 {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+      50% { transform: translate(-30px, -20px) scale(1.15); opacity: 1; }
+    }
+
+    @keyframes smokeFloat2 {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+      50% { transform: translate(20px, -30px) scale(1.1); opacity: 0.9; }
+    }
+
+    /* ========================================
+       3. FILTER / CATEGORY TABS
+       ======================================== */
+    .filter-section {
+      background: var(--cream);
+      padding: 40px 0 20px;
+      position: sticky;
+      top: 72px;
+      z-index: 50;
+      border-bottom: 1px solid rgba(139, 111, 174, 0.1);
+    }
+
+    .filter-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 0 24px;
+    }
+
+    .filter-tab {
+      font-family: var(--font-ar-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--warm-taupe);
+      background: transparent;
+      border: 1.5px solid rgba(166, 144, 128, 0.3);
+      padding: 10px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      white-space: nowrap;
+    }
+
+    .filter-tab:hover {
+      color: var(--deep-plum);
+      border-color: var(--lavender);
+      background: rgba(139, 111, 174, 0.06);
+    }
+
+    .filter-tab.active {
+      color: #fff;
+      background: var(--deep-plum);
+      border-color: var(--deep-plum);
+      box-shadow: 0 4px 15px rgba(74, 45, 94, 0.3);
+    }
+
+    /* ========================================
+       4. PRODUCT GRID
+       ======================================== */
+    .shop-section {
+      padding: 40px 0 80px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(139, 111, 174, 0.1);
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.45s ease;
+      position: relative;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.45s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(74, 45, 94, 0.15), 0 0 0 1px rgba(139, 111, 174, 0.2);
+    }
+
+    /* Product Image */
+    .product-image-wrap {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #2A1D38, var(--night-dark));
+    }
+
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .product-card:hover .product-image-wrap img {
+      transform: scale(1.08);
+    }
+
+    /* Badge */
+    .product-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--desert-sand);
+      color: #fff;
+      font-family: var(--font-ar-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 50px;
+      z-index: 3;
+      letter-spacing: 0.02em;
+    }
+
+    /* Quick View Overlay */
+    .product-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 21, 32, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 2;
+    }
+
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
+
+    .quick-view-btn {
+      font-family: var(--font-ar-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #fff;
+      background: rgba(139, 111, 174, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(200, 184, 216, 0.4);
+      padding: 10px 28px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: translateY(10px);
+    }
+
+    .product-card:hover .quick-view-btn {
+      transform: translateY(0);
+    }
+
+    .quick-view-btn:hover {
+      background: var(--lavender);
+      border-color: var(--lavender);
+    }
+
+    /* Product Info */
+    .product-info {
+      padding: 20px 22px 24px;
+    }
+
+    .product-name-ar {
+      font-family: var(--font-ar-display);
+      font-size: 1.3rem;
+      color: var(--deep-plum);
+      line-height: 1.5;
+      margin-bottom: 2px;
+    }
+
+    .product-name-en {
+      font-family: var(--font-en-display);
+      font-size: 0.95rem;
+      color: var(--warm-taupe);
+      font-weight: 400;
+      margin-bottom: 6px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .product-desc {
+      font-family: var(--font-ar-body);
+      font-size: 0.82rem;
+      color: #999;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Stars */
+    .product-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 12px;
+      direction: ltr;
+      justify-content: flex-end;
+    }
+
+    .product-stars svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .star-filled {
+      fill: var(--desert-sand);
+    }
+
+    .star-empty {
+      fill: #ddd;
+    }
+
+    /* Price & Button Row */
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .product-price {
+      font-family: var(--font-en-body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--deep-plum);
+      letter-spacing: 0.02em;
+      direction: ltr;
+    }
+
+    .product-price .currency {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--warm-taupe);
+      margin-left: 4px;
+    }
+
+    .add-to-cart-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-ar-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--deep-plum);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .add-to-cart-btn:hover {
+      background: var(--lavender);
+      box-shadow: 0 6px 20px rgba(139, 111, 174, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .add-to-cart-btn:active {
+      transform: translateY(0) scale(0.97);
+    }
+
+    .add-to-cart-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ========================================
+       5. TOAST NOTIFICATION
+       ======================================== */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--deep-plum);
+      color: #fff;
+      font-family: var(--font-ar-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 50px;
+      box-shadow: 0 10px 40px rgba(74, 45, 94, 0.4);
+      z-index: 10000;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: var(--desert-sand);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ========================================
+       6. FOOTER
+       ======================================== */
+    .site-footer {
+      background: var(--night-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-top-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--lavender), transparent);
+    }
+
+    .footer-main {
+      padding: 60px 24px 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Footer Logo Column */
+    .footer-brand {
+      text-align: center;
+    }
+
+    .footer-brand svg {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+    }
+
+    .footer-brand-name {
+      font-family: var(--font-en-display);
+      font-size: 1.3rem;
+      color: var(--soft-lavender);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .footer-brand-tagline {
+      font-family: var(--font-ar-display);
+      font-size: 1rem;
+      color: var(--desert-sand);
+      line-height: 1.6;
+    }
+
+    /* Footer Links */
+    .footer-links h4 {
+      font-family: var(--font-ar-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--soft-lavender);
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-family: var(--font-ar-body);
+      font-size: 0.9rem;
+      color: rgba(200, 184, 216, 0.6);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--desert-sand);
+    }
+
+    /* Footer Social */
+    .footer-social {
+      text-align: center;
+    }
+
+    .footer-social h4 {
+      font-family: var(--font-ar-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--soft-lavender);
+      margin-bottom: 16px;
+    }
+
+    .footer-social-icons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .footer-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(139, 111, 174, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .footer-social-link:hover {
+      border-color: var(--desert-sand);
+      background: rgba(139, 111, 174, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .footer-social-link svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--soft-lavender);
+    }
+
+    .footer-social-handle {
+      font-family: var(--font-en-body);
+      font-size: 0.85rem;
+      color: var(--desert-sand);
+      letter-spacing: 0.02em;
+    }
+
+    /* Footer Contact */
+    .footer-contact h4 {
+      font-family: var(--font-ar-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--soft-lavender);
+      margin-bottom: 16px;
+    }
+
+    .footer-contact p {
+      font-family: var(--font-ar-body);
+      font-size: 0.9rem;
+      color: rgba(200, 184, 216, 0.6);
+      line-height: 1.8;
+    }
+
+    /* Payment Icons */
+    .footer-payments {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .payment-icon {
+      width: 44px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-en-body);
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: rgba(200, 184, 216, 0.5);
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(139, 111, 174, 0.1);
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+      border-top: 1px solid rgba(139, 111, 174, 0.1);
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    .footer-copyright {
+      font-family: var(--font-en-body);
+      font-size: 0.75rem;
+      color: rgba(200, 184, 216, 0.35);
+      letter-spacing: 0.05em;
+    }
+
+    /* ========================================
+       Fade-in Animation
+       ======================================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered entrance for cards */
+    .product-card:nth-child(1) { transition-delay: 0s; }
+    .product-card:nth-child(2) { transition-delay: 0.08s; }
+    .product-card:nth-child(3) { transition-delay: 0.16s; }
+    .product-card:nth-child(4) { transition-delay: 0.24s; }
+    .product-card:nth-child(5) { transition-delay: 0.32s; }
+    .product-card:nth-child(6) { transition-delay: 0.4s; }
+    .product-card:nth-child(7) { transition-delay: 0.08s; }
+    .product-card:nth-child(8) { transition-delay: 0.16s; }
+    .product-card:nth-child(9) { transition-delay: 0.24s; }
+    .product-card:nth-child(10) { transition-delay: 0.32s; }
+    .product-card:nth-child(11) { transition-delay: 0.4s; }
+    .product-card:nth-child(12) { transition-delay: 0.48s; }
+
+    /* Product hidden by filter */
+    .product-card.hidden {
+      display: none;
+    }
+
+    /* ========================================
+       RESPONSIVE: Tablet (768px+)
+       ======================================== */
+    @media (min-width: 768px) {
+      .nav-desktop {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: none;
+      }
+
+      .page-hero-inner {
+        padding: 80px 48px 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 3.4rem;
+      }
+
+      .page-hero .hero-subtitle {
+        font-size: 1.4rem;
+      }
+
+      .filter-tabs {
+        gap: 12px;
+      }
+
+      .filter-tab {
+        padding: 10px 28px;
+        font-size: 1rem;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .product-image-wrap {
+        height: 280px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: right;
+      }
+
+      .footer-brand {
+        text-align: right;
+      }
+
+      .footer-social {
+        text-align: right;
+      }
+
+      .footer-social-icons {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE: Desktop (1024px+)
+       ======================================== */
+    @media (min-width: 1024px) {
+      .page-hero h1 {
+        font-size: 3.8rem;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+
+      .product-image-wrap {
+        height: 300px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE: Large Desktop (1280px+)
+       ======================================== */
+    @media (min-width: 1280px) {
+      .products-grid {
+        gap: 36px;
+      }
+
+      .product-image-wrap {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       1. STICKY HEADER
+       ========================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="header-logo">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="AJ Oud Logo">
+          <g fill="none" stroke="#8B6FAE" stroke-width="1.5">
+            <rect x="35" y="35" width="130" height="130" rx="2"/>
+            <rect x="35" y="35" width="130" height="130" rx="2" transform="rotate(45 100 100)"/>
+          </g>
+          <circle cx="100" cy="100" r="52" fill="none" stroke="#8B6FAE" stroke-width="0.5" opacity="0.5"/>
+          <g fill="#C8B8D8">
+            <polygon points="74,138 90,68 94,68 78,138"/>
+            <polygon points="106,68 110,68 126,138 122,138"/>
+            <path d="M82,108 Q84,95 92,90 Q100,86 108,90 Q116,95 118,108 L115,108 Q113,97 108,93 Q100,88 92,93 Q87,97 85,108 Z"/>
+          </g>
+          <g fill="#C8B8D8">
+            <rect x="125" y="62" width="5" height="52" rx="1"/>
+            <rect x="118" y="60" width="20" height="4" rx="1"/>
+            <path d="M130,114 Q130,130 120,138 Q112,144 104,142 Q98,140 96,135 L99,133 Q101,138 106,140 Q114,142 120,136 Q127,129 127,114 Z"/>
+          </g>
+          <circle cx="100" cy="8" r="2" fill="#8B6FAE" opacity="0.6"/>
+          <circle cx="100" cy="192" r="2" fill="#8B6FAE" opacity="0.6"/>
+          <circle cx="8" cy="100" r="2" fill="#8B6FAE" opacity="0.6"/>
+          <circle cx="192" cy="100" r="2" fill="#8B6FAE" opacity="0.6"/>
+        </svg>
+        <span class="header-logo-text">
+          <span class="brand-en">AJ OUD</span>
+          <span class="brand-ar">عطر المدينة</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html" class="active">المتجر</a>
+        <a href="about.html">من نحن</a>
+        <a href="cart.html">السلة</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="عرض السلة">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">الرئيسية</a>
+    <a href="shop.html" class="active">المتجر</a>
+    <a href="about.html">من نحن</a>
+    <a href="cart.html">السلة</a>
+  </nav>
+
+  <!-- ==========================================
+       2. PAGE HERO BANNER
+       ========================================== -->
+  <section class="page-hero">
+    <div class="smoke-1"></div>
+    <div class="smoke-2"></div>
+    <div class="geometric-overlay"></div>
+    <div class="page-hero-inner">
+      <h1>متجرنا</h1>
+      <p class="hero-subtitle">Our Collection</p>
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span class="sep">&lsaquo;</span>
+        <span class="current">المتجر</span>
+      </div>
+    </div>
+    <div class="page-hero-divider"></div>
+  </section>
+
+  <!-- ==========================================
+       3. FILTER / CATEGORY TABS
+       ========================================== -->
+  <div class="filter-section" id="filterSection">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">الكل</button>
+      <button class="filter-tab" data-filter="oud">عود</button>
+      <button class="filter-tab" data-filter="incense">بخور</button>
+      <button class="filter-tab" data-filter="musk">مسك</button>
+      <button class="filter-tab" data-filter="oud-oil">دهن عود</button>
+      <button class="filter-tab" data-filter="gifts">هدايا</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       4. PRODUCT GRID
+       ========================================== -->
+  <section class="shop-section">
+    <div class="container">
+      <div class="products-grid" id="productsGrid">
+
+        <!-- Product 1: عود ملكي -->
+        <div class="product-card" data-category="oud" data-name="عود ملكي" data-price="1200">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=500&h=500&fit=crop" alt="عود ملكي - Royal Oud" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">عود ملكي</h3>
+            <p class="product-name-en">Royal Oud</p>
+            <p class="product-desc">عود فاخر بجودة استثنائية من أجود الغابات الآسيوية</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">1,200 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('عود ملكي', 'Royal Oud', 1200, 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: عود كمبودي -->
+        <div class="product-card" data-category="oud" data-name="عود كمبودي" data-price="2400">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=500&h=500&fit=crop" alt="عود كمبودي - Cambodian Oud" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">عود كمبودي</h3>
+            <p class="product-name-en">Cambodian Oud</p>
+            <p class="product-desc">عود كمبودي أصيل بنكهة دافئة وعمق استثنائي</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">2,400 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('عود كمبودي', 'Cambodian Oud', 2400, 'https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: عود هندي سوبر (NEW) -->
+        <div class="product-card" data-category="oud" data-name="عود هندي سوبر" data-price="1800">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea081ae4c8d?w=500&h=500&fit=crop" alt="عود هندي سوبر - Super Indian Oud" loading="lazy">
+            <span class="product-badge">جديد</span>
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">عود هندي سوبر</h3>
+            <p class="product-name-en">Super Indian Oud</p>
+            <p class="product-desc">أجود أنواع العود الهندي المعتّق بعناية فائقة</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">1,800 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('عود هندي سوبر', 'Super Indian Oud', 1800, 'https://images.unsplash.com/photo-1594035910387-fea081ae4c8d?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: بخور المدينة -->
+        <div class="product-card" data-category="incense" data-name="بخور المدينة" data-price="350">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=500&h=500&fit=crop" alt="بخور المدينة - Madinah Incense" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">بخور المدينة</h3>
+            <p class="product-name-en">Madinah Incense</p>
+            <p class="product-desc">بخور مميز بعبق المدينة المنورة الأصيل</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">350 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('بخور المدينة', 'Madinah Incense', 350, 'https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: بخور العروس -->
+        <div class="product-card" data-category="incense" data-name="بخور العروس" data-price="450">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&h=500&fit=crop" alt="بخور العروس - Bridal Incense" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">بخور العروس</h3>
+            <p class="product-name-en">Bridal Incense</p>
+            <p class="product-desc">خلطة بخور فاخرة خاصة بليلة العرس والمناسبات</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">450 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('بخور العروس', 'Bridal Incense', 450, 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: بخور الدار -->
+        <div class="product-card" data-category="incense" data-name="بخور الدار" data-price="250">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500&h=500&fit=crop" alt="بخور الدار - Home Incense" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">بخور الدار</h3>
+            <p class="product-name-en">Home Incense</p>
+            <p class="product-desc">بخور يومي يملأ أركان بيتك بعبير الأصالة</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">250 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('بخور الدار', 'Home Incense', 250, 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: مسك الطهارة -->
+        <div class="product-card" data-category="musk" data-name="مسك الطهارة" data-price="180">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1595425959667-1436120163fc?w=500&h=500&fit=crop" alt="مسك الطهارة - Purity Musk" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">مسك الطهارة</h3>
+            <p class="product-name-en">Purity Musk</p>
+            <p class="product-desc">مسك أبيض نقي للطهارة والنظافة اليومية</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">180 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('مسك الطهارة', 'Purity Musk', 180, 'https://images.unsplash.com/photo-1595425959667-1436120163fc?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: مسك أبيض (NEW) -->
+        <div class="product-card" data-category="musk" data-name="مسك أبيض" data-price="220">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea081ae4c8d?w=500&h=500&fit=crop" alt="مسك أبيض - White Musk" loading="lazy">
+            <span class="product-badge">جديد</span>
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">مسك أبيض</h3>
+            <p class="product-name-en">White Musk</p>
+            <p class="product-desc">مسك أبيض صافي بتركيبة فريدة وثبات عالي</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-empty" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">220 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('مسك أبيض', 'White Musk', 220, 'https://images.unsplash.com/photo-1594035910387-fea081ae4c8d?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: مسك الختام -->
+        <div class="product-card" data-category="musk" data-name="مسك الختام" data-price="280">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=500&h=500&fit=crop" alt="مسك الختام - Finale Musk" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">مسك الختام</h3>
+            <p class="product-name-en">Finale Musk</p>
+            <p class="product-desc">مسك الختام الفاخر لإطلالة لا تُنسى</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">280 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('مسك الختام', 'Finale Musk', 280, 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: دهن العود الأصيل -->
+        <div class="product-card" data-category="oud-oil" data-name="دهن العود الأصيل" data-price="3200">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500&h=500&fit=crop" alt="دهن العود الأصيل - Pure Oud Oil" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">دهن العود الأصيل</h3>
+            <p class="product-name-en">Pure Oud Oil</p>
+            <p class="product-desc">دهن عود طبيعي مستخلص بالطريقة التقليدية</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">3,200 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('دهن العود الأصيل', 'Pure Oud Oil', 3200, 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 11: دهن العود الملكي -->
+        <div class="product-card" data-category="oud-oil" data-name="دهن العود الملكي" data-price="4500">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1595425959667-1436120163fc?w=500&h=500&fit=crop" alt="دهن العود الملكي - Royal Oud Oil" loading="lazy">
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">دهن العود الملكي</h3>
+            <p class="product-name-en">Royal Oud Oil</p>
+            <p class="product-desc">دهن عود ملكي معتّق لأصحاب الذوق الرفيع</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">4,500 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('دهن العود الكمبودي', 'Cambodian Oud Oil', 4500, 'https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 12: دهن عود كلمنتان (NEW) -->
+        <div class="product-card" data-category="oud-oil" data-name="دهن عود كلمنتان" data-price="5800">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&h=500&fit=crop" alt="دهن عود كلمنتان - Kalimantan Oil" loading="lazy">
+            <span class="product-badge">جديد</span>
+            <div class="product-overlay">
+              <button class="quick-view-btn">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name-ar">دهن عود كلمنتان</h3>
+            <p class="product-name-en">Kalimantan Oil</p>
+            <p class="product-desc">دهن عود كلمنتان النادر بتركيز عالي ونقاء فائق</p>
+            <div class="product-stars">
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon class="star-filled" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="product-bottom">
+              <span class="product-price">5,800 <span class="currency">SAR</span></span>
+              <button class="add-to-cart-btn" onclick="addToCart('طقم الهدايا الفاخر', 'Luxury Gift Set', 1600, 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=200&h=200&fit=crop')">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                أضف للسلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TOAST NOTIFICATION
+       ========================================== -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+    <span id="toastMsg">تمت الإضافة للسلة</span>
+  </div>
+
+  <!-- ==========================================
+       5. FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="footer-top-line"></div>
+    <div class="footer-main">
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="AJ Oud Logo">
+            <g fill="none" stroke="#8B6FAE" stroke-width="1.5">
+              <rect x="35" y="35" width="130" height="130" rx="2"/>
+              <rect x="35" y="35" width="130" height="130" rx="2" transform="rotate(45 100 100)"/>
+            </g>
+            <circle cx="100" cy="100" r="52" fill="none" stroke="#8B6FAE" stroke-width="0.5" opacity="0.5"/>
+            <g fill="#C8B8D8">
+              <polygon points="74,138 90,68 94,68 78,138"/>
+              <polygon points="106,68 110,68 126,138 122,138"/>
+              <path d="M82,108 Q84,95 92,90 Q100,86 108,90 Q116,95 118,108 L115,108 Q113,97 108,93 Q100,88 92,93 Q87,97 85,108 Z"/>
+            </g>
+            <g fill="#C8B8D8">
+              <rect x="125" y="62" width="5" height="52" rx="1"/>
+              <rect x="118" y="60" width="20" height="4" rx="1"/>
+              <path d="M130,114 Q130,130 120,138 Q112,144 104,142 Q98,140 96,135 L99,133 Q101,138 106,140 Q114,142 120,136 Q127,129 127,114 Z"/>
+            </g>
+          </svg>
+          <div class="footer-brand-name">AJ OUD</div>
+          <div class="footer-brand-tagline">من قلب المدينة المنورة</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html">المتجر</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="cart.html">السلة</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>تابعنا</h4>
+          <div class="footer-social-icons">
+            <!-- Instagram -->
+            <a href="https://instagram.com/AJ_Oud.SA" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://x.com/AJ_Oud.SA" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Snapchat -->
+            <a href="https://snapchat.com/add/AJ_Oud.SA" target="_blank" rel="noopener" class="footer-social-link" aria-label="Snapchat">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12.959-.289.105-.06.21-.09.315-.09.21 0 .42.12.51.3.12.24.105.51-.045.69a3.032 3.032 0 01-.345.3c-.135.12-.405.27-.615.42-.225.165-.435.36-.525.555-.06.12-.075.24-.03.42.36 1.395 1.08 2.58 2.13 3.48.21.18.405.33.6.45.12.075.255.195.33.36a.587.587 0 01-.06.555c-.21.39-.69.615-1.47.705-.135.015-.27.015-.42.03-.195.015-.42.03-.69.075-.255.045-.39.195-.555.405-.12.165-.285.39-.51.615-.33.33-.72.495-1.155.495-.255 0-.54-.06-.84-.18-.57-.24-1.11-.36-1.65-.36-.555 0-1.095.12-1.65.345a3.308 3.308 0 01-.84.18c-.45 0-.84-.165-1.17-.51-.225-.225-.39-.435-.51-.6-.165-.225-.3-.375-.555-.42-.27-.045-.495-.06-.69-.075-.15-.015-.285-.015-.42-.03-.78-.09-1.26-.315-1.47-.705a.587.587 0 01-.06-.555c.075-.165.21-.285.33-.36.195-.12.39-.27.6-.45 1.05-.9 1.77-2.085 2.13-3.48.045-.18.03-.3-.03-.42-.09-.195-.3-.39-.525-.555-.21-.15-.48-.3-.615-.42a3.032 3.032 0 01-.345-.3c-.15-.18-.165-.45-.045-.69.09-.18.3-.3.51-.3.105 0 .21.03.315.09.3.165.66.273.96.289.195 0 .33-.045.405-.09l-.03-.51-.003-.06c-.105-1.628-.23-3.654.3-4.847C7.86 1.069 11.216.793 12.206.793z"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@AJ_Oud.SA" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16V11.7a4.84 4.84 0 01-3.77-1.24V6.69h3.77z"/>
+              </svg>
+            </a>
+          </div>
+          <span class="footer-social-handle">@AJ_Oud.SA</span>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <p>المدينة المنورة، المملكة العربية السعودية</p>
+          <p style="direction: ltr; text-align: right;">info@ajoud.sa</p>
+          <p style="direction: ltr; text-align: right;">+966 50 000 0000</p>
+          <div class="footer-payments">
+            <div class="payment-icon">VISA</div>
+            <div class="payment-icon">MC</div>
+            <div class="payment-icon">MADA</div>
+            <div class="payment-icon">STC</div>
+            <div class="payment-icon">APPLE</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 AJ Oud &mdash; جميع الحقوق محفوظة | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       6. JAVASCRIPT
+       ========================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // ========================
+      // Header scroll effect
+      // ========================
+      var header = document.getElementById('siteHeader');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // ========================
+      // Mobile menu toggle
+      // ========================
+      var mobileToggle = document.getElementById('mobileToggle');
+      var mobileNav = document.getElementById('mobileNav');
+
+      mobileToggle.addEventListener('click', function () {
+        mobileToggle.classList.toggle('active');
+        mobileNav.classList.toggle('open');
+        document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+      });
+
+      // Close mobile nav on link click
+      var mobileLinks = mobileNav.querySelectorAll('a');
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileToggle.classList.remove('active');
+          mobileNav.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // ========================
+      // Category filter tabs
+      // ========================
+      var filterTabs = document.querySelectorAll('.filter-tab');
+      var productCards = document.querySelectorAll('.product-card');
+
+      filterTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          // Update active tab
+          filterTabs.forEach(function (t) { t.classList.remove('active'); });
+          tab.classList.add('active');
+
+          var filter = tab.getAttribute('data-filter');
+
+          productCards.forEach(function (card) {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.classList.remove('hidden');
+              // Re-trigger entrance animation
+              card.classList.remove('visible');
+              void card.offsetWidth; // force reflow
+              card.classList.add('visible');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // ========================
+      // Scroll-triggered fade-in for product cards
+      // ========================
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.08,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        productCards.forEach(function (card) {
+          observer.observe(card);
+        });
+
+        // Also observe any .fade-in elements
+        document.querySelectorAll('.fade-in').forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: show all
+        productCards.forEach(function (card) {
+          card.classList.add('visible');
+        });
+        document.querySelectorAll('.fade-in').forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // ========================
+      // Cart badge - load from localStorage
+      // ========================
+      updateCartBadge();
+    });
+
+    // ========================
+    // Add to Cart
+    // ========================
+    function addToCart(nameAr, nameEn, price, image) {
+      const CART_KEY = 'aj_cart';
+      let cart = [];
+      try {
+        const data = localStorage.getItem(CART_KEY);
+        cart = data ? JSON.parse(data) : [];
+      } catch(e) { cart = []; }
+
+      const existing = cart.find(item => item.name === nameAr);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ name: nameAr, nameEn: nameEn, price: price, qty: 1, image: image });
+      }
+
+      try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch(e) {}
+      updateCartBadge();
+      showToast('تمت إضافة ' + nameAr + ' للسلة');
+    }
+
+    // ========================
+    // Update Cart Badge
+    // ========================
+    function updateCartBadge() {
+      var cart = JSON.parse(localStorage.getItem('aj_cart') || '[]');
+      var totalItems = cart.reduce(function (sum, item) { return sum + item.qty; }, 0);
+      var badge = document.getElementById('cartBadge');
+
+      if (totalItems > 0) {
+        badge.textContent = totalItems > 99 ? '99+' : totalItems;
+        badge.classList.add('visible');
+      } else {
+        badge.classList.remove('visible');
+      }
+    }
+
+    // ========================
+    // Toast Notification
+    // ========================
+    function showToast(productName) {
+      var toast = document.getElementById('toast');
+      var toastMsg = document.getElementById('toastMsg');
+
+      toastMsg.textContent = productName + ' — تمت الإضافة للسلة';
+      toast.classList.add('show');
+
+      // Add a small bounce to the cart badge
+      var badge = document.getElementById('cartBadge');
+      badge.style.transform = 'scale(1.3)';
+      setTimeout(function () {
+        badge.style.transform = 'scale(1)';
+      }, 200);
+
+      setTimeout(function () {
+        toast.classList.remove('show');
+      }, 2800);
+    }
+  </script>
+
+</body>
+</html>
