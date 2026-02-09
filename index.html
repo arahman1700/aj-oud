@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJ Oud | عطر المدينة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dome-green: #1B5E3A;
+      --regal-gold: #C8A445;
+      --marble-cream: #F5F0E8;
+      --oud-brown: #5C3A1E;
+      --night-charcoal: #1A1A1A;
+      --soft-gold: #E8D5A3;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--night-charcoal);
+      color: var(--marble-cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Amiri', serif;
+      font-size: 3rem;
+      color: var(--regal-gold);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--soft-gold);
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .link-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(200, 164, 69, 0.2);
+      border-radius: 12px;
+      padding: 30px;
+      text-decoration: none;
+      color: var(--marble-cream);
+      transition: all 0.3s ease;
+    }
+
+    .link-card:hover {
+      background: rgba(200, 164, 69, 0.1);
+      border-color: var(--regal-gold);
+      transform: translateY(-4px);
+    }
+
+    .link-card h2 {
+      font-family: 'Amiri', serif;
+      font-size: 1.5rem;
+      color: var(--regal-gold);
+      margin-bottom: 8px;
+    }
+
+    .link-card p {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 0.85rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>AJ عطر المدينة</h1>
+  <div class="subtitle">PREMIUM OUD &middot; INCENSE &middot; MUSK</div>
+
+  <div class="links">
+    <a href="website/index.html" class="link-card">
+      <h2>الموقع الرئيسي</h2>
+      <p>Main Website — صفحة البراند الرئيسية</p>
+    </a>
+    <a href="brand-guide/index.html" class="link-card">
+      <h2>دليل البراند</h2>
+      <p>Brand Guide — الهوية البصرية والألوان والخطوط</p>
+    </a>
+    <a href="social/social-templates.html" class="link-card">
+      <h2>قوالب السوشال ميديا</h2>
+      <p>Social Media Templates — تصاميم جاهزة</p>
+    </a>
+    <a href="social/instagram-post.html" class="link-card">
+      <h2>بوست إنستقرام</h2>
+      <p>Instagram Post — تصميم بوست</p>
+    </a>
+    <a href="social/instagram-story.html" class="link-card">
+      <h2>ستوري إنستقرام</h2>
+      <p>Instagram Story — تصميم ستوري</p>
+    </a>
+    <a href="assets/logo/aj-logo-concepts.html" class="link-card">
+      <h2>تصاميم الشعار</h2>
+      <p>Logo Concepts — أفكار ومقترحات الشعار</p>
+    </a>
+    <a href="assets/logo/aj-logo-variations.html" class="link-card">
+      <h2>نسخ الشعار</h2>
+      <p>Logo Variations — نسخ مختلفة من الشعار</p>
+    </a>
+  </div>
+
+  <div class="footer">AJ Oud &copy; 2026</div>
+</body>
+</html>
