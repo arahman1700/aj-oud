@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJ — Instagram Post Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dome-green: #1B5E3A;
+    --regal-gold: #C8A445;
+    --marble-cream: #F5F0E8;
+    --oud-brown: #5C3A1E;
+    --night-charcoal: #1A1A1A;
+    --palm-green: #2D7A4F;
+    --soft-gold: #E8D5A3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0f0f0f;
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--regal-gold);
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    direction: ltr;
+  }
+
+  .variant-label {
+    color: var(--soft-gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    direction: ltr;
+    text-align: center;
+  }
+
+  .post-container {
+    width: min(1080px, 90vw);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* ========== VARIANT 1: PRODUCT SHOWCASE ========== */
+  .variant-1 {
+    background: var(--dome-green);
+  }
+
+  .variant-1 .geo-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image:
+      repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        transparent 0deg 45deg,
+        var(--regal-gold) 45deg 90deg
+      );
+    background-size: 80px 80px;
+  }
+
+  .variant-1 .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6%;
+  }
+
+  .mihrab-frame {
+    width: 52%;
+    height: 58%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+  }
+
+  .mihrab-frame svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mihrab-placeholder {
+    width: 75%;
+    height: 75%;
+    background: linear-gradient(135deg, var(--oud-brown) 0%, #3a2210 100%);
+    border-radius: 4px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mihrab-placeholder span {
+    color: var(--soft-gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(10px, 1.4vw, 16px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    direction: ltr;
+  }
+
+  .product-name-ar {
+    font-family: 'Amiri', serif;
+    color: var(--marble-cream);
+    font-size: clamp(22px, 3.5vw, 42px);
+    letter-spacing: 0;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .product-name-en {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--soft-gold);
+    font-size: clamp(12px, 1.5vw, 18px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    direction: ltr;
+    margin-top: 2px;
+  }
+
+  .product-price {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--regal-gold);
+    font-size: clamp(16px, 2.2vw, 26px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 3%;
+    direction: ltr;
+  }
+
+  .logo-corner {
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    width: clamp(40px, 6vw, 70px);
+    height: clamp(40px, 6vw, 70px);
+  }
+
+  /* ========== VARIANT 2: QUOTE ========== */
+  .variant-2 {
+    background: var(--night-charcoal);
+  }
+
+  .variant-2 .gold-border {
+    position: absolute;
+    inset: 4%;
+    border: 1.5px solid var(--regal-gold);
+    pointer-events: none;
+  }
+
+  .variant-2 .gold-border-inner {
+    position: absolute;
+    inset: 5.5%;
+    border: 0.5px solid var(--regal-gold);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .corner-ornament {
+    position: absolute;
+    width: clamp(24px, 4vw, 50px);
+    height: clamp(24px, 4vw, 50px);
+  }
+  .corner-ornament.tl { top: 3%; right: 3%; }
+  .corner-ornament.tr { top: 3%; left: 3%; }
+  .corner-ornament.bl { bottom: 3%; right: 3%; }
+  .corner-ornament.br { bottom: 3%; left: 3%; }
+
+  .variant-2 .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12%;
+  }
+
+  .star-deco {
+    color: var(--regal-gold);
+    font-size: clamp(18px, 2.5vw, 30px);
+    margin-bottom: 5%;
+    opacity: 0.7;
+    direction: ltr;
+    letter-spacing: 12px;
+  }
+
+  .quote-ar {
+    font-family: 'Amiri', serif;
+    color: var(--marble-cream);
+    font-size: clamp(20px, 3.8vw, 46px);
+    letter-spacing: 0;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .quote-en {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--soft-gold);
+    font-size: clamp(11px, 1.5vw, 18px);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    direction: ltr;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .star-deco-bottom {
+    color: var(--regal-gold);
+    font-size: clamp(18px, 2.5vw, 30px);
+    margin-top: 5%;
+    opacity: 0.7;
+    direction: ltr;
+    letter-spacing: 12px;
+  }
+
+  .logo-bottom {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(36px, 5vw, 56px);
+    height: clamp(36px, 5vw, 56px);
+  }
+
+  /* ========== VARIANT 3: BRAND AWARENESS ========== */
+  .variant-3 {
+    background: var(--marble-cream);
+  }
+
+  .variant-3 .tile-border {
+    position: absolute;
+    inset: 0;
+    border: clamp(16px, 3vw, 36px) solid transparent;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(27,94,58,0.06) 8px,
+      rgba(27,94,58,0.06) 10px
+    ) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .variant-3 .tile-border-inner {
+    position: absolute;
+    inset: clamp(14px, 2.8vw, 34px);
+    border: 1px solid rgba(27,94,58,0.15);
+    pointer-events: none;
+  }
+
+  .variant-3 .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+  }
+
+  .logo-large {
+    width: clamp(100px, 20vw, 220px);
+    height: clamp(100px, 20vw, 220px);
+    margin-bottom: 6%;
+  }
+
+  .icons-row {
+    display: flex;
+    gap: clamp(20px, 5vw, 60px);
+    margin-bottom: 6%;
+    direction: ltr;
+  }
+
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .icon-item svg {
+    width: clamp(32px, 5vw, 56px);
+    height: clamp(32px, 5vw, 56px);
+  }
+
+  .icon-item span {
+    font-family: 'Tajawal', sans-serif;
+    color: var(--dome-green);
+    font-size: clamp(11px, 1.3vw, 16px);
+    font-weight: 500;
+  }
+
+  .brand-tagline {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .brand-tagline .ar {
+    font-family: 'Amiri', serif;
+    color: var(--dome-green);
+    font-size: clamp(16px, 2.5vw, 30px);
+    letter-spacing: 0;
+    line-height: 1.8;
+  }
+
+  .brand-tagline .en {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--oud-brown);
+    font-size: clamp(11px, 1.4vw, 17px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    direction: ltr;
+  }
+
+  .brand-tagline .divider {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--regal-gold);
+    margin: 12px auto;
+  }
+</style>
+</head>
+<body>
+
+<h1>Instagram Post Templates</h1>
+
+<!-- ==================== VARIANT 1: PRODUCT SHOWCASE ==================== -->
+<div class="variant-label">Variant 1 — Product Showcase</div>
+<div class="post-container variant-1">
+  <div class="geo-pattern"></div>
+  <div class="content">
+    <div class="mihrab-frame">
+      <svg viewBox="0 0 400 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Mihrab pointed arch -->
+        <path d="M60 460 L60 200 Q60 60 200 20 Q340 60 340 200 L340 460"
+              stroke="#C8A445" stroke-width="2.5" fill="none"/>
+        <path d="M50 460 L50 200 Q50 50 200 10 Q350 50 350 200 L350 460"
+              stroke="#C8A445" stroke-width="1" fill="none" opacity="0.4"/>
+        <!-- Inner arch detail -->
+        <path d="M80 460 L80 210 Q80 80 200 40 Q320 80 320 210 L320 460"
+              stroke="#C8A445" stroke-width="0.5" fill="none" opacity="0.25"/>
+      </svg>
+      <div class="mihrab-placeholder">
+        <span>Product Image</span>
+      </div>
+    </div>
+
+    <div class="product-name-ar">عود ملكي</div>
+    <div class="product-name-en">Royal Oud</div>
+    <div class="product-price">SAR 450</div>
+  </div>
+
+  <div class="logo-corner">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="18" y="18" width="64" height="64" stroke="#C8A445" stroke-width="1.5" fill="none" transform="rotate(0 50 50)"/>
+      <rect x="18" y="18" width="64" height="64" stroke="#C8A445" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+      <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#C8A445">AJ</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ==================== VARIANT 2: QUOTE/VERSE ==================== -->
+<div class="variant-label">Variant 2 — Quote / Verse</div>
+<div class="post-container variant-2">
+  <div class="gold-border"></div>
+  <div class="gold-border-inner"></div>
+
+  <!-- Corner ornaments -->
+  <div class="corner-ornament tl">
+    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 L50 0 L50 8 Q20 8 8 20 L8 50 L0 50 Z" fill="none" stroke="#C8A445" stroke-width="1"/>
+      <path d="M50 0 Q10 10 0 50" fill="none" stroke="#C8A445" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="6" cy="6" r="2" fill="#C8A445"/>
+    </svg>
+  </div>
+  <div class="corner-ornament tr">
+    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1)">
+      <path d="M0 0 L50 0 L50 8 Q20 8 8 20 L8 50 L0 50 Z" fill="none" stroke="#C8A445" stroke-width="1"/>
+      <path d="M50 0 Q10 10 0 50" fill="none" stroke="#C8A445" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="6" cy="6" r="2" fill="#C8A445"/>
+    </svg>
+  </div>
+  <div class="corner-ornament bl">
+    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="transform: scaleY(-1)">
+      <path d="M0 0 L50 0 L50 8 Q20 8 8 20 L8 50 L0 50 Z" fill="none" stroke="#C8A445" stroke-width="1"/>
+      <path d="M50 0 Q10 10 0 50" fill="none" stroke="#C8A445" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="6" cy="6" r="2" fill="#C8A445"/>
+    </svg>
+  </div>
+  <div class="corner-ornament br">
+    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="transform: scale(-1,-1)">
+      <path d="M0 0 L50 0 L50 8 Q20 8 8 20 L8 50 L0 50 Z" fill="none" stroke="#C8A445" stroke-width="1"/>
+      <path d="M50 0 Q10 10 0 50" fill="none" stroke="#C8A445" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="6" cy="6" r="2" fill="#C8A445"/>
+    </svg>
+  </div>
+
+  <div class="content">
+    <div class="star-deco">&#10039; &#10039; &#10039;</div>
+    <div class="quote-ar">العطر هو لغة لا تحتاج إلى ترجمة</div>
+    <div class="quote-en">"Fragrance is a language that needs no translation"</div>
+    <div class="star-deco-bottom">&#10039; &#10039; &#10039;</div>
+  </div>
+
+  <div class="logo-bottom">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="18" y="18" width="64" height="64" stroke="#C8A445" stroke-width="1.5" fill="none" transform="rotate(0 50 50)"/>
+      <rect x="18" y="18" width="64" height="64" stroke="#C8A445" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+      <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#C8A445">AJ</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ==================== VARIANT 3: BRAND AWARENESS ==================== -->
+<div class="variant-label">Variant 3 — Brand Awareness</div>
+<div class="post-container variant-3">
+  <div class="tile-border"></div>
+  <div class="tile-border-inner"></div>
+
+  <div class="content">
+    <div class="logo-large">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Eight-pointed star: two overlapping squares -->
+        <rect x="36" y="36" width="128" height="128" stroke="#C8A445" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
+        <rect x="36" y="36" width="128" height="128" stroke="#C8A445" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
+        <!-- Inner detail -->
+        <rect x="52" y="52" width="96" height="96" stroke="#C8A445" stroke-width="0.8" fill="none" transform="rotate(0 100 100)" opacity="0.35"/>
+        <rect x="52" y="52" width="96" height="96" stroke="#C8A445" stroke-width="0.8" fill="none" transform="rotate(45 100 100)" opacity="0.35"/>
+        <!-- Monogram -->
+        <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#1B5E3A">AJ</text>
+      </svg>
+    </div>
+
+    <div class="icons-row">
+      <!-- Oud (wood) icon -->
+      <div class="icon-item">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="28" cy="38" rx="10" ry="14" stroke="#1B5E3A" stroke-width="1.5"/>
+          <line x1="28" y1="24" x2="28" y2="8" stroke="#1B5E3A" stroke-width="1.5"/>
+          <line x1="28" y1="16" x2="22" y2="10" stroke="#1B5E3A" stroke-width="1.2"/>
+          <line x1="28" y1="18" x2="34" y2="12" stroke="#1B5E3A" stroke-width="1.2"/>
+          <line x1="22" y1="34" x2="34" y2="34" stroke="#1B5E3A" stroke-width="0.8" opacity="0.4"/>
+          <line x1="21" y1="38" x2="35" y2="38" stroke="#1B5E3A" stroke-width="0.8" opacity="0.4"/>
+          <line x1="22" y1="42" x2="34" y2="42" stroke="#1B5E3A" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+        <span>عود</span>
+      </div>
+      <!-- Incense burner icon -->
+      <div class="icon-item">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 42 L22 28 L34 28 L38 42 Z" stroke="#1B5E3A" stroke-width="1.5" fill="none"/>
+          <line x1="16" y1="42" x2="40" y2="42" stroke="#1B5E3A" stroke-width="1.5"/>
+          <ellipse cx="28" cy="28" rx="6" ry="2" stroke="#1B5E3A" stroke-width="1"/>
+          <path d="M28 24 Q26 18 28 14 Q30 10 28 6" stroke="#1B5E3A" stroke-width="1.2" fill="none"/>
+          <path d="M24 22 Q22 17 24 13" stroke="#1B5E3A" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <path d="M32 22 Q34 17 32 13" stroke="#1B5E3A" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <line x1="14" y1="46" x2="42" y2="46" stroke="#1B5E3A" stroke-width="1.2"/>
+          <line x1="16" y1="42" x2="14" y2="46" stroke="#1B5E3A" stroke-width="1.2"/>
+          <line x1="40" y1="42" x2="42" y2="46" stroke="#1B5E3A" stroke-width="1.2"/>
+        </svg>
+        <span>بخور</span>
+      </div>
+      <!-- Musk (perfume drop) icon -->
+      <div class="icon-item">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8 Q20 24 16 32 Q12 40 20 47 Q24 50 28 50 Q32 50 36 47 Q44 40 40 32 Q36 24 28 8 Z" stroke="#1B5E3A" stroke-width="1.5" fill="none"/>
+          <path d="M24 38 Q22 34 26 32" stroke="#1B5E3A" stroke-width="1" fill="none" opacity="0.4"/>
+          <circle cx="23" cy="40" r="1.5" fill="#1B5E3A" opacity="0.3"/>
+        </svg>
+        <span>مسك</span>
+      </div>
+    </div>
+
+    <div class="brand-tagline">
+      <div class="ar">عطر المدينة</div>
+      <div class="divider"></div>
+      <div class="en">The Essence of Madinah</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

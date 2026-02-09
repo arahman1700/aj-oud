@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJ — Logo Concepts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1B5E3A;
+      --gold: #C8A445;
+      --cream: #F5F0E8;
+      --charcoal: #1A1A1A;
+      --soft-gold: #E8D5A3;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #080808;
+      color: var(--cream);
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      padding: 70px 20px 50px;
+      border-bottom: 1px solid rgba(200,164,69,0.08);
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      direction: ltr;
+    }
+    .header p {
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: rgba(200,164,69,0.5);
+      margin-top: 10px;
+    }
+    .grid {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px 100px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; gap: 40px; } }
+    .card {
+      text-align: center;
+    }
+    .card-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 0.6rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(200,164,69,0.25);
+      margin-bottom: 20px;
+      direction: ltr;
+    }
+    .card svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .card-title {
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--gold);
+      margin-top: 24px;
+    }
+    .card-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: var(--soft-gold);
+      direction: ltr;
+      margin-top: 2px;
+    }
+    .card-desc {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      margin-top: 10px;
+      line-height: 1.7;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <h1>AJ &mdash; Logo Concepts</h1>
+  <p>اختر الشعار المناسب</p>
+</header>
+
+<main class="grid">
+
+  <!-- ============================================ -->
+  <!-- CONCEPT 1: THE OUD BLOSSOM                   -->
+  <!-- Bold 8-petal rosette — like a luxury emblem   -->
+  <!-- ============================================ -->
+  <div class="card">
+    <div class="card-num">Concept 01</div>
+    <svg viewBox="0 0 400 530" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="158" fill="#1B5E3A"/>
+      <circle cx="200" cy="200" r="158" fill="none" stroke="#C8A445" stroke-width="1.8" opacity="0.35"/>
+
+      <!-- 4 Primary petals (N/S/E/W) -->
+      <ellipse cx="200" cy="120" rx="34" ry="88" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5"/>
+      <ellipse cx="200" cy="120" rx="34" ry="88" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(90,200,200)"/>
+      <ellipse cx="200" cy="120" rx="34" ry="88" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(180,200,200)"/>
+      <ellipse cx="200" cy="120" rx="34" ry="88" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(270,200,200)"/>
+
+      <!-- 4 Secondary petals (diagonals) -->
+      <ellipse cx="200" cy="128" rx="30" ry="78" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(45,200,200)"/>
+      <ellipse cx="200" cy="128" rx="30" ry="78" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(135,200,200)"/>
+      <ellipse cx="200" cy="128" rx="30" ry="78" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(225,200,200)"/>
+      <ellipse cx="200" cy="128" rx="30" ry="78" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5" transform="rotate(315,200,200)"/>
+
+      <!-- Center layers -->
+      <circle cx="200" cy="200" r="32" fill="#C8A445" stroke="#1B5E3A" stroke-width="2.5"/>
+      <circle cx="200" cy="200" r="15" fill="#1B5E3A"/>
+      <circle cx="200" cy="200" r="6" fill="#C8A445"/>
+
+      <!-- Brand name below -->
+      <text x="200" y="445" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-weight="700" font-size="54" letter-spacing="12" fill="#C8A445" direction="ltr">AJ</text>
+      <text x="200" y="480" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#C8A445" opacity="0.45">عود · بخور · مسك</text>
+    </svg>
+    <div class="card-title">زهرة العود</div>
+    <div class="card-subtitle">The Oud Blossom</div>
+    <div class="card-desc">وردة ذهبية بثمانية بتلات — ترمز لانتشار العطر في كل اتجاه. مستوحاة من الزخارف الإسلامية الهندسية</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CONCEPT 2: THE GOLDEN DROP                    -->
+  <!-- Bold gold disc + negative-space oud drop      -->
+  <!-- ============================================ -->
+  <div class="card">
+    <div class="card-num">Concept 02</div>
+    <svg viewBox="0 0 400 530" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="158" fill="#1B5E3A"/>
+      <circle cx="200" cy="200" r="158" fill="none" stroke="#C8A445" stroke-width="1.8" opacity="0.35"/>
+
+      <!-- Bold gold disc -->
+      <circle cx="200" cy="200" r="108" fill="#C8A445"/>
+
+      <!-- Negative-space oud drop cutout -->
+      <path d="M 200,115
+               C 162,162 148,208 200,252
+               C 252,208 238,162 200,115 Z"
+            fill="#1B5E3A"/>
+
+      <!-- Thin gold outline around the drop -->
+      <path d="M 200,115
+               C 162,162 148,208 200,252
+               C 252,208 238,162 200,115 Z"
+            fill="none" stroke="#C8A445" stroke-width="1.2" opacity="0.4"/>
+
+      <!-- Tiny gold dot inside drop -->
+      <circle cx="200" cy="198" r="5" fill="#C8A445" opacity="0.5"/>
+
+      <!-- Thin inner ring on the disc -->
+      <circle cx="200" cy="200" r="108" fill="none" stroke="#1B5E3A" stroke-width="1" opacity="0.12"/>
+      <circle cx="200" cy="200" r="100" fill="none" stroke="#1B5E3A" stroke-width="0.6" opacity="0.08"/>
+
+      <!-- Brand name -->
+      <text x="200" y="445" text-anchor="middle" font-family="'Montserrat',sans-serif" font-weight="600" font-size="48" letter-spacing="14" fill="#C8A445" direction="ltr">AJ</text>
+      <text x="200" y="480" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#C8A445" opacity="0.45">عود · بخور · مسك</text>
+    </svg>
+    <div class="card-title">القطرة الذهبية</div>
+    <div class="card-subtitle">The Golden Drop</div>
+    <div class="card-desc">ختم ذهبي جريء بقطرة عود منحوتة في القلب — بساطة فاخرة ترمز لنفاسة كل قطرة من دهن العود</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CONCEPT 3: THE SACRED STAR                    -->
+  <!-- Bold 8-pointed star (two squares)             -->
+  <!-- ============================================ -->
+  <div class="card">
+    <div class="card-num">Concept 03</div>
+    <svg viewBox="0 0 400 530" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="158" fill="#1B5E3A"/>
+      <circle cx="200" cy="200" r="158" fill="none" stroke="#C8A445" stroke-width="1.8" opacity="0.35"/>
+
+      <!-- Two overlapping squares = 8-pointed star (SOLID FILL) -->
+      <rect x="102" y="102" width="196" height="196" rx="4" fill="#C8A445"/>
+      <rect x="102" y="102" width="196" height="196" rx="4" fill="#C8A445" transform="rotate(45,200,200)"/>
+
+      <!-- Center green circle cutout -->
+      <circle cx="200" cy="200" r="48" fill="#1B5E3A"/>
+
+      <!-- Gold diamond inside center -->
+      <polygon points="200,168 232,200 200,232 168,200" fill="#C8A445"/>
+
+      <!-- Green diamond inside -->
+      <polygon points="200,180 220,200 200,220 180,200" fill="#1B5E3A"/>
+
+      <!-- Tiny gold dot at very center -->
+      <circle cx="200" cy="200" r="4" fill="#C8A445"/>
+
+      <!-- Brand name -->
+      <text x="200" y="445" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-weight="700" font-size="54" letter-spacing="12" fill="#C8A445" direction="ltr">AJ</text>
+      <text x="200" y="480" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#C8A445" opacity="0.45">عود · بخور · مسك</text>
+    </svg>
+    <div class="card-title">النجمة الثمانية</div>
+    <div class="card-subtitle">The Sacred Star</div>
+    <div class="card-desc">نجمة الربع حزب — رمز إسلامي عريق بتنفيذ جريء وعصري. ألماسة ذهبية في القلب تمثل جوهر الطيب</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CONCEPT 4: THE AJ SEAL                        -->
+  <!-- Premium monogram — big bold AJ typography     -->
+  <!-- ============================================ -->
+  <div class="card">
+    <div class="card-num">Concept 04</div>
+    <svg viewBox="0 0 400 530" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="158" fill="#1B5E3A"/>
+      <circle cx="200" cy="200" r="158" fill="none" stroke="#C8A445" stroke-width="1.8" opacity="0.35"/>
+      <!-- Inner decorative ring -->
+      <circle cx="200" cy="200" r="148" fill="none" stroke="#C8A445" stroke-width="0.6" opacity="0.18"/>
+
+      <!-- Crown element: 3 gold diamonds above text -->
+      <polygon points="180,98 184,88 188,98 184,104" fill="#C8A445" opacity="0.7"/>
+      <polygon points="196,88 200,75 204,88 200,95" fill="#C8A445"/>
+      <polygon points="212,98 216,88 220,98 216,104" fill="#C8A445" opacity="0.7"/>
+      <!-- Crown arc -->
+      <path d="M 172,105 Q 200,82 228,105" fill="none" stroke="#C8A445" stroke-width="1.2" opacity="0.35"/>
+
+      <!-- LARGE BOLD AJ -->
+      <text x="200" y="260" text-anchor="middle"
+            font-family="'Playfair Display',Georgia,serif"
+            font-weight="900" font-size="155" letter-spacing="-4"
+            fill="#C8A445" direction="ltr">AJ</text>
+
+      <!-- Thin decorative line below -->
+      <line x1="130" y1="280" x2="270" y2="280" stroke="#C8A445" stroke-width="1" opacity="0.3"/>
+
+      <!-- Small tagline inside circle -->
+      <text x="200" y="310" text-anchor="middle" font-family="'Amiri',serif" font-size="16" fill="#C8A445" opacity="0.45">عطور المدينة</text>
+
+      <!-- Below circle -->
+      <text x="200" y="460" text-anchor="middle" font-family="'Tajawal',sans-serif" font-weight="300" font-size="13" letter-spacing="6" fill="#C8A445" opacity="0.4" direction="ltr">LUXURY OUD</text>
+      <text x="200" y="488" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#C8A445" opacity="0.35">عود · بخور · مسك</text>
+    </svg>
+    <div class="card-title">ختم AJ</div>
+    <div class="card-subtitle">The AJ Seal</div>
+    <div class="card-desc">ختم ملكي — حروف AJ بحجم جريء وخط فاخر مع تاج ذهبي. مثل شعارات دور الأزياء الراقية</div>
+  </div>
+
+</main>
+
+</body>
+</html>
