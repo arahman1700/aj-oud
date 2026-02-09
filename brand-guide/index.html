@@ -9,14 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --sage: #6B8F71;
-  --golden-amber: #C4956A;
-  --forest-deep: #1B3A2D;
-  --leaf-light: #A8C5A0;
-  --parchment: #F5F0E6;
-  --night-forest: #0E1F16;
-  --fern: #5C8A4D;
-  --stone: #9A8B7A;
+  --lavender: #8B6FAE;
+  --desert-sand: #D4A574;
+  --deep-plum: #4A2D5E;
+  --soft-lavender: #C8B8D8;
+  --cream: #F8F4F0;
+  --night-dark: #1A1520;
+  --sage-green: #8FA87A;
+  --warm-taupe: #A69080;
   --sidebar-w: 240px;
 }
 
@@ -26,8 +26,8 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: var(--night-forest);
-  background: var(--parchment);
+  color: var(--night-dark);
+  background: var(--cream);
   line-height: 1.6;
 }
 
@@ -37,7 +37,7 @@ body {
   top: 0; left: 0;
   width: var(--sidebar-w);
   height: 100vh;
-  background: var(--forest-deep);
+  background: var(--deep-plum);
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ body {
 .sidebar-logo {
   padding: 28px 20px 20px;
   text-align: center;
-  border-bottom: 1px solid rgba(107,143,113,0.2);
+  border-bottom: 1px solid rgba(139,111,174,0.2);
 }
 
 .sidebar-logo svg { width: 44px; height: 44px; }
@@ -58,14 +58,14 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 0.75rem;
-  color: var(--sage);
+  color: var(--lavender);
   letter-spacing: 0.25em;
   margin-top: 6px;
 }
 
 .sidebar-logo .sub-label {
   font-size: 0.55rem;
-  color: rgba(245,240,230,0.35);
+  color: rgba(248,244,240,0.35);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-top: 2px;
@@ -78,7 +78,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
-  color: rgba(245,240,230,0.6);
+  color: rgba(248,244,240,0.6);
   text-decoration: none;
   font-size: 0.72rem;
   font-weight: 500;
@@ -89,9 +89,9 @@ body {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-  color: var(--leaf-light);
-  background: rgba(107,143,113,0.08);
-  border-left-color: var(--sage);
+  color: var(--soft-lavender);
+  background: rgba(139,111,174,0.08);
+  border-left-color: var(--lavender);
 }
 
 .sidebar nav a .num {
@@ -102,10 +102,10 @@ body {
 
 .sidebar-footer {
   padding: 14px 20px;
-  border-top: 1px solid rgba(107,143,113,0.2);
+  border-top: 1px solid rgba(139,111,174,0.2);
   text-align: center;
   font-size: 0.55rem;
-  color: rgba(245,240,230,0.3);
+  color: rgba(248,244,240,0.3);
   letter-spacing: 0.08em;
 }
 
@@ -116,8 +116,8 @@ body {
   top: 14px; left: 14px;
   z-index: 1100;
   width: 40px; height: 40px;
-  background: var(--forest-deep);
-  border: 1px solid rgba(107,143,113,0.4);
+  background: var(--deep-plum);
+  border: 1px solid rgba(139,111,174,0.4);
   border-radius: 6px;
   cursor: pointer;
   align-items: center;
@@ -129,7 +129,7 @@ body {
 .mobile-toggle span::after {
   display: block;
   width: 18px; height: 1.5px;
-  background: var(--leaf-light);
+  background: var(--soft-lavender);
   transition: 0.3s;
 }
 
@@ -155,7 +155,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--lavender);
   opacity: 0.7;
   margin-bottom: 6px;
 }
@@ -164,7 +164,7 @@ section {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 2.2rem;
-  color: var(--night-forest);
+  color: var(--night-dark);
   margin-bottom: 4px;
   line-height: 1.2;
 }
@@ -173,7 +173,7 @@ section {
   font-family: 'Amiri', serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--stone);
+  color: var(--warm-taupe);
   direction: rtl;
   letter-spacing: 0;
   line-height: 1.8;
@@ -182,7 +182,7 @@ section {
 
 .section-sub {
   font-size: 0.78rem;
-  color: var(--stone);
+  color: var(--warm-taupe);
   opacity: 0.55;
   letter-spacing: 0.04em;
   margin-bottom: 36px;
@@ -191,7 +191,7 @@ section {
 .section-div {
   width: 48px;
   height: 1px;
-  background: var(--sage);
+  background: var(--lavender);
   margin-bottom: 36px;
 }
 
@@ -199,7 +199,7 @@ h3.sub-heading {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.15rem;
-  color: var(--forest-deep);
+  color: var(--deep-plum);
   margin-top: 44px;
   margin-bottom: 6px;
 }
@@ -213,7 +213,7 @@ p.sub-desc {
 
 /* ===== 01 COVER ===== */
 #cover {
-  background: var(--forest-deep);
+  background: var(--deep-plum);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,7 +228,7 @@ p.sub-desc {
   position: absolute;
   inset: 0;
   opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%236B8F71' stroke-width='0.5'%3E%3Crect x='10' y='10' width='60' height='60'/%3E%3Crect x='10' y='10' width='60' height='60' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='18'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%238B6FAE' stroke-width='0.5'%3E%3Crect x='10' y='10' width='60' height='60'/%3E%3Crect x='10' y='10' width='60' height='60' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='18'/%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 80px 80px;
 }
 
@@ -237,8 +237,8 @@ p.sub-desc {
   inset: 0;
   opacity: 0.025;
   background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 78px, rgba(107,143,113,1) 78px, rgba(107,143,113,1) 79px),
-    repeating-linear-gradient(90deg, transparent, transparent 78px, rgba(107,143,113,1) 78px, rgba(107,143,113,1) 79px);
+    repeating-linear-gradient(0deg, transparent, transparent 78px, rgba(139,111,174,1) 78px, rgba(139,111,174,1) 79px),
+    repeating-linear-gradient(90deg, transparent, transparent 78px, rgba(139,111,174,1) 78px, rgba(139,111,174,1) 79px);
 }
 
 #cover .content {
@@ -256,7 +256,7 @@ p.sub-desc {
 
 #cover .brand-name {
   font-family: 'Playfair Display', serif;
-  color: var(--parchment);
+  color: var(--cream);
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.7em;
@@ -266,7 +266,7 @@ p.sub-desc {
 
 #cover .brand-sub {
   font-size: 0.6rem;
-  color: rgba(245,240,230,0.45);
+  color: rgba(248,244,240,0.45);
   letter-spacing: 0.35em;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -274,7 +274,7 @@ p.sub-desc {
 
 #cover .tagline-ar {
   font-family: 'Amiri', serif;
-  color: var(--leaf-light);
+  color: var(--soft-lavender);
   font-size: 1.6rem;
   letter-spacing: 0;
   line-height: 1.8;
@@ -283,7 +283,7 @@ p.sub-desc {
 
 #cover .tagline-en {
   font-family: 'Playfair Display', serif;
-  color: rgba(245,240,230,0.6);
+  color: rgba(248,244,240,0.6);
   font-size: 0.85rem;
   font-weight: 500;
   font-style: italic;
@@ -294,13 +294,13 @@ p.sub-desc {
 #cover .cover-line {
   width: 80px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--sage), transparent);
+  background: linear-gradient(90deg, transparent, var(--lavender), transparent);
   margin-bottom: 40px;
 }
 
 #cover .doc-title {
   font-size: 0.55rem;
-  color: rgba(245,240,230,0.3);
+  color: rgba(248,244,240,0.3);
   letter-spacing: 0.4em;
   text-transform: uppercase;
 }
@@ -320,7 +320,7 @@ p.sub-desc {
   font-weight: 300;
   font-size: 0.88rem;
   line-height: 1.9;
-  color: var(--night-forest);
+  color: var(--night-dark);
 }
 
 .story-ar {
@@ -329,10 +329,10 @@ p.sub-desc {
   font-size: 1.15rem;
   line-height: 2;
   letter-spacing: 0;
-  color: var(--stone);
+  color: var(--warm-taupe);
   direction: rtl;
   text-align: right;
-  border-right: 2px solid var(--sage);
+  border-right: 2px solid var(--lavender);
   padding-right: 24px;
 }
 
@@ -343,13 +343,13 @@ p.sub-desc {
 }
 
 /* ===== 03 LOGO RULES ===== */
-#logo { background: var(--parchment); }
+#logo { background: var(--cream); }
 
 .logo-showcase {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--forest-deep);
+  background: var(--deep-plum);
   border-radius: 12px;
   padding: 64px;
   margin: 24px 0 36px;
@@ -361,7 +361,7 @@ p.sub-desc {
   position: absolute;
   inset: 0;
   opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%236B8F71' stroke-width='0.3'%3E%3Crect x='8' y='8' width='44' height='44'/%3E%3Crect x='8' y='8' width='44' height='44' transform='rotate(45 30 30)'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%238B6FAE' stroke-width='0.3'%3E%3Crect x='8' y='8' width='44' height='44'/%3E%3Crect x='8' y='8' width='44' height='44' transform='rotate(45 30 30)'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 60px 60px;
 }
 
@@ -379,8 +379,8 @@ p.sub-desc {
   align-items: center;
   justify-content: center;
   padding: 52px;
-  border: 1px dashed rgba(107,143,113,0.5);
-  background: rgba(107,143,113,0.03);
+  border: 1px dashed rgba(139,111,174,0.5);
+  background: rgba(139,111,174,0.03);
   border-radius: 6px;
 }
 
@@ -389,7 +389,7 @@ p.sub-desc {
 .cs-label {
   position: absolute;
   font-size: 0.55rem;
-  color: var(--sage);
+  color: var(--lavender);
   font-weight: 500;
   letter-spacing: 0.1em;
 }
@@ -408,7 +408,7 @@ p.sub-desc {
 
 .min-size-item { text-align: center; }
 .min-size-item svg { margin-bottom: 6px; }
-.min-size-item span { font-size: 0.6rem; color: var(--stone); opacity: 0.6; }
+.min-size-item span { font-size: 0.6rem; color: var(--warm-taupe); opacity: 0.6; }
 
 /* Logo Variants */
 .logo-variants-grid {
@@ -444,12 +444,12 @@ p.sub-desc {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--night-forest);
+  color: var(--night-dark);
 }
 
 .lv-info .lv-use {
   font-size: 0.55rem;
-  color: var(--stone);
+  color: var(--warm-taupe);
   opacity: 0.5;
   margin-top: 1px;
 }
@@ -497,7 +497,7 @@ p.sub-desc {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--warm-taupe);
   margin-bottom: 12px;
   margin-top: 28px;
 }
@@ -528,7 +528,7 @@ p.sub-desc {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 0.82rem;
-  color: var(--night-forest);
+  color: var(--night-dark);
   margin-bottom: 4px;
 }
 
@@ -569,7 +569,7 @@ p.sub-desc {
   border-radius: 10px;
 }
 
-.do-box { background: rgba(92,138,77,0.05); border: 1px solid rgba(92,138,77,0.15); }
+.do-box { background: rgba(143,168,122,0.05); border: 1px solid rgba(143,168,122,0.15); }
 .dont-box { background: rgba(200,50,50,0.03); border: 1px solid rgba(200,50,50,0.12); }
 
 .do-box h4, .dont-box h4 {
@@ -580,7 +580,7 @@ p.sub-desc {
   margin-bottom: 12px;
 }
 
-.do-box h4 { color: var(--fern); }
+.do-box h4 { color: var(--sage-green); }
 .dont-box h4 { color: #c44; }
 
 .do-box li, .dont-box li {
@@ -592,11 +592,11 @@ p.sub-desc {
   position: relative;
 }
 
-.do-box li::before { content: '\2713'; position: absolute; left: 0; color: var(--fern); font-weight: 700; }
+.do-box li::before { content: '\2713'; position: absolute; left: 0; color: var(--sage-green); font-weight: 700; }
 .dont-box li::before { content: '\2717'; position: absolute; left: 0; color: #c44; font-weight: 700; }
 
 /* ===== 05 TYPOGRAPHY ===== */
-#typography { background: var(--parchment); }
+#typography { background: var(--cream); }
 
 .type-specimens {
   display: grid;
@@ -616,32 +616,32 @@ p.sub-desc {
   font-size: 0.55rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--lavender);
   margin-bottom: 4px;
 }
 
 .type-fname {
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--night-forest);
+  color: var(--night-dark);
   letter-spacing: 0.05em;
   margin-bottom: 2px;
 }
 
 .type-role {
   font-size: 0.55rem;
-  color: var(--stone);
+  color: var(--warm-taupe);
   opacity: 0.5;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
-.type-sample { margin-bottom: 6px; color: var(--night-forest); }
+.type-sample { margin-bottom: 6px; color: var(--night-dark); }
 
 .type-alpha {
   font-size: 0.65rem;
-  color: var(--stone);
+  color: var(--warm-taupe);
   opacity: 0.35;
   margin-top: 12px;
   line-height: 1.8;
@@ -670,7 +670,7 @@ p.sub-desc {
   font-size: 0.55rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--lavender);
 }
 
 .ts-size {
@@ -693,7 +693,7 @@ p.sub-desc {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.2rem;
-  color: var(--forest-deep);
+  color: var(--deep-plum);
   margin-bottom: 8px;
 }
 
@@ -714,7 +714,7 @@ p.sub-desc {
   font-family: 'Amiri', serif;
   font-weight: 700;
   font-size: 1.4rem;
-  color: var(--forest-deep);
+  color: var(--deep-plum);
   letter-spacing: 0;
   line-height: 1.8;
   margin-bottom: 8px;
@@ -762,7 +762,7 @@ p.sub-desc {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: var(--night-forest);
+  color: var(--night-dark);
   margin-bottom: 2px;
 }
 
@@ -797,7 +797,7 @@ p.sub-desc {
 }
 
 /* ===== 07 PHOTOGRAPHY ===== */
-#photography { background: var(--parchment); }
+#photography { background: var(--cream); }
 
 .photo-grid {
   display: grid;
@@ -834,14 +834,14 @@ p.sub-desc {
   padding: 20px;
   background: #fff;
   border-radius: 10px;
-  border-left: 3px solid var(--sage);
+  border-left: 3px solid var(--lavender);
 }
 
 .photo-rule h4 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 0.82rem;
-  color: var(--forest-deep);
+  color: var(--deep-plum);
   margin-bottom: 6px;
 }
 
@@ -873,12 +873,12 @@ p.sub-desc {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--forest-deep);
-  border: 2px solid var(--sage);
+  background: var(--deep-plum);
+  border: 2px solid var(--lavender);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 10px rgba(27,58,45,0.2);
+  box-shadow: 0 2px 10px rgba(74,45,94,0.2);
 }
 
 .hl-circle svg { width: 26px; height: 26px; }
@@ -886,7 +886,7 @@ p.sub-desc {
 .hl-item span {
   font-size: 0.6rem;
   font-weight: 500;
-  color: var(--stone);
+  color: var(--warm-taupe);
   letter-spacing: 0.03em;
 }
 
@@ -916,7 +916,7 @@ p.sub-desc {
   text-align: center;
 }
 
-.st-label h4 { font-size: 0.72rem; font-weight: 600; color: var(--night-forest); }
+.st-label h4 { font-size: 0.72rem; font-weight: 600; color: var(--night-dark); }
 .st-label p { font-size: 0.55rem; color: #999; }
 
 .profile-row {
@@ -929,8 +929,8 @@ p.sub-desc {
 .profile-circle {
   width: 72px; height: 72px;
   border-radius: 50%;
-  background: var(--forest-deep);
-  border: 2px solid var(--sage);
+  background: var(--deep-plum);
+  border: 2px solid var(--lavender);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -939,7 +939,7 @@ p.sub-desc {
 
 .profile-circle svg { width: 40px; height: 40px; }
 
-.profile-info .pi-title { font-size: 0.75rem; font-weight: 600; color: var(--night-forest); margin-bottom: 2px; }
+.profile-info .pi-title { font-size: 0.75rem; font-weight: 600; color: var(--night-dark); margin-bottom: 2px; }
 .profile-info .pi-desc { font-size: 0.62rem; color: #999; }
 
 .voice-grid {
@@ -952,15 +952,15 @@ p.sub-desc {
 .voice-card {
   padding: 20px;
   border-radius: 10px;
-  background: var(--parchment);
-  border: 1px solid rgba(107,143,113,0.12);
+  background: var(--cream);
+  border: 1px solid rgba(139,111,174,0.12);
 }
 
 .voice-card h4 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 0.85rem;
-  color: var(--forest-deep);
+  color: var(--deep-plum);
   margin-bottom: 6px;
 }
 
@@ -1007,8 +1007,8 @@ p.sub-desc {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--parchment); }
-::-webkit-scrollbar-thumb { background: rgba(107,143,113,0.4); border-radius: 3px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: rgba(139,111,174,0.4); border-radius: 3px; }
 
 /* Print */
 @media print {
@@ -1029,9 +1029,9 @@ p.sub-desc {
 <aside class="sidebar" role="navigation">
   <div class="sidebar-logo">
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(0 50 50)"/>
-      <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-      <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#A8C5A0">AJ</text>
+      <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(0 50 50)"/>
+      <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+      <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#C8B8D8">AJ</text>
     </svg>
     <span class="brand-name">BRAND GUIDE</span>
     <span class="sub-label">Identity System 2026</span>
@@ -1059,11 +1059,11 @@ p.sub-desc {
   <div class="content">
     <div class="logo-main">
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
-        <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
-        <rect x="50" y="50" width="100" height="100" stroke="#6B8F71" stroke-width="0.7" fill="none" transform="rotate(0 100 100)" opacity="0.25"/>
-        <rect x="50" y="50" width="100" height="100" stroke="#6B8F71" stroke-width="0.7" fill="none" transform="rotate(45 100 100)" opacity="0.25"/>
-        <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#F5F0E6">AJ</text>
+        <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
+        <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
+        <rect x="50" y="50" width="100" height="100" stroke="#8B6FAE" stroke-width="0.7" fill="none" transform="rotate(0 100 100)" opacity="0.25"/>
+        <rect x="50" y="50" width="100" height="100" stroke="#8B6FAE" stroke-width="0.7" fill="none" transform="rotate(45 100 100)" opacity="0.25"/>
+        <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#F8F4F0">AJ</text>
       </svg>
     </div>
     <div class="brand-name">AJ Oud</div>
@@ -1085,8 +1085,8 @@ p.sub-desc {
 
     <div class="story-divider">
       <svg viewBox="0 0 60 80" width="48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 80 V30 Q5 5 30 5 Q55 5 55 30 V80" stroke="#6B8F71" stroke-width="1" fill="none"/>
-        <line x1="30" y1="18" x2="30" y2="65" stroke="#6B8F71" stroke-width="0.4" opacity="0.3"/>
+        <path d="M5 80 V30 Q5 5 30 5 Q55 5 55 30 V80" stroke="#8B6FAE" stroke-width="1" fill="none"/>
+        <line x1="30" y1="18" x2="30" y2="65" stroke="#8B6FAE" stroke-width="0.4" opacity="0.3"/>
       </svg>
     </div>
 
@@ -1110,14 +1110,14 @@ p.sub-desc {
     <div class="section-div"></div>
 
     <h3 class="sub-heading">Primary Logo</h3>
-    <p class="sub-desc">The AJ monogram sits within an eight-pointed star frame formed by two overlapping rotated squares, with sage green strokes on the Forest Deep background.</p>
+    <p class="sub-desc">The AJ monogram sits within an eight-pointed star frame formed by two overlapping rotated squares, with lavender strokes on the Deep Plum background.</p>
 
     <div class="logo-showcase">
       <div class="bg-pattern"></div>
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
-        <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
-        <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#A8C5A0">AJ</text>
+        <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
+        <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
+        <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#C8B8D8">AJ</text>
       </svg>
     </div>
 
@@ -1131,9 +1131,9 @@ p.sub-desc {
         <span class="cs-label lft">1x</span>
         <span class="cs-label rgt">1x</span>
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
         </svg>
       </div>
     </div>
@@ -1144,24 +1144,24 @@ p.sub-desc {
     <div class="min-size-row">
       <div class="min-size-item">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
         </svg>
         <span>Print: 25mm</span>
       </div>
       <div class="min-size-item">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
         </svg>
         <span>Digital: 48px</span>
       </div>
       <div class="min-size-item">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="3" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="3" fill="none" transform="rotate(45 50 50)"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="3" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="3" fill="none" transform="rotate(45 50 50)"/>
         </svg>
         <span>Favicon: 32px</span>
       </div>
@@ -1172,37 +1172,37 @@ p.sub-desc {
 
     <div class="logo-variants-grid">
       <div class="lv-card">
-        <div class="lv-display" style="background:var(--forest-deep);">
+        <div class="lv-display" style="background:var(--deep-plum);">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#A8C5A0">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#C8B8D8">AJ</text>
           </svg>
         </div>
         <div class="lv-info">
           <div class="lv-name">Primary</div>
-          <div class="lv-use">Sage frame, cream text on forest</div>
+          <div class="lv-use">Lavender frame, cream text on plum</div>
         </div>
       </div>
       <div class="lv-card">
-        <div class="lv-display" style="background:var(--parchment);">
+        <div class="lv-display" style="background:var(--cream);">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#1B3A2D" stroke-width="1.5" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#1B3A2D" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1B3A2D">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#4A2D5E" stroke-width="1.5" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#4A2D5E" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#4A2D5E">AJ</text>
           </svg>
         </div>
         <div class="lv-info">
           <div class="lv-name">Reversed</div>
-          <div class="lv-use">Forest frame and text on light</div>
+          <div class="lv-use">Plum frame and text on light</div>
         </div>
       </div>
       <div class="lv-card">
         <div class="lv-display" style="background:#fff;">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#0E1F16" stroke-width="1.5" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#0E1F16" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#1A1520" stroke-width="1.5" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#1A1520" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
           </svg>
         </div>
         <div class="lv-info">
@@ -1211,22 +1211,22 @@ p.sub-desc {
         </div>
       </div>
       <div class="lv-card">
-        <div class="lv-display" style="background:var(--night-forest);">
+        <div class="lv-display" style="background:var(--night-dark);">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#6B8F71">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#8B6FAE">AJ</text>
           </svg>
         </div>
         <div class="lv-info">
-          <div class="lv-name">Sage Foil</div>
-          <div class="lv-use">All sage on dark for luxury</div>
+          <div class="lv-name">Lavender Foil</div>
+          <div class="lv-use">All lavender on dark for luxury</div>
         </div>
       </div>
       <div class="lv-card">
         <div class="lv-display" style="background:#fff;">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <text x="50" y="58" text-anchor="middle" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#0E1F16">AJ</text>
+            <text x="50" y="58" text-anchor="middle" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#1A1520">AJ</text>
           </svg>
         </div>
         <div class="lv-info">
@@ -1242,9 +1242,9 @@ p.sub-desc {
     <div class="donts-grid">
       <div class="dont-card">
         <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="18" width="104" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-          <rect x="8" y="18" width="104" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 60 50)"/>
-          <text x="60" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+          <rect x="8" y="18" width="104" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+          <rect x="8" y="18" width="104" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 60 50)"/>
+          <text x="60" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
         </svg>
         <div class="x-label">Do not stretch</div>
       </div>
@@ -1258,17 +1258,17 @@ p.sub-desc {
       </div>
       <div class="dont-card">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(25deg);">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
         </svg>
         <div class="x-label">Do not rotate</div>
       </div>
       <div class="dont-card">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(3px 3px 6px rgba(0,0,0,0.5));">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
-          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#0E1F16">AJ</text>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="1.5" fill="none" transform="rotate(45 50 50)"/>
+          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#1A1520">AJ</text>
         </svg>
         <div class="x-label">Do not add effects</div>
       </div>
@@ -1287,31 +1287,31 @@ p.sub-desc {
     <div class="color-group-label">Primary Colors</div>
     <div class="colors-grid">
       <div class="color-card">
-        <div class="swatch-block" style="background:#6B8F71;"></div>
+        <div class="swatch-block" style="background:#8B6FAE;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Sage Green مريمية</div>
-          <div class="swatch-vals">HEX #6B8F71<br>RGB 107, 143, 113</div>
+          <div class="swatch-name">Lavender خزامى</div>
+          <div class="swatch-vals">HEX #8B6FAE<br>RGB 139, 111, 174</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="swatch-block" style="background:#C4956A;"></div>
+        <div class="swatch-block" style="background:#D4A574;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Golden Amber عنبر</div>
-          <div class="swatch-vals">HEX #C4956A<br>RGB 196, 149, 106</div>
+          <div class="swatch-name">Desert Sand رمال</div>
+          <div class="swatch-vals">HEX #D4A574<br>RGB 212, 165, 116</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="swatch-block" style="background:#1B3A2D;"></div>
+        <div class="swatch-block" style="background:#4A2D5E;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Forest Deep أخضر غامق</div>
-          <div class="swatch-vals">HEX #1B3A2D<br>RGB 27, 58, 45</div>
+          <div class="swatch-name">Deep Plum بنفسجي غامق</div>
+          <div class="swatch-vals">HEX #4A2D5E<br>RGB 74, 45, 94</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="swatch-block" style="background:#0E1F16;"></div>
+        <div class="swatch-block" style="background:#1A1520;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Night Forest ليل الغابة</div>
-          <div class="swatch-vals">HEX #0E1F16<br>RGB 14, 31, 22</div>
+          <div class="swatch-name">Night Dark ليلي</div>
+          <div class="swatch-vals">HEX #1A1520<br>RGB 26, 21, 32</div>
         </div>
       </div>
     </div>
@@ -1319,31 +1319,31 @@ p.sub-desc {
     <div class="color-group-label">Secondary Colors</div>
     <div class="colors-grid" style="grid-template-columns:repeat(4,1fr);">
       <div class="color-card">
-        <div class="swatch-block" style="background:#A8C5A0;"></div>
+        <div class="swatch-block" style="background:#C8B8D8;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Leaf Light أخضر فاتح</div>
-          <div class="swatch-vals">HEX #A8C5A0<br>RGB 168, 197, 160</div>
+          <div class="swatch-name">Soft Lavender خزامى فاتح</div>
+          <div class="swatch-vals">HEX #C8B8D8<br>RGB 200, 184, 216</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="swatch-block" style="background:#F5F0E6; border-bottom:1px solid rgba(0,0,0,0.05);"></div>
+        <div class="swatch-block" style="background:#F8F4F0; border-bottom:1px solid rgba(0,0,0,0.05);"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Parchment رقّي</div>
-          <div class="swatch-vals">HEX #F5F0E6<br>RGB 245, 240, 230</div>
+          <div class="swatch-name">Cream كريمي</div>
+          <div class="swatch-vals">HEX #F8F4F0<br>RGB 248, 244, 240</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="swatch-block" style="background:#5C8A4D;"></div>
+        <div class="swatch-block" style="background:#8FA87A;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Fern سرخس</div>
-          <div class="swatch-vals">HEX #5C8A4D<br>RGB 92, 138, 77</div>
+          <div class="swatch-name">Sage Green مريمية</div>
+          <div class="swatch-vals">HEX #8FA87A<br>RGB 143, 168, 122</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="swatch-block" style="background:#9A8B7A;"></div>
+        <div class="swatch-block" style="background:#A69080;"></div>
         <div class="swatch-info">
-          <div class="swatch-name">Stone حجر</div>
-          <div class="swatch-vals">HEX #9A8B7A<br>RGB 154, 139, 122</div>
+          <div class="swatch-name">Warm Taupe بيج</div>
+          <div class="swatch-vals">HEX #A69080<br>RGB 166, 144, 128</div>
         </div>
       </div>
     </div>
@@ -1351,8 +1351,8 @@ p.sub-desc {
     <h3 class="sub-heading">Gradients</h3>
     <p class="sub-desc">Approved gradient definitions for backgrounds and accents.</p>
     <div class="gradient-row">
-      <div class="gradient-card" style="background:linear-gradient(135deg,#6B8F71,#1B3A2D);">Sage to Forest</div>
-      <div class="gradient-card" style="background:linear-gradient(135deg,#1B3A2D,#C4956A);">Forest to Amber</div>
+      <div class="gradient-card" style="background:linear-gradient(135deg,#8B6FAE,#4A2D5E);">Lavender to Plum</div>
+      <div class="gradient-card" style="background:linear-gradient(135deg,#4A2D5E,#D4A574);">Plum to Sand</div>
     </div>
 
     <h3 class="sub-heading">Color Usage</h3>
@@ -1360,17 +1360,17 @@ p.sub-desc {
       <div class="do-box">
         <h4>Do</h4>
         <ul>
-          <li>Use Sage Green as the primary brand accent color</li>
-          <li>Pair Forest Deep with sage accents for contrast</li>
-          <li>Use Parchment for page backgrounds</li>
-          <li>Use Night Forest for body text</li>
-          <li>Apply Leaf Light for subtle highlights</li>
+          <li>Use Lavender as the primary brand accent color</li>
+          <li>Pair Deep Plum with lavender accents for contrast</li>
+          <li>Use Cream for page backgrounds</li>
+          <li>Use Night Dark for body text</li>
+          <li>Apply Soft Lavender for subtle highlights</li>
         </ul>
       </div>
       <div class="dont-box">
         <h4>Don't</h4>
         <ul>
-          <li>Place Leaf Light text on Parchment (low contrast)</li>
+          <li>Place Soft Lavender text on Cream (low contrast)</li>
           <li>Use more than 3 brand colors in one composition</li>
           <li>Apply colors at reduced opacity below 40%</li>
           <li>Substitute brand colors with similar shades</li>
@@ -1431,12 +1431,12 @@ p.sub-desc {
       <div class="ts-row">
         <span class="ts-label">Display</span>
         <span class="ts-size">48 / 56px</span>
-        <span style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--forest-deep);">AJ Oud</span>
+        <span style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--deep-plum);">AJ Oud</span>
       </div>
       <div class="ts-row">
         <span class="ts-label">H1</span>
         <span class="ts-size">36 / 44px</span>
-        <span style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; color:var(--night-forest);">Our Collection</span>
+        <span style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; color:var(--night-dark);">Our Collection</span>
       </div>
       <div class="ts-row">
         <span class="ts-label">H2</span>
@@ -1466,7 +1466,7 @@ p.sub-desc {
       <div class="ts-row">
         <span class="ts-label">Overline</span>
         <span class="ts-size">10 / 16px</span>
-        <span style="font-family:'Montserrat',sans-serif; font-size:0.55rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage);">New Arrival</span>
+        <span style="font-family:'Montserrat',sans-serif; font-size:0.55rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--lavender);">New Arrival</span>
       </div>
     </div>
 
@@ -1496,13 +1496,13 @@ p.sub-desc {
     <div class="patterns-grid">
       <!-- Geometric Tile -->
       <div class="pat-card">
-        <div class="pat-display" style="background:var(--forest-deep);">
+        <div class="pat-display" style="background:var(--deep-plum);">
           <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
             <defs>
               <pattern id="geo" x="0" y="0" width="45" height="45" patternUnits="userSpaceOnUse">
-                <rect x="4" y="4" width="37" height="37" stroke="#6B8F71" stroke-width="0.5" fill="none"/>
-                <rect x="4" y="4" width="37" height="37" stroke="#6B8F71" stroke-width="0.5" fill="none" transform="rotate(45 22.5 22.5)"/>
-                <circle cx="22.5" cy="22.5" r="7" stroke="#6B8F71" stroke-width="0.3" fill="none"/>
+                <rect x="4" y="4" width="37" height="37" stroke="#8B6FAE" stroke-width="0.5" fill="none"/>
+                <rect x="4" y="4" width="37" height="37" stroke="#8B6FAE" stroke-width="0.5" fill="none" transform="rotate(45 22.5 22.5)"/>
+                <circle cx="22.5" cy="22.5" r="7" stroke="#8B6FAE" stroke-width="0.3" fill="none"/>
               </pattern>
             </defs>
             <rect width="180" height="180" fill="url(#geo)" opacity="0.6"/>
@@ -1513,26 +1513,26 @@ p.sub-desc {
           <p>Interlocking octagons and stars for backgrounds.</p>
         </div>
       </div>
-      <!-- Sage Divider -->
+      <!-- Lavender Divider -->
       <div class="pat-card">
-        <div class="pat-display" style="background:var(--parchment);">
+        <div class="pat-display" style="background:var(--cream);">
           <svg width="180" height="36" viewBox="0 0 180 36" fill="none">
-            <line x1="8" y1="18" x2="76" y2="18" stroke="#6B8F71" stroke-width="0.75"/>
-            <polygon points="90,6 98,18 90,30 82,18" stroke="#6B8F71" stroke-width="0.75" fill="none"/>
-            <line x1="104" y1="18" x2="172" y2="18" stroke="#6B8F71" stroke-width="0.75"/>
+            <line x1="8" y1="18" x2="76" y2="18" stroke="#8B6FAE" stroke-width="0.75"/>
+            <polygon points="90,6 98,18 90,30 82,18" stroke="#8B6FAE" stroke-width="0.75" fill="none"/>
+            <line x1="104" y1="18" x2="172" y2="18" stroke="#8B6FAE" stroke-width="0.75"/>
           </svg>
         </div>
         <div class="pat-info">
-          <h4>Sage Divider</h4>
+          <h4>Lavender Divider</h4>
           <p>Thin line with centered star for section breaks.</p>
         </div>
       </div>
       <!-- Mihrab Arch -->
       <div class="pat-card">
-        <div class="pat-display" style="background:var(--forest-deep);">
+        <div class="pat-display" style="background:var(--deep-plum);">
           <svg width="100" height="160" viewBox="0 0 100 160" fill="none">
-            <path d="M8 160 V50 Q8 8 50 8 Q92 8 92 50 V160" stroke="#6B8F71" stroke-width="1.5" fill="none"/>
-            <path d="M20 160 V55 Q20 22 50 22 Q80 22 80 55 V160" stroke="#6B8F71" stroke-width="0.6" fill="none" opacity="0.35"/>
+            <path d="M8 160 V50 Q8 8 50 8 Q92 8 92 50 V160" stroke="#8B6FAE" stroke-width="1.5" fill="none"/>
+            <path d="M20 160 V55 Q20 22 50 22 Q80 22 80 55 V160" stroke="#8B6FAE" stroke-width="0.6" fill="none" opacity="0.35"/>
           </svg>
         </div>
         <div class="pat-info">
@@ -1542,17 +1542,17 @@ p.sub-desc {
       </div>
       <!-- Corner Ornaments -->
       <div class="pat-card">
-        <div class="pat-display" style="background:var(--night-forest); position:relative;">
+        <div class="pat-display" style="background:var(--night-dark); position:relative;">
           <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
-            <path d="M10 10 L50 10" stroke="#6B8F71" stroke-width="0.8"/><path d="M10 10 L10 50" stroke="#6B8F71" stroke-width="0.8"/>
-            <path d="M10 10 Q30 10 30 30" stroke="#6B8F71" stroke-width="0.5" opacity="0.5"/>
-            <circle cx="10" cy="10" r="2" fill="#6B8F71" opacity="0.7"/>
-            <path d="M170 10 L130 10" stroke="#6B8F71" stroke-width="0.8"/><path d="M170 10 L170 50" stroke="#6B8F71" stroke-width="0.8"/>
-            <circle cx="170" cy="10" r="2" fill="#6B8F71" opacity="0.7"/>
-            <path d="M10 170 L50 170" stroke="#6B8F71" stroke-width="0.8"/><path d="M10 170 L10 130" stroke="#6B8F71" stroke-width="0.8"/>
-            <circle cx="10" cy="170" r="2" fill="#6B8F71" opacity="0.7"/>
-            <path d="M170 170 L130 170" stroke="#6B8F71" stroke-width="0.8"/><path d="M170 170 L170 130" stroke="#6B8F71" stroke-width="0.8"/>
-            <circle cx="170" cy="170" r="2" fill="#6B8F71" opacity="0.7"/>
+            <path d="M10 10 L50 10" stroke="#8B6FAE" stroke-width="0.8"/><path d="M10 10 L10 50" stroke="#8B6FAE" stroke-width="0.8"/>
+            <path d="M10 10 Q30 10 30 30" stroke="#8B6FAE" stroke-width="0.5" opacity="0.5"/>
+            <circle cx="10" cy="10" r="2" fill="#8B6FAE" opacity="0.7"/>
+            <path d="M170 10 L130 10" stroke="#8B6FAE" stroke-width="0.8"/><path d="M170 10 L170 50" stroke="#8B6FAE" stroke-width="0.8"/>
+            <circle cx="170" cy="10" r="2" fill="#8B6FAE" opacity="0.7"/>
+            <path d="M10 170 L50 170" stroke="#8B6FAE" stroke-width="0.8"/><path d="M10 170 L10 130" stroke="#8B6FAE" stroke-width="0.8"/>
+            <circle cx="10" cy="170" r="2" fill="#8B6FAE" opacity="0.7"/>
+            <path d="M170 170 L130 170" stroke="#8B6FAE" stroke-width="0.8"/><path d="M170 170 L170 130" stroke="#8B6FAE" stroke-width="0.8"/>
+            <circle cx="170" cy="170" r="2" fill="#8B6FAE" opacity="0.7"/>
           </svg>
         </div>
         <div class="pat-info">
@@ -1562,11 +1562,11 @@ p.sub-desc {
       </div>
       <!-- Eight-Pointed Star -->
       <div class="pat-card">
-        <div class="pat-display" style="background:var(--night-forest);">
+        <div class="pat-display" style="background:var(--night-dark);">
           <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-            <rect x="20" y="20" width="60" height="60" stroke="#6B8F71" stroke-width="1.5" transform="rotate(0 50 50)"/>
-            <rect x="20" y="20" width="60" height="60" stroke="#6B8F71" stroke-width="1.5" transform="rotate(45 50 50)"/>
-            <circle cx="50" cy="50" r="10" stroke="#6B8F71" stroke-width="0.5" fill="none"/>
+            <rect x="20" y="20" width="60" height="60" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(0 50 50)"/>
+            <rect x="20" y="20" width="60" height="60" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(45 50 50)"/>
+            <circle cx="50" cy="50" r="10" stroke="#8B6FAE" stroke-width="0.5" fill="none"/>
           </svg>
         </div>
         <div class="pat-info">
@@ -1576,14 +1576,14 @@ p.sub-desc {
       </div>
       <!-- Background Pattern -->
       <div class="pat-card">
-        <div class="pat-display" style="background:var(--forest-deep);">
+        <div class="pat-display" style="background:var(--deep-plum);">
           <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
             <defs>
               <pattern id="bgp" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
-                <line x1="0" y1="18" x2="36" y2="18" stroke="#6B8F71" stroke-width="0.15"/>
-                <line x1="18" y1="0" x2="18" y2="36" stroke="#6B8F71" stroke-width="0.15"/>
-                <circle cx="18" cy="18" r="5" stroke="#6B8F71" stroke-width="0.25" fill="none"/>
-                <rect x="13" y="13" width="10" height="10" stroke="#6B8F71" stroke-width="0.15" fill="none" transform="rotate(45 18 18)"/>
+                <line x1="0" y1="18" x2="36" y2="18" stroke="#8B6FAE" stroke-width="0.15"/>
+                <line x1="18" y1="0" x2="18" y2="36" stroke="#8B6FAE" stroke-width="0.15"/>
+                <circle cx="18" cy="18" r="5" stroke="#8B6FAE" stroke-width="0.25" fill="none"/>
+                <rect x="13" y="13" width="10" height="10" stroke="#8B6FAE" stroke-width="0.15" fill="none" transform="rotate(45 18 18)"/>
               </pattern>
             </defs>
             <rect width="180" height="180" fill="url(#bgp)" opacity="0.5"/>
@@ -1600,32 +1600,32 @@ p.sub-desc {
     <p class="sub-desc">Use patterns and elements at varying opacity for different visual weight.</p>
     <div class="opacity-row">
       <div class="opacity-item">
-        <div class="opacity-box" style="background:var(--forest-deep);">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none"><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
+        <div class="opacity-box" style="background:var(--deep-plum);">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none"><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
         </div>
         <span>100%</span>
       </div>
       <div class="opacity-item">
-        <div class="opacity-box" style="background:var(--forest-deep);">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.6"><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
+        <div class="opacity-box" style="background:var(--deep-plum);">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.6"><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
         </div>
         <span>60%</span>
       </div>
       <div class="opacity-item">
-        <div class="opacity-box" style="background:var(--forest-deep);">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.3"><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
+        <div class="opacity-box" style="background:var(--deep-plum);">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.3"><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
         </div>
         <span>30%</span>
       </div>
       <div class="opacity-item">
-        <div class="opacity-box" style="background:var(--forest-deep);">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.1"><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
+        <div class="opacity-box" style="background:var(--deep-plum);">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.1"><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
         </div>
         <span>10%</span>
       </div>
       <div class="opacity-item">
-        <div class="opacity-box" style="background:var(--forest-deep);">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.04"><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#6B8F71" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
+        <div class="opacity-box" style="background:var(--deep-plum);">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" opacity="0.04"><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(0 40 40)"/><rect x="14" y="14" width="52" height="52" stroke="#8B6FAE" stroke-width="1.5" transform="rotate(45 40 40)"/></svg>
         </div>
         <span>4%</span>
       </div>
@@ -1642,11 +1642,11 @@ p.sub-desc {
     <div class="section-div"></div>
 
     <div class="photo-grid">
-      <div class="photo-ph hero" style="background:linear-gradient(135deg,#1B3A2D,#6B8F71);">Oud Wood Texture<br>Warm, close-up detail<br>Natural lighting</div>
-      <div class="photo-ph" style="background:linear-gradient(135deg,#0E1F16,#1B3A2D);">Incense Smoke<br>Dark background</div>
-      <div class="photo-ph" style="background:linear-gradient(135deg,#6B8F71,#A8C5A0); color:var(--forest-deep);">Nature Accents<br>Product detail</div>
-      <div class="photo-ph" style="background:linear-gradient(135deg,#F5F0E6,#C4956A); color:var(--stone);">Desert Surface<br>Clean, minimal</div>
-      <div class="photo-ph" style="background:linear-gradient(135deg,#5C8A4D,#1B3A2D);">Natural Elements<br>Sage, earth tones</div>
+      <div class="photo-ph hero" style="background:linear-gradient(135deg,#4A2D5E,#8B6FAE);">Oud Wood Texture<br>Warm, close-up detail<br>Natural lighting</div>
+      <div class="photo-ph" style="background:linear-gradient(135deg,#1A1520,#4A2D5E);">Incense Smoke<br>Dark background</div>
+      <div class="photo-ph" style="background:linear-gradient(135deg,#8B6FAE,#C8B8D8); color:var(--deep-plum);">Lavender Accents<br>Product detail</div>
+      <div class="photo-ph" style="background:linear-gradient(135deg,#F8F4F0,#D4A574); color:var(--warm-taupe);">Desert Surface<br>Clean, minimal</div>
+      <div class="photo-ph" style="background:linear-gradient(135deg,#8FA87A,#4A2D5E);">Natural Elements<br>Sage, earth tones</div>
     </div>
 
     <div class="photo-rules">
@@ -1664,7 +1664,7 @@ p.sub-desc {
       </div>
       <div class="photo-rule">
         <h4>Color Grading</h4>
-        <p>Warm shadows, desaturated midtones. Lifted blacks for luxury. Nature-toned highlights where possible.</p>
+        <p>Warm shadows, desaturated midtones. Lifted blacks for luxury. Lavender highlights where possible.</p>
       </div>
       <div class="photo-rule">
         <h4>Smoke &amp; Atmosphere</h4>
@@ -1687,36 +1687,36 @@ p.sub-desc {
     <div class="section-div"></div>
 
     <h3 class="sub-heading">Story Highlight Icons</h3>
-    <p class="sub-desc">Circular icons with Forest Deep background and Leaf Light line icons.</p>
+    <p class="sub-desc">Circular icons with Deep Plum background and Soft Lavender line icons.</p>
 
     <div class="highlight-icons">
       <div class="hl-item">
         <div class="hl-circle">
-          <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="30" rx="8" ry="11" stroke="#A8C5A0" stroke-width="1.5"/><line x1="24" y1="19" x2="24" y2="8" stroke="#A8C5A0" stroke-width="1.5"/><line x1="24" y1="12" x2="19" y2="7" stroke="#A8C5A0" stroke-width="1"/><line x1="24" y1="14" x2="29" y2="9" stroke="#A8C5A0" stroke-width="1"/></svg>
+          <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="30" rx="8" ry="11" stroke="#C8B8D8" stroke-width="1.5"/><line x1="24" y1="19" x2="24" y2="8" stroke="#C8B8D8" stroke-width="1.5"/><line x1="24" y1="12" x2="19" y2="7" stroke="#C8B8D8" stroke-width="1"/><line x1="24" y1="14" x2="29" y2="9" stroke="#C8B8D8" stroke-width="1"/></svg>
         </div>
         <span>Oud</span>
       </div>
       <div class="hl-item">
         <div class="hl-circle">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M17 36 L21 26 L27 26 L31 36 Z" stroke="#A8C5A0" stroke-width="1.5" fill="none"/><line x1="15" y1="36" x2="33" y2="36" stroke="#A8C5A0" stroke-width="1.5"/><path d="M24 22 Q22 16 24 12 Q26 8 24 4" stroke="#A8C5A0" stroke-width="1.2" fill="none"/></svg>
+          <svg viewBox="0 0 48 48" fill="none"><path d="M17 36 L21 26 L27 26 L31 36 Z" stroke="#C8B8D8" stroke-width="1.5" fill="none"/><line x1="15" y1="36" x2="33" y2="36" stroke="#C8B8D8" stroke-width="1.5"/><path d="M24 22 Q22 16 24 12 Q26 8 24 4" stroke="#C8B8D8" stroke-width="1.2" fill="none"/></svg>
         </div>
         <span>Incense</span>
       </div>
       <div class="hl-item">
         <div class="hl-circle">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M24 8 Q18 20 14 28 Q10 36 18 42 Q22 44 24 44 Q26 44 30 42 Q38 36 34 28 Q30 20 24 8Z" stroke="#A8C5A0" stroke-width="1.5" fill="none"/></svg>
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 8 Q18 20 14 28 Q10 36 18 42 Q22 44 24 44 Q26 44 30 42 Q38 36 34 28 Q30 20 24 8Z" stroke="#C8B8D8" stroke-width="1.5" fill="none"/></svg>
         </div>
         <span>Musk</span>
       </div>
       <div class="hl-item">
         <div class="hl-circle">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" rx="2" stroke="#A8C5A0" stroke-width="1.5"/><rect x="10" y="10" width="28" height="28" rx="2" stroke="#A8C5A0" stroke-width="1" transform="rotate(45 24 24)" opacity="0.4"/></svg>
+          <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" rx="2" stroke="#C8B8D8" stroke-width="1.5"/><rect x="10" y="10" width="28" height="28" rx="2" stroke="#C8B8D8" stroke-width="1" transform="rotate(45 24 24)" opacity="0.4"/></svg>
         </div>
         <span>Collections</span>
       </div>
       <div class="hl-item">
         <div class="hl-circle">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="14" y="14" width="20" height="20" stroke="#A8C5A0" stroke-width="1.2" fill="none" transform="rotate(0 24 24)"/><rect x="14" y="14" width="20" height="20" stroke="#A8C5A0" stroke-width="1.2" fill="none" transform="rotate(45 24 24)"/><text x="24" y="27" text-anchor="middle" font-family="'Playfair Display',serif" font-size="8" font-weight="700" fill="#A8C5A0">AJ</text></svg>
+          <svg viewBox="0 0 48 48" fill="none"><rect x="14" y="14" width="20" height="20" stroke="#C8B8D8" stroke-width="1.2" fill="none" transform="rotate(0 24 24)"/><rect x="14" y="14" width="20" height="20" stroke="#C8B8D8" stroke-width="1.2" fill="none" transform="rotate(45 24 24)"/><text x="24" y="27" text-anchor="middle" font-family="'Playfair Display',serif" font-size="8" font-weight="700" fill="#C8B8D8">AJ</text></svg>
         </div>
         <span>About</span>
       </div>
@@ -1727,12 +1727,12 @@ p.sub-desc {
 
     <div class="social-templates">
       <div class="st-card">
-        <div class="st-preview" style="background:var(--forest-deep);">
+        <div class="st-preview" style="background:var(--deep-plum);">
           <svg viewBox="0 0 200 200" width="140" fill="none">
-            <rect x="20" y="20" width="160" height="160" rx="3" stroke="#6B8F71" stroke-width="0.5" fill="none"/>
-            <rect x="60" y="60" width="80" height="80" stroke="#6B8F71" stroke-width="0.5" fill="none" transform="rotate(45 100 100)"/>
-            <text x="100" y="95" text-anchor="middle" font-family="'Playfair Display',serif" font-size="13" fill="#A8C5A0" font-weight="600">Product Name</text>
-            <text x="100" y="112" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" fill="#6B8F71" letter-spacing="2">COLLECTION</text>
+            <rect x="20" y="20" width="160" height="160" rx="3" stroke="#8B6FAE" stroke-width="0.5" fill="none"/>
+            <rect x="60" y="60" width="80" height="80" stroke="#8B6FAE" stroke-width="0.5" fill="none" transform="rotate(45 100 100)"/>
+            <text x="100" y="95" text-anchor="middle" font-family="'Playfair Display',serif" font-size="13" fill="#C8B8D8" font-weight="600">Product Name</text>
+            <text x="100" y="112" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" fill="#8B6FAE" letter-spacing="2">COLLECTION</text>
           </svg>
         </div>
         <div class="st-label">
@@ -1741,13 +1741,13 @@ p.sub-desc {
         </div>
       </div>
       <div class="st-card">
-        <div class="st-preview" style="background:var(--night-forest);">
+        <div class="st-preview" style="background:var(--night-dark);">
           <svg viewBox="0 0 200 200" width="140" fill="none">
-            <text x="100" y="60" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#6B8F71">بسم الله</text>
-            <line x1="60" y1="72" x2="140" y2="72" stroke="#6B8F71" stroke-width="0.4"/>
-            <text x="100" y="108" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#F5F0E6" font-weight="500" font-style="italic">"Scent is the</text>
-            <text x="100" y="122" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#F5F0E6" font-weight="500" font-style="italic">language of memory."</text>
-            <text x="100" y="155" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" fill="#6B8F71" letter-spacing="3">AJ</text>
+            <text x="100" y="60" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#8B6FAE">بسم الله</text>
+            <line x1="60" y1="72" x2="140" y2="72" stroke="#8B6FAE" stroke-width="0.4"/>
+            <text x="100" y="108" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#F8F4F0" font-weight="500" font-style="italic">"Scent is the</text>
+            <text x="100" y="122" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#F8F4F0" font-weight="500" font-style="italic">language of memory."</text>
+            <text x="100" y="155" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" fill="#8B6FAE" letter-spacing="3">AJ</text>
           </svg>
         </div>
         <div class="st-label">
@@ -1756,13 +1756,13 @@ p.sub-desc {
         </div>
       </div>
       <div class="st-card">
-        <div class="st-preview" style="background:linear-gradient(135deg,var(--parchment),var(--leaf-light));">
+        <div class="st-preview" style="background:linear-gradient(135deg,var(--cream),var(--soft-lavender));">
           <svg viewBox="0 0 200 200" width="140" fill="none">
-            <rect x="40" y="30" width="120" height="100" rx="3" stroke="#1B3A2D" stroke-width="0.5" fill="none"/>
-            <text x="100" y="75" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="6" fill="#1B3A2D" letter-spacing="1.5">PHOTO AREA</text>
-            <line x1="60" y1="148" x2="140" y2="148" stroke="#6B8F71" stroke-width="0.4"/>
-            <text x="100" y="164" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#1B3A2D" font-weight="600">Product Name</text>
-            <text x="100" y="178" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="6" fill="#9A8B7A">SAR 000</text>
+            <rect x="40" y="30" width="120" height="100" rx="3" stroke="#4A2D5E" stroke-width="0.5" fill="none"/>
+            <text x="100" y="75" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="6" fill="#4A2D5E" letter-spacing="1.5">PHOTO AREA</text>
+            <line x1="60" y1="148" x2="140" y2="148" stroke="#8B6FAE" stroke-width="0.4"/>
+            <text x="100" y="164" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#4A2D5E" font-weight="600">Product Name</text>
+            <text x="100" y="178" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="6" fill="#A69080">SAR 000</text>
           </svg>
         </div>
         <div class="st-label">
@@ -1773,19 +1773,19 @@ p.sub-desc {
     </div>
 
     <h3 class="sub-heading">Profile Picture</h3>
-    <p class="sub-desc">Use the AJ monogram on Forest Deep background. Ensure the star frame is visible at small sizes.</p>
+    <p class="sub-desc">Use the AJ monogram on Deep Plum background. Ensure the star frame is visible at small sizes.</p>
 
     <div class="profile-row">
       <div class="profile-circle">
         <svg viewBox="0 0 100 100" fill="none">
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
-          <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display',serif" font-size="22" font-weight="700" fill="#A8C5A0">AJ</text>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
+          <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+          <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display',serif" font-size="22" font-weight="700" fill="#C8B8D8">AJ</text>
         </svg>
       </div>
       <div class="profile-info">
         <div class="pi-title">Profile Picture</div>
-        <div class="pi-desc">320 x 320px minimum &bull; Circular crop &bull; Forest Deep background</div>
+        <div class="pi-desc">320 x 320px minimum &bull; Circular crop &bull; Deep Plum background</div>
       </div>
     </div>
 
