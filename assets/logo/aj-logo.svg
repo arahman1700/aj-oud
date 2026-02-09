@@ -2,13 +2,13 @@
   <defs>
     <style>
       :root {
-        --aj-green: #1B5E3A;
-        --aj-gold: #C8A445;
-        --aj-cream: #F5F0E8;
-        --aj-brown: #5C3A1E;
-        --aj-charcoal: #1A1A1A;
-        --aj-palm: #2D7A4F;
-        --aj-soft-gold: #E8D5A3;
+        --aj-plum: #4A2D5E;
+        --aj-lavender: #8B6FAE;
+        --aj-cream: #F8F4F0;
+        --aj-sand: #D4A574;
+        --aj-night: #1A1520;
+        --aj-palm: #6B4D8A;
+        --aj-soft-lavender: #C8B8D8;
       }
       .brand-name {
         font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -26,12 +26,12 @@
   <!-- CIRCULAR EMBLEM                          -->
   <!-- ======================================== -->
   <g id="emblem">
-    <!-- Green circle background -->
-    <circle cx="200" cy="190" r="152" fill="#1B5E3A"/>
-    <!-- Outer gold ring -->
-    <circle cx="200" cy="190" r="152" fill="none" stroke="#C8A445" stroke-width="2"/>
+    <!-- Deep plum circle background -->
+    <circle cx="200" cy="190" r="152" fill="#4A2D5E"/>
+    <!-- Outer lavender ring -->
+    <circle cx="200" cy="190" r="152" fill="none" stroke="#8B6FAE" stroke-width="2"/>
     <!-- Inner decorative ring -->
-    <circle cx="200" cy="190" r="144" fill="none" stroke="#C8A445" stroke-width="0.6" opacity="0.3"/>
+    <circle cx="200" cy="190" r="144" fill="none" stroke="#8B6FAE" stroke-width="0.6" opacity="0.3"/>
 
     <!-- ================================ -->
     <!-- THREE SMOKE TRAILS               -->
@@ -43,29 +43,29 @@
              C 207,238 191,215 200,190
              C 209,165 191,142 200,118
              C 205,100 196,82 200,60"
-          fill="none" stroke="#C8A445" stroke-width="4" stroke-linecap="round"/>
+          fill="none" stroke="#8B6FAE" stroke-width="4" stroke-linecap="round"/>
 
     <!-- Left smoke trail (البخور) - flowing left -->
     <path d="M 188,268
              C 176,244 158,228 162,200
              C 166,172 152,155 160,128
              C 165,112 158,98 164,78"
-          fill="none" stroke="#C8A445" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+          fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
 
     <!-- Right smoke trail (المسك) - flowing right -->
     <path d="M 212,268
              C 224,244 242,228 238,200
              C 234,172 248,155 240,128
              C 235,112 242,98 236,78"
-          fill="none" stroke="#C8A445" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+          fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
 
     <!-- Convergence accent - small star at top -->
     <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5"
-             fill="#C8A445" opacity="0.6"/>
+             fill="#8B6FAE" opacity="0.6"/>
 
     <!-- Smoke tip accents -->
-    <circle cx="164" cy="74" r="1.8" fill="#C8A445" opacity="0.45"/>
-    <circle cx="236" cy="74" r="1.8" fill="#C8A445" opacity="0.45"/>
+    <circle cx="164" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
+    <circle cx="236" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
 
     <!-- ================================ -->
     <!-- MABKHARA (مبخرة)                 -->
@@ -77,10 +77,10 @@
              Q 174,268 174,282
              L 226,282
              Q 226,268 200,262 Z"
-          fill="#C8A445"/>
+          fill="#8B6FAE"/>
 
     <!-- Rim band -->
-    <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#C8A445"/>
+    <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#8B6FAE"/>
 
     <!-- Bowl body - wide elegant curve -->
     <path d="M 166,287
@@ -92,39 +92,39 @@
              Q 260,330 256,312
              Q 250,293 234,287
              Z"
-          fill="#C8A445"/>
+          fill="#8B6FAE"/>
 
     <!-- Bowl geometric decoration -->
-    <line x1="150" y1="318" x2="250" y2="318" stroke="#1B5E3A" stroke-width="0.6" opacity="0.18"/>
-    <line x1="148" y1="324" x2="252" y2="324" stroke="#1B5E3A" stroke-width="0.6" opacity="0.18"/>
-    <line x1="148" y1="330" x2="252" y2="330" stroke="#1B5E3A" stroke-width="0.6" opacity="0.18"/>
+    <line x1="150" y1="318" x2="250" y2="318" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
+    <line x1="148" y1="324" x2="252" y2="324" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
+    <line x1="148" y1="330" x2="252" y2="330" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
     <!-- Small diamond ornament on bowl -->
-    <polygon points="200,314 206,322 200,330 194,322" fill="#1B5E3A" opacity="0.12"/>
+    <polygon points="200,314 206,322 200,330 194,322" fill="#4A2D5E" opacity="0.12"/>
 
     <!-- Waist transition -->
     <path d="M 170,356
              Q 180,362 192,365
              L 208,365
              Q 220,362 230,356"
-          fill="#C8A445"/>
+          fill="#8B6FAE"/>
 
     <!-- Stem -->
-    <rect x="190" y="365" width="20" height="12" fill="#C8A445"/>
+    <rect x="190" y="365" width="20" height="12" fill="#8B6FAE"/>
 
     <!-- Base flare -->
     <path d="M 190,377
              Q 182,380 176,386
              L 224,386
              Q 218,380 210,377 Z"
-          fill="#C8A445"/>
+          fill="#8B6FAE"/>
 
     <!-- Base plate -->
-    <rect x="170" y="386" width="60" height="4" rx="2" fill="#C8A445"/>
+    <rect x="170" y="386" width="60" height="4" rx="2" fill="#8B6FAE"/>
 
     <!-- Tiny foot details -->
-    <circle cx="175" cy="392" r="1" fill="#C8A445" opacity="0.4"/>
-    <circle cx="200" cy="392" r="1" fill="#C8A445" opacity="0.4"/>
-    <circle cx="225" cy="392" r="1" fill="#C8A445" opacity="0.4"/>
+    <circle cx="175" cy="392" r="1" fill="#8B6FAE" opacity="0.4"/>
+    <circle cx="200" cy="392" r="1" fill="#8B6FAE" opacity="0.4"/>
+    <circle cx="225" cy="392" r="1" fill="#8B6FAE" opacity="0.4"/>
   </g>
 
   <!-- ======================================== -->
@@ -134,13 +134,13 @@
         text-anchor="middle"
         class="brand-name"
         font-size="52"
-        fill="#C8A445">AJ</text>
+        fill="#8B6FAE">AJ</text>
 
   <!-- Arabic subtitle -->
   <text x="200" y="478"
         text-anchor="middle"
         class="brand-subtitle"
         font-size="15"
-        fill="#C8A445"
+        fill="#8B6FAE"
         opacity="0.6">عطور فاخرة من المدينة المنورة</text>
 </svg>
