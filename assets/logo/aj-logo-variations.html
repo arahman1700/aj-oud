@@ -7,25 +7,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --aj-plum: #4A2D5E;
-      --aj-lavender: #8B6FAE;
-      --aj-cream: #F8F4F0;
-      --aj-sand: #D4A574;
-      --aj-night: #1A1520;
-      --aj-palm: #6B4D8A;
-      --aj-soft-lavender: #C8B8D8;
+      --aj-forest-deep: #1B3A2D;
+      --aj-sage: #6B8F71;
+      --aj-parchment: #F5F0E6;
+      --aj-golden-amber: #C4956A;
+      --aj-night-forest: #0E1F16;
+      --aj-fern: #2D5F3F;
+      --aj-leaf-light: #A8C5A0;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: #FAFAFA;
-      color: var(--aj-night);
+      color: var(--aj-night-forest);
       min-height: 100vh;
     }
     .page-header {
       text-align: center;
       padding: 60px 20px 40px;
-      border-bottom: 1px solid var(--aj-soft-lavender);
+      border-bottom: 1px solid var(--aj-leaf-light);
       background: white;
     }
     .page-header h1 {
@@ -33,13 +33,13 @@
       font-weight: 400;
       font-size: 2.4rem;
       letter-spacing: 0.15em;
-      color: var(--aj-night);
+      color: var(--aj-night-forest);
     }
-    .page-header h1 span { color: var(--aj-lavender); }
+    .page-header h1 span { color: var(--aj-sage); }
     .page-header .arabic-subtitle {
       font-family: 'Amiri', serif;
       font-size: 1rem;
-      color: var(--aj-lavender);
+      color: var(--aj-sage);
       margin-top: 8px;
       direction: rtl;
     }
@@ -145,85 +145,85 @@
 
     <!-- ===== 1. PRIMARY: Lavender on Deep Plum Circle, Cream BG ===== -->
     <div class="variation-card primary">
-      <div class="variation-display" style="background: #F8F4F0;">
+      <div class="variation-display" style="background: #F5F0E6;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
           <g id="emblem-primary">
-            <circle cx="200" cy="190" r="152" fill="#4A2D5E"/>
-            <circle cx="200" cy="190" r="152" fill="none" stroke="#8B6FAE" stroke-width="2"/>
-            <circle cx="200" cy="190" r="144" fill="none" stroke="#8B6FAE" stroke-width="0.6" opacity="0.3"/>
+            <circle cx="200" cy="190" r="152" fill="#1B3A2D"/>
+            <circle cx="200" cy="190" r="152" fill="none" stroke="#6B8F71" stroke-width="2"/>
+            <circle cx="200" cy="190" r="144" fill="none" stroke="#6B8F71" stroke-width="0.6" opacity="0.3"/>
             <!-- Smoke -->
-            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#8B6FAE" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#8B6FAE" opacity="0.6"/>
-            <circle cx="164" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
-            <circle cx="236" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
+            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#6B8F71" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#6B8F71" opacity="0.6"/>
+            <circle cx="164" cy="74" r="1.8" fill="#6B8F71" opacity="0.45"/>
+            <circle cx="236" cy="74" r="1.8" fill="#6B8F71" opacity="0.45"/>
             <!-- Mabkhara -->
-            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#8B6FAE"/>
-            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#8B6FAE"/>
-            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#8B6FAE"/>
-            <line x1="150" y1="318" x2="250" y2="318" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <line x1="148" y1="324" x2="252" y2="324" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <line x1="148" y1="330" x2="252" y2="330" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <polygon points="200,314 206,322 200,330 194,322" fill="#4A2D5E" opacity="0.12"/>
-            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#8B6FAE"/>
-            <rect x="190" y="365" width="20" height="12" fill="#8B6FAE"/>
-            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#8B6FAE"/>
-            <rect x="170" y="386" width="60" height="4" rx="2" fill="#8B6FAE"/>
+            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#6B8F71"/>
+            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#6B8F71"/>
+            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#6B8F71"/>
+            <line x1="150" y1="318" x2="250" y2="318" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <line x1="148" y1="324" x2="252" y2="324" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <line x1="148" y1="330" x2="252" y2="330" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <polygon points="200,314 206,322 200,330 194,322" fill="#1B3A2D" opacity="0.12"/>
+            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#6B8F71"/>
+            <rect x="190" y="365" width="20" height="12" fill="#6B8F71"/>
+            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#6B8F71"/>
+            <rect x="170" y="386" width="60" height="4" rx="2" fill="#6B8F71"/>
           </g>
-          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#8B6FAE">AJ</text>
-          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#8B6FAE" opacity="0.6">عطور فاخرة من المدينة المنورة</text>
+          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#6B8F71">AJ</text>
+          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#6B8F71" opacity="0.6">عطور فاخرة من المدينة المنورة</text>
         </svg>
       </div>
       <div class="variation-label">
         <h3>Primary</h3>
         <p>Lavender emblem on Deep Plum &bull; Cream background</p>
         <div class="color-swatches">
-          <div class="color-swatch" style="background: #4A2D5E;"></div>
-          <div class="color-swatch" style="background: #8B6FAE;"></div>
-          <div class="color-swatch" style="background: #F8F4F0;"></div>
+          <div class="color-swatch" style="background: #1B3A2D;"></div>
+          <div class="color-swatch" style="background: #6B8F71;"></div>
+          <div class="color-swatch" style="background: #F5F0E6;"></div>
         </div>
       </div>
     </div>
 
     <!-- ===== 2. REVERSED: On Night Dark Background ===== -->
     <div class="variation-card">
-      <div class="variation-display" style="background: #1A1520;">
+      <div class="variation-display" style="background: #0E1F16;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
           <g>
-            <circle cx="200" cy="190" r="152" fill="#4A2D5E"/>
-            <circle cx="200" cy="190" r="152" fill="none" stroke="#8B6FAE" stroke-width="2"/>
-            <circle cx="200" cy="190" r="144" fill="none" stroke="#8B6FAE" stroke-width="0.6" opacity="0.3"/>
-            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#8B6FAE" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#8B6FAE" opacity="0.6"/>
-            <circle cx="164" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
-            <circle cx="236" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
-            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#8B6FAE"/>
-            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#8B6FAE"/>
-            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#8B6FAE"/>
-            <line x1="150" y1="318" x2="250" y2="318" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <line x1="148" y1="324" x2="252" y2="324" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <line x1="148" y1="330" x2="252" y2="330" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <polygon points="200,314 206,322 200,330 194,322" fill="#4A2D5E" opacity="0.12"/>
-            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#8B6FAE"/>
-            <rect x="190" y="365" width="20" height="12" fill="#8B6FAE"/>
-            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#8B6FAE"/>
-            <rect x="170" y="386" width="60" height="4" rx="2" fill="#8B6FAE"/>
+            <circle cx="200" cy="190" r="152" fill="#1B3A2D"/>
+            <circle cx="200" cy="190" r="152" fill="none" stroke="#6B8F71" stroke-width="2"/>
+            <circle cx="200" cy="190" r="144" fill="none" stroke="#6B8F71" stroke-width="0.6" opacity="0.3"/>
+            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#6B8F71" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#6B8F71" opacity="0.6"/>
+            <circle cx="164" cy="74" r="1.8" fill="#6B8F71" opacity="0.45"/>
+            <circle cx="236" cy="74" r="1.8" fill="#6B8F71" opacity="0.45"/>
+            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#6B8F71"/>
+            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#6B8F71"/>
+            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#6B8F71"/>
+            <line x1="150" y1="318" x2="250" y2="318" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <line x1="148" y1="324" x2="252" y2="324" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <line x1="148" y1="330" x2="252" y2="330" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <polygon points="200,314 206,322 200,330 194,322" fill="#1B3A2D" opacity="0.12"/>
+            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#6B8F71"/>
+            <rect x="190" y="365" width="20" height="12" fill="#6B8F71"/>
+            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#6B8F71"/>
+            <rect x="170" y="386" width="60" height="4" rx="2" fill="#6B8F71"/>
           </g>
-          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#F8F4F0">AJ</text>
-          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#F8F4F0" opacity="0.5">عطور فاخرة من المدينة المنورة</text>
+          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#F5F0E6">AJ</text>
+          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#F5F0E6" opacity="0.5">عطور فاخرة من المدينة المنورة</text>
         </svg>
       </div>
       <div class="variation-label">
         <h3>Reversed</h3>
         <p>Plum emblem &bull; Cream text on Night Dark</p>
         <div class="color-swatches">
-          <div class="color-swatch" style="background: #4A2D5E;"></div>
-          <div class="color-swatch" style="background: #8B6FAE;"></div>
-          <div class="color-swatch" style="background: #F8F4F0;"></div>
-          <div class="color-swatch" style="background: #1A1520;"></div>
+          <div class="color-swatch" style="background: #1B3A2D;"></div>
+          <div class="color-swatch" style="background: #6B8F71;"></div>
+          <div class="color-swatch" style="background: #F5F0E6;"></div>
+          <div class="color-swatch" style="background: #0E1F16;"></div>
         </div>
       </div>
     </div>
@@ -254,8 +254,8 @@
             <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#D0D0D0"/>
             <rect x="170" y="386" width="60" height="4" rx="2" fill="#D0D0D0"/>
           </g>
-          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#1A1520">AJ</text>
-          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#1A1520" opacity="0.5">عطور فاخرة من المدينة المنورة</text>
+          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#0E1F16">AJ</text>
+          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#0E1F16" opacity="0.5">عطور فاخرة من المدينة المنورة</text>
         </svg>
       </div>
       <div class="variation-label">
@@ -271,70 +271,70 @@
 
     <!-- ===== 4. LAVENDER FOIL ===== -->
     <div class="variation-card">
-      <div class="variation-display" style="background: #1A1520;">
+      <div class="variation-display" style="background: #0E1F16;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
           <g>
             <circle cx="200" cy="190" r="152" fill="#111011"/>
-            <circle cx="200" cy="190" r="152" fill="none" stroke="#8B6FAE" stroke-width="2"/>
-            <circle cx="200" cy="190" r="144" fill="none" stroke="#8B6FAE" stroke-width="0.6" opacity="0.4"/>
-            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#8B6FAE" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#8B6FAE" opacity="0.7"/>
-            <circle cx="164" cy="74" r="1.8" fill="#8B6FAE" opacity="0.5"/>
-            <circle cx="236" cy="74" r="1.8" fill="#8B6FAE" opacity="0.5"/>
-            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#8B6FAE"/>
-            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#8B6FAE"/>
-            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#8B6FAE"/>
+            <circle cx="200" cy="190" r="152" fill="none" stroke="#6B8F71" stroke-width="2"/>
+            <circle cx="200" cy="190" r="144" fill="none" stroke="#6B8F71" stroke-width="0.6" opacity="0.4"/>
+            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#6B8F71" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#6B8F71" opacity="0.7"/>
+            <circle cx="164" cy="74" r="1.8" fill="#6B8F71" opacity="0.5"/>
+            <circle cx="236" cy="74" r="1.8" fill="#6B8F71" opacity="0.5"/>
+            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#6B8F71"/>
+            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#6B8F71"/>
+            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#6B8F71"/>
             <line x1="150" y1="318" x2="250" y2="318" stroke="#111011" stroke-width="0.6" opacity="0.2"/>
             <line x1="148" y1="324" x2="252" y2="324" stroke="#111011" stroke-width="0.6" opacity="0.2"/>
             <line x1="148" y1="330" x2="252" y2="330" stroke="#111011" stroke-width="0.6" opacity="0.2"/>
             <polygon points="200,314 206,322 200,330 194,322" fill="#111011" opacity="0.15"/>
-            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#8B6FAE"/>
-            <rect x="190" y="365" width="20" height="12" fill="#8B6FAE"/>
-            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#8B6FAE"/>
-            <rect x="170" y="386" width="60" height="4" rx="2" fill="#8B6FAE"/>
+            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#6B8F71"/>
+            <rect x="190" y="365" width="20" height="12" fill="#6B8F71"/>
+            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#6B8F71"/>
+            <rect x="170" y="386" width="60" height="4" rx="2" fill="#6B8F71"/>
           </g>
-          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#8B6FAE">AJ</text>
-          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#8B6FAE" opacity="0.5">عطور فاخرة من المدينة المنورة</text>
+          <text x="200" y="448" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="52" letter-spacing="12" fill="#6B8F71">AJ</text>
+          <text x="200" y="478" text-anchor="middle" font-family="'Amiri', serif" font-size="15" fill="#6B8F71" opacity="0.5">عطور فاخرة من المدينة المنورة</text>
         </svg>
       </div>
       <div class="variation-label">
         <h3>Lavender Foil</h3>
         <p>Full Lavender on Black</p>
         <div class="color-swatches">
-          <div class="color-swatch" style="background: #8B6FAE;"></div>
+          <div class="color-swatch" style="background: #6B8F71;"></div>
           <div class="color-swatch" style="background: #111011;"></div>
-          <div class="color-swatch" style="background: #1A1520;"></div>
+          <div class="color-swatch" style="background: #0E1F16;"></div>
         </div>
       </div>
     </div>
 
     <!-- ===== 5. ICON ONLY (Profile Picture) ===== -->
     <div class="variation-card">
-      <div class="variation-display" style="background: #F8F4F0;">
+      <div class="variation-display" style="background: #F5F0E6;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 20 340 340">
           <g>
-            <circle cx="200" cy="190" r="152" fill="#4A2D5E"/>
-            <circle cx="200" cy="190" r="152" fill="none" stroke="#8B6FAE" stroke-width="2"/>
-            <circle cx="200" cy="190" r="144" fill="none" stroke="#8B6FAE" stroke-width="0.6" opacity="0.3"/>
-            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#8B6FAE" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#8B6FAE" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
-            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#8B6FAE" opacity="0.6"/>
-            <circle cx="164" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
-            <circle cx="236" cy="74" r="1.8" fill="#8B6FAE" opacity="0.45"/>
-            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#8B6FAE"/>
-            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#8B6FAE"/>
-            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#8B6FAE"/>
-            <line x1="150" y1="318" x2="250" y2="318" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <line x1="148" y1="324" x2="252" y2="324" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <line x1="148" y1="330" x2="252" y2="330" stroke="#4A2D5E" stroke-width="0.6" opacity="0.18"/>
-            <polygon points="200,314 206,322 200,330 194,322" fill="#4A2D5E" opacity="0.12"/>
-            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#8B6FAE"/>
-            <rect x="190" y="365" width="20" height="12" fill="#8B6FAE"/>
-            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#8B6FAE"/>
-            <rect x="170" y="386" width="60" height="4" rx="2" fill="#8B6FAE"/>
+            <circle cx="200" cy="190" r="152" fill="#1B3A2D"/>
+            <circle cx="200" cy="190" r="152" fill="none" stroke="#6B8F71" stroke-width="2"/>
+            <circle cx="200" cy="190" r="144" fill="none" stroke="#6B8F71" stroke-width="0.6" opacity="0.3"/>
+            <path d="M 200,262 C 207,238 191,215 200,190 C 209,165 191,142 200,118 C 205,100 196,82 200,60" fill="none" stroke="#6B8F71" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 186,268 C 176,244 158,228 162,200 C 166,172 152,155 160,128 C 165,112 158,98 164,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <path d="M 214,268 C 224,244 242,228 238,200 C 234,172 248,155 240,128 C 235,112 242,98 236,78" fill="none" stroke="#6B8F71" stroke-width="3.2" stroke-linecap="round" opacity="0.8"/>
+            <polygon points="200,52 202.5,56.5 207,57 203.5,60.5 204.5,65 200,62.5 195.5,65 196.5,60.5 193,57 197.5,56.5" fill="#6B8F71" opacity="0.6"/>
+            <circle cx="164" cy="74" r="1.8" fill="#6B8F71" opacity="0.45"/>
+            <circle cx="236" cy="74" r="1.8" fill="#6B8F71" opacity="0.45"/>
+            <path d="M 200,262 Q 174,268 174,282 L 226,282 Q 226,268 200,262 Z" fill="#6B8F71"/>
+            <rect x="166" y="282" width="68" height="5" rx="2.5" fill="#6B8F71"/>
+            <path d="M 166,287 Q 150,293 144,312 Q 140,330 148,344 Q 154,352 170,356 L 230,356 Q 246,352 252,344 Q 260,330 256,312 Q 250,293 234,287 Z" fill="#6B8F71"/>
+            <line x1="150" y1="318" x2="250" y2="318" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <line x1="148" y1="324" x2="252" y2="324" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <line x1="148" y1="330" x2="252" y2="330" stroke="#1B3A2D" stroke-width="0.6" opacity="0.18"/>
+            <polygon points="200,314 206,322 200,330 194,322" fill="#1B3A2D" opacity="0.12"/>
+            <path d="M 170,356 Q 180,362 192,365 L 208,365 Q 220,362 230,356" fill="#6B8F71"/>
+            <rect x="190" y="365" width="20" height="12" fill="#6B8F71"/>
+            <path d="M 190,377 Q 182,380 176,386 L 224,386 Q 218,380 210,377 Z" fill="#6B8F71"/>
+            <rect x="170" y="386" width="60" height="4" rx="2" fill="#6B8F71"/>
           </g>
           <!-- No text - icon only for profile pictures -->
         </svg>
@@ -343,8 +343,8 @@
         <h3>Icon Only</h3>
         <p>Emblem for Profile Pictures &bull; No text</p>
         <div class="color-swatches">
-          <div class="color-swatch" style="background: #4A2D5E;"></div>
-          <div class="color-swatch" style="background: #8B6FAE;"></div>
+          <div class="color-swatch" style="background: #1B3A2D;"></div>
+          <div class="color-swatch" style="background: #6B8F71;"></div>
         </div>
       </div>
     </div>

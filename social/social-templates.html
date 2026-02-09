@@ -9,19 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --deep-plum: #4A2D5E;
-    --lavender: #8B6FAE;
-    --cream: #F8F4F0;
-    --desert-sand: #D4A574;
-    --night-dark: #1A1520;
-    --sage-green: #8FA87A;
-    --soft-lavender: #C8B8D8;
+    --forest-deep: #1B3A2D;
+    --sage: #6B8F71;
+    --parchment: #F5F0E6;
+    --golden-amber: #C4956A;
+    --night-forest: #0E1F16;
+    --fern: #5C8A4D;
+    --leaf-light: #A8C5A0;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--cream);
+    background: var(--parchment);
     font-family: 'Tajawal', sans-serif;
     min-height: 100vh;
     padding: 60px 40px 80px;
@@ -42,7 +42,7 @@
 
   .page-header h1 {
     font-family: 'Playfair Display', serif;
-    color: var(--night-dark);
+    color: var(--night-forest);
     font-size: 32px;
     font-weight: 400;
     letter-spacing: 6px;
@@ -51,13 +51,13 @@
   }
 
   .page-header h1 span {
-    color: var(--lavender);
+    color: var(--sage);
     font-weight: 700;
   }
 
   .page-header .subtitle {
     font-family: 'Montserrat', sans-serif;
-    color: var(--desert-sand);
+    color: var(--golden-amber);
     font-size: 13px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -67,7 +67,7 @@
   .divider {
     width: 60px;
     height: 1px;
-    background: var(--lavender);
+    background: var(--sage);
     margin: 16px auto 0;
   }
 
@@ -78,7 +78,7 @@
 
   .section-title {
     font-family: 'Montserrat', sans-serif;
-    color: var(--deep-plum);
+    color: var(--forest-deep);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -88,7 +88,7 @@
 
   .section-subtitle {
     font-family: 'Montserrat', sans-serif;
-    color: var(--desert-sand);
+    color: var(--golden-amber);
     font-size: 11px;
     letter-spacing: 1px;
     opacity: 0.5;
@@ -188,11 +188,11 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: var(--deep-plum);
+    background: var(--forest-deep);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 10px rgba(74,45,94,0.25);
+    box-shadow: 0 2px 10px rgba(27,58,45,0.25);
   }
 
   .highlight-circle svg {
@@ -202,7 +202,7 @@
 
   .highlight-label {
     font-family: 'Tajawal', sans-serif;
-    color: var(--night-dark);
+    color: var(--night-forest);
     font-size: 13px;
     font-weight: 500;
     direction: rtl;
@@ -212,7 +212,7 @@
 
   /* --- Post 1: Product Showcase --- */
   .mini-post-1 {
-    background: var(--deep-plum);
+    background: var(--forest-deep);
     width: 100%;
     height: 100%;
     display: flex;
@@ -228,7 +228,7 @@
     inset: 0;
     opacity: 0.05;
     background-image:
-      repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg 45deg, var(--lavender) 45deg 90deg);
+      repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg 45deg, var(--sage) 45deg 90deg);
     background-size: 40px 40px;
   }
 
@@ -258,14 +258,14 @@
   .mini-mihrab .ph {
     width: 65%;
     height: 65%;
-    background: linear-gradient(135deg, var(--desert-sand), #a07850);
+    background: linear-gradient(135deg, var(--golden-amber), #a07850);
     border-radius: 2px;
     z-index: 1;
   }
 
   .mini-post-1 .name-ar {
     font-family: 'Amiri', serif;
-    color: var(--cream);
+    color: var(--parchment);
     font-size: clamp(10px, 1.8vw, 18px);
     letter-spacing: 0;
     line-height: 1.8;
@@ -273,7 +273,7 @@
 
   .mini-post-1 .name-en {
     font-family: 'Montserrat', sans-serif;
-    color: var(--soft-lavender);
+    color: var(--leaf-light);
     font-size: clamp(7px, 0.9vw, 10px);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -281,7 +281,7 @@
 
   .mini-post-1 .price {
     font-family: 'Montserrat', sans-serif;
-    color: var(--lavender);
+    color: var(--sage);
     font-size: clamp(9px, 1.2vw, 14px);
     font-weight: 600;
     margin-top: 4%;
@@ -297,7 +297,7 @@
 
   /* --- Post 2: Quote --- */
   .mini-post-2 {
-    background: var(--night-dark);
+    background: var(--night-forest);
     width: 100%;
     height: 100%;
     display: flex;
@@ -311,18 +311,18 @@
   .mini-post-2 .border-o {
     position: absolute;
     inset: 4%;
-    border: 1px solid var(--lavender);
+    border: 1px solid var(--sage);
   }
 
   .mini-post-2 .border-i {
     position: absolute;
     inset: 6%;
-    border: 0.5px solid var(--lavender);
+    border: 0.5px solid var(--sage);
     opacity: 0.4;
   }
 
   .mini-post-2 .stars {
-    color: var(--lavender);
+    color: var(--sage);
     font-size: clamp(8px, 1.2vw, 14px);
     letter-spacing: 6px;
     opacity: 0.7;
@@ -331,7 +331,7 @@
 
   .mini-post-2 .q-ar {
     font-family: 'Amiri', serif;
-    color: var(--cream);
+    color: var(--parchment);
     font-size: clamp(9px, 1.6vw, 18px);
     letter-spacing: 0;
     line-height: 1.8;
@@ -342,7 +342,7 @@
 
   .mini-post-2 .q-en {
     font-family: 'Montserrat', sans-serif;
-    color: var(--soft-lavender);
+    color: var(--leaf-light);
     font-size: clamp(6px, 0.85vw, 10px);
     font-style: italic;
     font-weight: 300;
@@ -352,7 +352,7 @@
   }
 
   .mini-post-2 .stars-b {
-    color: var(--lavender);
+    color: var(--sage);
     font-size: clamp(8px, 1.2vw, 14px);
     letter-spacing: 6px;
     opacity: 0.7;
@@ -370,7 +370,7 @@
 
   /* --- Post 3: Brand Awareness --- */
   .mini-post-3 {
-    background: var(--cream);
+    background: var(--parchment);
     width: 100%;
     height: 100%;
     display: flex;
@@ -385,7 +385,7 @@
     position: absolute;
     inset: 0;
     border: clamp(8px, 1.5vw, 18px) solid transparent;
-    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(74,45,94,0.06) 4px, rgba(74,45,94,0.06) 5px) border-box;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(27,58,45,0.06) 4px, rgba(27,58,45,0.06) 5px) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -418,14 +418,14 @@
 
   .mini-icons .mi span {
     font-family: 'Tajawal', sans-serif;
-    color: var(--deep-plum);
+    color: var(--forest-deep);
     font-size: clamp(6px, 0.8vw, 9px);
     direction: rtl;
   }
 
   .mini-post-3 .tag-ar {
     font-family: 'Amiri', serif;
-    color: var(--deep-plum);
+    color: var(--forest-deep);
     font-size: clamp(9px, 1.4vw, 16px);
     letter-spacing: 0;
     line-height: 1.8;
@@ -435,13 +435,13 @@
   .mini-post-3 .tag-div {
     width: 24px;
     height: 1px;
-    background: var(--lavender);
+    background: var(--sage);
     margin: 4px 0;
   }
 
   .mini-post-3 .tag-en {
     font-family: 'Montserrat', sans-serif;
-    color: var(--desert-sand);
+    color: var(--golden-amber);
     font-size: clamp(6px, 0.8vw, 9px);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -449,7 +449,7 @@
 
   /* --- Story 1: Product Launch Mini --- */
   .mini-story-1 {
-    background: linear-gradient(180deg, var(--deep-plum) 0%, #2e1a3d 50%, var(--night-dark) 100%);
+    background: linear-gradient(180deg, var(--forest-deep) 0%, #2e1a3d 50%, var(--night-forest) 100%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -464,8 +464,8 @@
     inset: 0;
     opacity: 0.06;
     background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 16px, var(--lavender) 16px, var(--lavender) 17px),
-      repeating-linear-gradient(90deg, transparent, transparent 16px, var(--lavender) 16px, var(--lavender) 17px);
+      repeating-linear-gradient(0deg, transparent, transparent 16px, var(--sage) 16px, var(--sage) 17px),
+      repeating-linear-gradient(90deg, transparent, transparent 16px, var(--sage) 16px, var(--sage) 17px);
     -webkit-mask: linear-gradient(90deg, #000 0%, transparent 15%, transparent 85%, #000 100%);
     mask: linear-gradient(90deg, #000 0%, transparent 15%, transparent 85%, #000 100%);
   }
@@ -488,8 +488,8 @@
   }
 
   .ms-badge {
-    background: var(--lavender);
-    color: var(--night-dark);
+    background: var(--sage);
+    color: var(--night-forest);
     font-family: 'Tajawal', sans-serif;
     font-weight: 700;
     font-size: clamp(7px, 1.5vw, 10px);
@@ -514,7 +514,7 @@
   .ms-arch .ph {
     width: 60%;
     height: 65%;
-    background: linear-gradient(135deg, var(--desert-sand), #a07850);
+    background: linear-gradient(135deg, var(--golden-amber), #a07850);
     border-radius: 2px;
     z-index: 1;
   }
@@ -526,7 +526,7 @@
 
   .ms-name .ar {
     font-family: 'Amiri', serif;
-    color: var(--cream);
+    color: var(--parchment);
     font-size: clamp(10px, 2.5vw, 16px);
     letter-spacing: 0;
     line-height: 1.8;
@@ -535,7 +535,7 @@
 
   .ms-name .en {
     font-family: 'Montserrat', sans-serif;
-    color: var(--soft-lavender);
+    color: var(--leaf-light);
     font-size: clamp(6px, 1.2vw, 9px);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -543,15 +543,15 @@
 
   .ms-price {
     font-family: 'Montserrat', sans-serif;
-    color: var(--lavender);
+    color: var(--sage);
     font-size: clamp(10px, 2.2vw, 16px);
     font-weight: 600;
     margin-bottom: 3%;
   }
 
   .ms-btn {
-    border: 1px solid var(--lavender);
-    color: var(--lavender);
+    border: 1px solid var(--sage);
+    color: var(--sage);
     font-family: 'Tajawal', sans-serif;
     font-size: clamp(6px, 1.3vw, 9px);
     padding: 3px 14px;
@@ -572,7 +572,7 @@
 
   /* --- Story 2: Announcement Mini --- */
   .mini-story-2 {
-    background: linear-gradient(180deg, var(--deep-plum) 0%, #251538 40%, var(--night-dark) 100%);
+    background: linear-gradient(180deg, var(--forest-deep) 0%, #251538 40%, var(--night-forest) 100%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -586,7 +586,7 @@
   .mini-story-2 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(74,45,94,0.3) 0%, rgba(26,21,32,0.8) 100%);
+    background: linear-gradient(180deg, rgba(27,58,45,0.3) 0%, rgba(26,21,32,0.8) 100%);
   }
 
   .mini-story-2 .wm {
@@ -620,7 +620,7 @@
   .ms2-heading {
     font-family: 'Amiri', serif;
     font-weight: 700;
-    color: var(--lavender);
+    color: var(--sage);
     font-size: clamp(11px, 2.5vw, 20px);
     letter-spacing: 0;
     line-height: 1.8;
@@ -631,7 +631,7 @@
 
   .ms2-sub {
     font-family: 'Montserrat', sans-serif;
-    color: var(--cream);
+    color: var(--parchment);
     font-size: clamp(6px, 1.2vw, 10px);
     font-weight: 300;
     text-align: center;
@@ -643,14 +643,14 @@
   .ms2-div {
     width: 24px;
     height: 1px;
-    background: var(--lavender);
+    background: var(--sage);
     opacity: 0.6;
     margin-bottom: 5%;
   }
 
   .ms2-date {
     font-family: 'Montserrat', sans-serif;
-    color: var(--soft-lavender);
+    color: var(--leaf-light);
     font-size: clamp(6px, 1.1vw, 9px);
     letter-spacing: 2px;
     opacity: 0.7;
@@ -673,9 +673,9 @@
 <div class="page-header">
   <div class="logo">
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
-      <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
-      <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#4A2D5E">AJ</text>
+      <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(0 100 100)"/>
+      <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
+      <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#1B3A2D">AJ</text>
     </svg>
   </div>
   <h1><span>AJ</span> &mdash; Social Media Templates</h1>
@@ -696,8 +696,8 @@
         <div class="inner">
           <div class="mini-mihrab">
             <svg viewBox="0 0 400 460" fill="none">
-              <path d="M60 460 L60 200 Q60 60 200 20 Q340 60 340 200 L340 460" stroke="#8B6FAE" stroke-width="2.5" fill="none"/>
-              <path d="M50 460 L50 200 Q50 50 200 10 Q350 50 350 200 L350 460" stroke="#8B6FAE" stroke-width="1" fill="none" opacity="0.4"/>
+              <path d="M60 460 L60 200 Q60 60 200 20 Q340 60 340 200 L340 460" stroke="#6B8F71" stroke-width="2.5" fill="none"/>
+              <path d="M50 460 L50 200 Q50 50 200 10 Q350 50 350 200 L350 460" stroke="#6B8F71" stroke-width="1" fill="none" opacity="0.4"/>
             </svg>
             <div class="ph"></div>
           </div>
@@ -707,9 +707,9 @@
         </div>
         <div class="mini-logo">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#8B6FAE">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#6B8F71">AJ</text>
           </svg>
         </div>
       </div>
@@ -727,9 +727,9 @@
         <div class="stars-b">&#10039; &#10039; &#10039;</div>
         <div class="mini-logo-bottom">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#8B6FAE">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#6B8F71">AJ</text>
           </svg>
         </div>
       </div>
@@ -742,37 +742,37 @@
         <div class="tile-b"></div>
         <div class="logo-lg">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none"/>
-            <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
-            <rect x="52" y="52" width="96" height="96" stroke="#8B6FAE" stroke-width="0.8" fill="none" opacity="0.35"/>
-            <rect x="52" y="52" width="96" height="96" stroke="#8B6FAE" stroke-width="0.8" fill="none" transform="rotate(45 100 100)" opacity="0.35"/>
-            <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#4A2D5E">AJ</text>
+            <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none"/>
+            <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2.5" fill="none" transform="rotate(45 100 100)"/>
+            <rect x="52" y="52" width="96" height="96" stroke="#6B8F71" stroke-width="0.8" fill="none" opacity="0.35"/>
+            <rect x="52" y="52" width="96" height="96" stroke="#6B8F71" stroke-width="0.8" fill="none" transform="rotate(45 100 100)" opacity="0.35"/>
+            <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#1B3A2D">AJ</text>
           </svg>
         </div>
         <div class="mini-icons">
           <div class="mi">
             <svg viewBox="0 0 56 56" fill="none">
-              <ellipse cx="28" cy="38" rx="10" ry="14" stroke="#4A2D5E" stroke-width="1.5"/>
-              <line x1="28" y1="24" x2="28" y2="8" stroke="#4A2D5E" stroke-width="1.5"/>
-              <line x1="28" y1="16" x2="22" y2="10" stroke="#4A2D5E" stroke-width="1.2"/>
-              <line x1="28" y1="18" x2="34" y2="12" stroke="#4A2D5E" stroke-width="1.2"/>
+              <ellipse cx="28" cy="38" rx="10" ry="14" stroke="#1B3A2D" stroke-width="1.5"/>
+              <line x1="28" y1="24" x2="28" y2="8" stroke="#1B3A2D" stroke-width="1.5"/>
+              <line x1="28" y1="16" x2="22" y2="10" stroke="#1B3A2D" stroke-width="1.2"/>
+              <line x1="28" y1="18" x2="34" y2="12" stroke="#1B3A2D" stroke-width="1.2"/>
             </svg>
             <span>عود</span>
           </div>
           <div class="mi">
             <svg viewBox="0 0 56 56" fill="none">
-              <path d="M18 42 L22 28 L34 28 L38 42 Z" stroke="#4A2D5E" stroke-width="1.5" fill="none"/>
-              <line x1="16" y1="42" x2="40" y2="42" stroke="#4A2D5E" stroke-width="1.5"/>
-              <path d="M28 24 Q26 18 28 14 Q30 10 28 6" stroke="#4A2D5E" stroke-width="1.2" fill="none"/>
-              <line x1="14" y1="46" x2="42" y2="46" stroke="#4A2D5E" stroke-width="1.2"/>
-              <line x1="16" y1="42" x2="14" y2="46" stroke="#4A2D5E" stroke-width="1.2"/>
-              <line x1="40" y1="42" x2="42" y2="46" stroke="#4A2D5E" stroke-width="1.2"/>
+              <path d="M18 42 L22 28 L34 28 L38 42 Z" stroke="#1B3A2D" stroke-width="1.5" fill="none"/>
+              <line x1="16" y1="42" x2="40" y2="42" stroke="#1B3A2D" stroke-width="1.5"/>
+              <path d="M28 24 Q26 18 28 14 Q30 10 28 6" stroke="#1B3A2D" stroke-width="1.2" fill="none"/>
+              <line x1="14" y1="46" x2="42" y2="46" stroke="#1B3A2D" stroke-width="1.2"/>
+              <line x1="16" y1="42" x2="14" y2="46" stroke="#1B3A2D" stroke-width="1.2"/>
+              <line x1="40" y1="42" x2="42" y2="46" stroke="#1B3A2D" stroke-width="1.2"/>
             </svg>
             <span>بخور</span>
           </div>
           <div class="mi">
             <svg viewBox="0 0 56 56" fill="none">
-              <path d="M28 8 Q20 24 16 32 Q12 40 20 47 Q24 50 28 50 Q32 50 36 47 Q44 40 40 32 Q36 24 28 8 Z" stroke="#4A2D5E" stroke-width="1.5" fill="none"/>
+              <path d="M28 8 Q20 24 16 32 Q12 40 20 47 Q24 50 28 50 Q32 50 36 47 Q44 40 40 32 Q36 24 28 8 Z" stroke="#1B3A2D" stroke-width="1.5" fill="none"/>
             </svg>
             <span>مسك</span>
           </div>
@@ -799,15 +799,15 @@
         <div class="inner">
           <div class="ms-logo">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
-              <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-              <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#8B6FAE">AJ</text>
+              <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
+              <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+              <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#6B8F71">AJ</text>
             </svg>
           </div>
           <div class="ms-badge">جديد | NEW</div>
           <div class="ms-arch">
             <svg viewBox="0 0 300 380" fill="none">
-              <path d="M40 380 L40 170 Q40 40 150 10 Q260 40 260 170 L260 380" stroke="#8B6FAE" stroke-width="2" fill="none"/>
+              <path d="M40 380 L40 170 Q40 40 150 10 Q260 40 260 170 L260 380" stroke="#6B8F71" stroke-width="2" fill="none"/>
             </svg>
             <div class="ph"></div>
           </div>
@@ -819,7 +819,7 @@
           <div class="ms-btn">اطلب الآن | Order Now</div>
           <div class="ms-swipe">
             <svg viewBox="0 0 24 24" fill="none">
-              <path d="M12 19 L12 5 M5 12 L12 5 L19 12" stroke="#C8B8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 19 L12 5 M5 12 L12 5 L19 12" stroke="#A8C5A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
         </div>
@@ -833,42 +833,42 @@
         <div class="overlay"></div>
         <div class="wm">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2" fill="none"/>
-            <rect x="36" y="36" width="128" height="128" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 100 100)"/>
-            <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#8B6FAE">AJ</text>
+            <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2" fill="none"/>
+            <rect x="36" y="36" width="128" height="128" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 100 100)"/>
+            <text x="100" y="112" text-anchor="middle" font-family="'Playfair Display', serif" font-size="48" font-weight="700" fill="#6B8F71">AJ</text>
           </svg>
         </div>
         <!-- Corners -->
         <div class="ms2-corner tl">
           <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0 L70 0" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 L0 70" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 Q12 28 0 56" stroke="#8B6FAE" stroke-width="0.8" fill="none" opacity="0.5"/>
-            <circle cx="4" cy="4" r="2.5" fill="#8B6FAE" opacity="0.8"/>
+            <path d="M0 0 L70 0" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 L0 70" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 Q12 28 0 56" stroke="#6B8F71" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <circle cx="4" cy="4" r="2.5" fill="#6B8F71" opacity="0.8"/>
           </svg>
         </div>
         <div class="ms2-corner tr">
           <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1)">
-            <path d="M0 0 L70 0" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 L0 70" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 Q12 28 0 56" stroke="#8B6FAE" stroke-width="0.8" fill="none" opacity="0.5"/>
-            <circle cx="4" cy="4" r="2.5" fill="#8B6FAE" opacity="0.8"/>
+            <path d="M0 0 L70 0" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 L0 70" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 Q12 28 0 56" stroke="#6B8F71" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <circle cx="4" cy="4" r="2.5" fill="#6B8F71" opacity="0.8"/>
           </svg>
         </div>
         <div class="ms2-corner bl">
           <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style="transform: scaleY(-1)">
-            <path d="M0 0 L70 0" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 L0 70" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 Q12 28 0 56" stroke="#8B6FAE" stroke-width="0.8" fill="none" opacity="0.5"/>
-            <circle cx="4" cy="4" r="2.5" fill="#8B6FAE" opacity="0.8"/>
+            <path d="M0 0 L70 0" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 L0 70" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 Q12 28 0 56" stroke="#6B8F71" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <circle cx="4" cy="4" r="2.5" fill="#6B8F71" opacity="0.8"/>
           </svg>
         </div>
         <div class="ms2-corner br">
           <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" style="transform: scale(-1,-1)">
-            <path d="M0 0 L70 0" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 L0 70" stroke="#8B6FAE" stroke-width="1" fill="none"/>
-            <path d="M0 0 Q12 28 0 56" stroke="#8B6FAE" stroke-width="0.8" fill="none" opacity="0.5"/>
-            <circle cx="4" cy="4" r="2.5" fill="#8B6FAE" opacity="0.8"/>
+            <path d="M0 0 L70 0" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 L0 70" stroke="#6B8F71" stroke-width="1" fill="none"/>
+            <path d="M0 0 Q12 28 0 56" stroke="#6B8F71" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <circle cx="4" cy="4" r="2.5" fill="#6B8F71" opacity="0.8"/>
           </svg>
         </div>
         <div class="inner">
@@ -879,9 +879,9 @@
         </div>
         <div class="ms2-logo-b">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none"/>
-            <rect x="18" y="18" width="64" height="64" stroke="#8B6FAE" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
-            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#8B6FAE">AJ</text>
+            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none"/>
+            <rect x="18" y="18" width="64" height="64" stroke="#6B8F71" stroke-width="2" fill="none" transform="rotate(45 50 50)"/>
+            <text x="50" y="56" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#6B8F71">AJ</text>
           </svg>
         </div>
       </div>
@@ -900,13 +900,13 @@
     <div class="highlight-item">
       <div class="highlight-circle">
         <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="28" cy="36" rx="9" ry="13" stroke="#C8B8D8" stroke-width="1.5"/>
-          <line x1="28" y1="23" x2="28" y2="8" stroke="#C8B8D8" stroke-width="1.5"/>
-          <line x1="28" y1="14" x2="22" y2="8" stroke="#C8B8D8" stroke-width="1.2"/>
-          <line x1="28" y1="16" x2="34" y2="10" stroke="#C8B8D8" stroke-width="1.2"/>
-          <line x1="22" y1="32" x2="34" y2="32" stroke="#C8B8D8" stroke-width="0.6" opacity="0.5"/>
-          <line x1="21" y1="36" x2="35" y2="36" stroke="#C8B8D8" stroke-width="0.6" opacity="0.5"/>
-          <line x1="22" y1="40" x2="34" y2="40" stroke="#C8B8D8" stroke-width="0.6" opacity="0.5"/>
+          <ellipse cx="28" cy="36" rx="9" ry="13" stroke="#A8C5A0" stroke-width="1.5"/>
+          <line x1="28" y1="23" x2="28" y2="8" stroke="#A8C5A0" stroke-width="1.5"/>
+          <line x1="28" y1="14" x2="22" y2="8" stroke="#A8C5A0" stroke-width="1.2"/>
+          <line x1="28" y1="16" x2="34" y2="10" stroke="#A8C5A0" stroke-width="1.2"/>
+          <line x1="22" y1="32" x2="34" y2="32" stroke="#A8C5A0" stroke-width="0.6" opacity="0.5"/>
+          <line x1="21" y1="36" x2="35" y2="36" stroke="#A8C5A0" stroke-width="0.6" opacity="0.5"/>
+          <line x1="22" y1="40" x2="34" y2="40" stroke="#A8C5A0" stroke-width="0.6" opacity="0.5"/>
         </svg>
       </div>
       <div class="highlight-label">عود</div>
@@ -916,15 +916,15 @@
     <div class="highlight-item">
       <div class="highlight-circle">
         <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 40 L23 28 L33 28 L37 40 Z" stroke="#C8B8D8" stroke-width="1.5" fill="none"/>
-          <line x1="17" y1="40" x2="39" y2="40" stroke="#C8B8D8" stroke-width="1.5"/>
-          <ellipse cx="28" cy="28" rx="5" ry="1.5" stroke="#C8B8D8" stroke-width="1"/>
-          <path d="M28 24 Q26 18 28 14 Q30 10 28 6" stroke="#C8B8D8" stroke-width="1.2" fill="none"/>
-          <path d="M25 22 Q23 17 25 13" stroke="#C8B8D8" stroke-width="0.8" fill="none" opacity="0.5"/>
-          <path d="M31 22 Q33 17 31 13" stroke="#C8B8D8" stroke-width="0.8" fill="none" opacity="0.5"/>
-          <line x1="15" y1="44" x2="41" y2="44" stroke="#C8B8D8" stroke-width="1.2"/>
-          <line x1="17" y1="40" x2="15" y2="44" stroke="#C8B8D8" stroke-width="1.2"/>
-          <line x1="39" y1="40" x2="41" y2="44" stroke="#C8B8D8" stroke-width="1.2"/>
+          <path d="M19 40 L23 28 L33 28 L37 40 Z" stroke="#A8C5A0" stroke-width="1.5" fill="none"/>
+          <line x1="17" y1="40" x2="39" y2="40" stroke="#A8C5A0" stroke-width="1.5"/>
+          <ellipse cx="28" cy="28" rx="5" ry="1.5" stroke="#A8C5A0" stroke-width="1"/>
+          <path d="M28 24 Q26 18 28 14 Q30 10 28 6" stroke="#A8C5A0" stroke-width="1.2" fill="none"/>
+          <path d="M25 22 Q23 17 25 13" stroke="#A8C5A0" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <path d="M31 22 Q33 17 31 13" stroke="#A8C5A0" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <line x1="15" y1="44" x2="41" y2="44" stroke="#A8C5A0" stroke-width="1.2"/>
+          <line x1="17" y1="40" x2="15" y2="44" stroke="#A8C5A0" stroke-width="1.2"/>
+          <line x1="39" y1="40" x2="41" y2="44" stroke="#A8C5A0" stroke-width="1.2"/>
         </svg>
       </div>
       <div class="highlight-label">بخور</div>
@@ -934,9 +934,9 @@
     <div class="highlight-item">
       <div class="highlight-circle">
         <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M28 8 Q20 24 16 32 Q12 40 20 47 Q24 50 28 50 Q32 50 36 47 Q44 40 40 32 Q36 24 28 8 Z" stroke="#C8B8D8" stroke-width="1.5" fill="none"/>
-          <path d="M24 38 Q22 34 26 32" stroke="#C8B8D8" stroke-width="1" fill="none" opacity="0.5"/>
-          <circle cx="23" cy="40" r="1.5" fill="#C8B8D8" opacity="0.4"/>
+          <path d="M28 8 Q20 24 16 32 Q12 40 20 47 Q24 50 28 50 Q32 50 36 47 Q44 40 40 32 Q36 24 28 8 Z" stroke="#A8C5A0" stroke-width="1.5" fill="none"/>
+          <path d="M24 38 Q22 34 26 32" stroke="#A8C5A0" stroke-width="1" fill="none" opacity="0.5"/>
+          <circle cx="23" cy="40" r="1.5" fill="#A8C5A0" opacity="0.4"/>
         </svg>
       </div>
       <div class="highlight-label">مسك</div>
@@ -946,12 +946,12 @@
     <div class="highlight-item">
       <div class="highlight-circle">
         <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="20" width="26" height="18" rx="1" stroke="#C8B8D8" stroke-width="1.5"/>
-          <path d="M34 24 L44 24 L48 32 L48 38 L34 38 Z" stroke="#C8B8D8" stroke-width="1.5" fill="none"/>
-          <circle cx="18" cy="40" r="4" stroke="#C8B8D8" stroke-width="1.5"/>
-          <circle cx="41" cy="40" r="4" stroke="#C8B8D8" stroke-width="1.5"/>
-          <line x1="22" y1="38" x2="37" y2="38" stroke="#C8B8D8" stroke-width="1.5"/>
-          <line x1="40" y1="28" x2="44" y2="28" stroke="#C8B8D8" stroke-width="1" opacity="0.5"/>
+          <rect x="8" y="20" width="26" height="18" rx="1" stroke="#A8C5A0" stroke-width="1.5"/>
+          <path d="M34 24 L44 24 L48 32 L48 38 L34 38 Z" stroke="#A8C5A0" stroke-width="1.5" fill="none"/>
+          <circle cx="18" cy="40" r="4" stroke="#A8C5A0" stroke-width="1.5"/>
+          <circle cx="41" cy="40" r="4" stroke="#A8C5A0" stroke-width="1.5"/>
+          <line x1="22" y1="38" x2="37" y2="38" stroke="#A8C5A0" stroke-width="1.5"/>
+          <line x1="40" y1="28" x2="44" y2="28" stroke="#A8C5A0" stroke-width="1" opacity="0.5"/>
         </svg>
       </div>
       <div class="highlight-label">التوصيل</div>
@@ -962,9 +962,9 @@
       <div class="highlight-circle">
         <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Eight-pointed star small -->
-          <rect x="16" y="16" width="24" height="24" stroke="#C8B8D8" stroke-width="1.2" fill="none" transform="rotate(0 28 28)"/>
-          <rect x="16" y="16" width="24" height="24" stroke="#C8B8D8" stroke-width="1.2" fill="none" transform="rotate(45 28 28)"/>
-          <text x="28" y="32" text-anchor="middle" font-family="'Playfair Display', serif" font-size="10" font-weight="700" fill="#C8B8D8">AJ</text>
+          <rect x="16" y="16" width="24" height="24" stroke="#A8C5A0" stroke-width="1.2" fill="none" transform="rotate(0 28 28)"/>
+          <rect x="16" y="16" width="24" height="24" stroke="#A8C5A0" stroke-width="1.2" fill="none" transform="rotate(45 28 28)"/>
+          <text x="28" y="32" text-anchor="middle" font-family="'Playfair Display', serif" font-size="10" font-weight="700" fill="#A8C5A0">AJ</text>
         </svg>
       </div>
       <div class="highlight-label">عن AJ</div>
