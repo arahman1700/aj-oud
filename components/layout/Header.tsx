@@ -77,12 +77,11 @@ export function Header() {
             {/* Logo — Centered (like both reference sites) */}
             <Link href="/" className="flex flex-col items-center gap-1">
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/logo-light.png"
                 alt="AJoud"
                 width={44}
-                height={56}
+                height={72}
                 className="h-10 md:h-14 w-auto"
-                style={{ filter: "brightness(0) invert(1) sepia(.15) saturate(.4) brightness(1.6)" }}
                 priority
               />
               <span className="text-[10px] md:text-xs tracking-[0.35em] uppercase text-brand-gold font-medium">

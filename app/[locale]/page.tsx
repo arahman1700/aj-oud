@@ -58,12 +58,11 @@ function HeroSection() {
         {/* Logo */}
         <div className="mb-6">
           <Image
-            src="/images/brand/logo.png"
+            src="/images/brand/logo-light.png"
             alt="AJoud"
             width={80}
-            height={100}
+            height={130}
             className="mx-auto h-20 md:h-28 w-auto"
-            style={{ filter: "brightness(0) invert(1) sepia(0.15) saturate(0.4) brightness(1.6)" }}
             priority
           />
         </div>
@@ -177,12 +176,11 @@ function BrandStorySection() {
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         <Image
-          src="/images/brand/logo.png"
+          src="/images/brand/logo-light.png"
           alt="AJoud"
           width={56}
-          height={70}
+          height={90}
           className="mx-auto h-14 w-auto"
-          style={{ filter: "brightness(0) invert(1) sepia(0.15) saturate(0.4) brightness(1.6)" }}
         />
         <h2 className="text-3xl md:text-4xl font-heading text-brand-beige mt-6 mb-6">
           {t("brandStoryTitle")}

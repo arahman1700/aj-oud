@@ -20,12 +20,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/logo-light.png"
                 alt="AJoud"
                 width={36}
-                height={45}
+                height={58}
                 className="h-10 w-auto"
-                style={{ filter: "brightness(0) invert(1) sepia(0.15) saturate(0.4) brightness(1.6)" }}
               />
               <span className="text-xl font-heading text-brand-gold tracking-[0.25em] uppercase">
                 AJOUD
