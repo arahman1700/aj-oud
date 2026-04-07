@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ShoppingBag, Truck, Shield, Gift } from "lucide-react";
@@ -21,7 +21,30 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
   const [selectedSize, setSelectedSize] = useState(0);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const addToCartRef = useRef<HTMLButtonElement>(null);
   const addItem = useCartStore((s) => s.addItem);
+
+  // Show sticky bar when main add-to-cart button scrolls out of view (mobile only)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyBar(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    const currentRef = addToCartRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   const currentSize = product.sizes[selectedSize];
 
@@ -176,6 +199,7 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
           </div>
 
           <button
+            ref={addToCartRef}
             onClick={handleAddToCart}
             disabled={!product.inStock}
             className="flex-1 flex items-center justify-center gap-2 bg-brand-gold text-brand-green-dark py-3 px-6 rounded-sm font-semibold hover:bg-brand-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -248,6 +272,32 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
           <p className="text-sm text-muted-foreground leading-relaxed">
             {product.story}
           </p>
+        </div>
+      </div>
+
+      {/* Mobile Sticky Bottom Bar */}
+      <div
+        className={`fixed bottom-0 inset-x-0 z-40 bg-background/95 backdrop-blur-md border-t border-border px-4 py-3 transition-transform duration-300 lg:hidden ${
+          showStickyBar ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <div className="flex items-center justify-between gap-4 max-w-lg mx-auto">
+          <div className="shrink-0">
+            <p className="text-lg font-bold text-brand-gold">
+              {formatPrice(currentSize.price)} {t("sar")}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {currentSize.label}
+            </p>
+          </div>
+          <button
+            onClick={handleAddToCart}
+            disabled={!product.inStock}
+            className="flex-1 flex items-center justify-center gap-2 bg-brand-gold text-brand-green-dark py-3 px-5 rounded-sm font-semibold hover:bg-brand-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <ShoppingBag className="h-4 w-4" />
+            {product.inStock ? t("addToCart") : t("outOfStock")}
+          </button>
         </div>
       </div>
     </div>

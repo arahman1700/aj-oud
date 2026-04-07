@@ -65,11 +65,11 @@ function HeroSection() {
           />
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading text-brand-beige mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading text-brand-beige mb-6 leading-tight animate-fade-in-up">
           {t("heroTitle")}
         </h1>
 
-        <p className="text-lg md:text-xl text-brand-gold-light mb-10 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-brand-gold-light mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
           {t("heroSubtitle")}
         </p>
 
@@ -104,16 +104,16 @@ function CategoriesSection({ locale }: { locale: "ar" | "en" }) {
 
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-6 py-20">
-      <h2 className="text-3xl font-heading text-brand-gold text-center mb-12">
+      <h2 className="text-3xl font-heading text-brand-gold text-center mb-12 animate-fade-in-up">
         {t("featuredTitle")}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {categories.map((cat) => (
+        {categories.map((cat, index) => (
           <Link
             key={cat.id}
             href={`/products?category=${cat.id}` as any}
-            className="group relative aspect-[4/3] overflow-hidden rounded-sm"
+            className={`group relative aspect-[4/3] overflow-hidden rounded-sm animate-fade-in-up delay-${(index + 1) * 100}`}
           >
             <Image
               src={cat.image}
@@ -148,7 +148,7 @@ function BestSellersSection({
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-6 py-16">
       <div className="flex items-center justify-between mb-10">
-        <h2 className="text-3xl font-heading text-brand-gold">
+        <h2 className="text-3xl font-heading text-brand-gold animate-fade-in-up">
           {t("bestSellersTitle")}
         </h2>
         <Link
@@ -177,9 +177,9 @@ function BrandStorySection() {
         <img
           src="/images/brand/logo-light.png"
           alt="AJoud"
-          className="mx-auto h-14 w-auto"
+          className="mx-auto h-14 w-auto animate-fade-in"
         />
-        <h2 className="text-3xl md:text-4xl font-heading text-brand-beige mt-6 mb-6">
+        <h2 className="text-3xl md:text-4xl font-heading text-brand-beige mt-6 mb-6 animate-fade-in-up">
           {t("brandStoryTitle")}
         </h2>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -208,7 +208,7 @@ function NewArrivalsSection({
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-6 py-16">
       <div className="flex items-center justify-between mb-10">
-        <h2 className="text-3xl font-heading text-brand-gold">
+        <h2 className="text-3xl font-heading text-brand-gold animate-fade-in-up">
           {t("newArrivalsTitle")}
         </h2>
         <Link

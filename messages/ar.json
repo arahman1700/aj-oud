@@ -10,12 +10,17 @@
     "about": "عن أجود",
     "contact": "تواصل معنا",
     "search": "ابحث...",
+    "searchPlaceholder": "ابحث عن منتج...",
+    "searchNoResults": "لا توجد منتجات",
+    "searchTitle": "البحث",
     "cart": "السلة",
     "account": "حسابي",
     "login": "تسجيل الدخول",
     "register": "حساب جديد",
     "orders": "طلباتي",
-    "menu": "القائمة"
+    "menu": "القائمة",
+    "categories": "الأقسام",
+    "followUs": "تابعنا"
   },
   "Home": {
     "heroTitle": "أجود العطور الشرقية",
@@ -144,6 +149,9 @@
     "back": "رجوع",
     "next": "التالي",
     "viewAll": "عرض الكل",
-    "currency": "ر.س"
+    "currency": "ر.س",
+    "backToHome": "العودة للرئيسية",
+    "notFoundTitle": "الصفحة غير موجودة",
+    "notFoundText": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها."
   }
 }

@@ -10,12 +10,17 @@
     "about": "About",
     "contact": "Contact",
     "search": "Search...",
+    "searchPlaceholder": "Search for products...",
+    "searchNoResults": "No products found",
+    "searchTitle": "Search",
     "cart": "Cart",
     "account": "My Account",
     "login": "Login",
     "register": "Register",
     "orders": "My Orders",
-    "menu": "Menu"
+    "menu": "Menu",
+    "categories": "Categories",
+    "followUs": "Follow Us"
   },
   "Home": {
     "heroTitle": "The Finest Oriental Fragrances",
@@ -144,6 +149,9 @@
     "back": "Back",
     "next": "Next",
     "viewAll": "View All",
-    "currency": "SAR"
+    "currency": "SAR",
+    "backToHome": "Back to Home",
+    "notFoundTitle": "Page Not Found",
+    "notFoundText": "The page you are looking for does not exist or has been moved."
   }
 }

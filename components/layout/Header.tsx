@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 import { ShoppingBag, Search, User, Menu } from "lucide-react";
 import { useCartStore } from "@/store/cart";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileNav } from "./MobileNav";
+import { SearchModal } from "./SearchModal";
 
 export function Header() {
   const t = useTranslations("Nav");
@@ -15,6 +15,7 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const totalItems = useCartStore((s) => s.totalItems);
 
@@ -106,6 +107,7 @@ export function Header() {
               <LanguageSwitcher />
 
               <button
+                onClick={() => setSearchOpen(true)}
                 className="text-muted-foreground hover:text-brand-gold transition-colors p-1.5"
                 aria-label={t("search")}
               >
@@ -141,6 +143,12 @@ export function Header() {
           open={mobileOpen}
           onClose={() => setMobileOpen(false)}
           links={navLinks}
+        />
+
+        {/* Search Modal */}
+        <SearchModal
+          open={searchOpen}
+          onClose={() => setSearchOpen(false)}
         />
       </header>
     </>
