@@ -28,6 +28,33 @@ export const categories: Category[] = [
     },
     image: "/images/products/oud-box.png",
   },
+  {
+    id: "bakhoor",
+    name: { ar: "بخور", en: "Bakhoor" },
+    description: {
+      ar: "بخور فاخر من أجود أنواع الخشب العطري",
+      en: "Premium bakhoor from the finest aromatic woods",
+    },
+    image: "/images/products/oud-globe-1.png",
+  },
+  {
+    id: "oils",
+    name: { ar: "أدهان", en: "Oils & Dehn" },
+    description: {
+      ar: "أدهان عود ومسك طبيعية مركزة",
+      en: "Concentrated natural oud and musk oils",
+    },
+    image: "/images/products/oud-globe-2.png",
+  },
+  {
+    id: "home",
+    name: { ar: "بخور بيتي", en: "Home Fragrance" },
+    description: {
+      ar: "خلطات بخور بيتية لأجواء عطرية مميزة",
+      en: "Home bakhoor blends for a distinctive aromatic atmosphere",
+    },
+    image: "/images/products/oud-box.png",
+  },
 ];
 
 export const products: Product[] = [
@@ -353,6 +380,84 @@ export const products: Product[] = [
       base: [{ ar: "عنبر", en: "Amber" }, { ar: "مسك", en: "Musk" }],
     },
     badges: ["limited", "bestseller"],
+    inStock: true,
+  },
+  {
+    id: "bakhoor-cambodian",
+    slug: "cambodian-bakhoor",
+    name: { ar: "بخور كمبودي", en: "Cambodian Bakhoor" },
+    description: {
+      ar: "بخور كمبودي فاخر من أجود أنواع خشب العود. رائحة غنية وعميقة تملأ المكان بأجواء ساحرة.",
+      en: "Premium Cambodian bakhoor from the finest oud wood. A rich, deep scent that fills the space with an enchanting atmosphere.",
+    },
+    story: {
+      ar: "يُحضّر هذا البخور من رقائق خشب العود الكمبودي المعتّق، ويُمزج بالعنبر والمسك لتجربة بخور استثنائية.",
+      en: "Prepared from aged Cambodian oud wood chips, blended with amber and musk for an exceptional bakhoor experience.",
+    },
+    category: "bakhoor",
+    images: ["/images/products/oud-globe-1.png", "/images/products/oud-box.png"],
+    sizes: [
+      { id: "small", label: { ar: "علبة صغيرة", en: "Small Box" }, price: 120 },
+      { id: "large", label: { ar: "علبة كبيرة", en: "Large Box" }, price: 220 },
+    ],
+    fragranceNotes: {
+      top: [{ ar: "عود كمبودي", en: "Cambodian Oud" }, { ar: "بخور", en: "Incense" }],
+      heart: [{ ar: "عنبر", en: "Amber" }, { ar: "صندل", en: "Sandalwood" }],
+      base: [{ ar: "مسك", en: "Musk" }, { ar: "فانيلا", en: "Vanilla" }],
+    },
+    badges: ["new"],
+    inStock: true,
+  },
+  {
+    id: "oil-royal-dehn",
+    slug: "royal-dehn-oud",
+    name: { ar: "دهن عود ملكي", en: "Royal Dehn Oud" },
+    description: {
+      ar: "دهن عود ملكي مركّز من أندر أنواع العود. قطرة واحدة تكفي ليوم كامل من الفخامة.",
+      en: "Concentrated royal oud oil from the rarest oud varieties. A single drop provides a full day of luxury.",
+    },
+    story: {
+      ar: "يُقطّر بطريقة تقليدية تستغرق أسابيع للحصول على أنقى دهن عود، مخصص لعشاق العطور النادرة.",
+      en: "Distilled using a traditional method that takes weeks to obtain the purest oud oil, crafted for rare fragrance enthusiasts.",
+    },
+    category: "oils",
+    images: ["/images/products/oud-globe-2.png", "/images/products/oud-globe-1.png"],
+    sizes: [
+      { id: "quarter", label: { ar: "ربع تولة", en: "Quarter Tola" }, price: 450 },
+      { id: "half", label: { ar: "نصف تولة", en: "Half Tola" }, price: 850 },
+    ],
+    fragranceNotes: {
+      top: [{ ar: "دهن عود", en: "Oud Oil" }, { ar: "زعفران", en: "Saffron" }],
+      heart: [{ ar: "ورد طائفي", en: "Taifi Rose" }, { ar: "عنبر", en: "Amber" }],
+      base: [{ ar: "مسك", en: "Musk" }, { ar: "صندل", en: "Sandalwood" }],
+    },
+    badges: ["limited"],
+    inStock: true,
+  },
+  {
+    id: "home-bakhoor-mix",
+    slug: "home-bakhoor-mix",
+    name: { ar: "خلطة بخور بيتي", en: "Home Bakhoor Mix" },
+    description: {
+      ar: "خلطة بخور بيتية مميزة بروائح دافئة ومريحة. مثالية لتعطير المنزل والمجالس.",
+      en: "A distinctive home bakhoor blend with warm, comforting scents. Perfect for scenting homes and gathering spaces.",
+    },
+    story: {
+      ar: "خلطة عائلية توارثتها الأجيال، تجمع بين خشب العود والأعشاب العطرية لتعطير البيت بأصالة سعودية.",
+      en: "A family blend passed down through generations, combining oud wood and aromatic herbs for an authentically Saudi home fragrance.",
+    },
+    category: "home",
+    images: ["/images/products/oud-box.png", "/images/products/oud-globe-1.png"],
+    sizes: [
+      { id: "small", label: { ar: "علبة صغيرة", en: "Small Box" }, price: 85 },
+      { id: "large", label: { ar: "علبة كبيرة", en: "Large Box" }, price: 150 },
+    ],
+    fragranceNotes: {
+      top: [{ ar: "بخور", en: "Incense" }, { ar: "هيل", en: "Cardamom" }],
+      heart: [{ ar: "عود", en: "Oud" }, { ar: "ورد", en: "Rose" }],
+      base: [{ ar: "عنبر", en: "Amber" }, { ar: "مسك أبيض", en: "White Musk" }],
+    },
+    badges: [],
     inStock: true,
   },
   {

@@ -12,6 +12,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { SmoothScrollProvider } from "@/components/providers/SmoothScroll";
 import { Toaster } from "@/components/ui/sonner";
 
 type Props = {
@@ -44,13 +45,22 @@ export default async function LocaleLayout({ children, params }: Props) {
         h-full antialiased
       `}
     >
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#254639" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="apple-touch-icon" href="/images/brand/icon-192.png" />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-          <BackToTop />
+          <SmoothScrollProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <WhatsAppButton />
+            <BackToTop />
+          </SmoothScrollProvider>
           <Toaster position={isArabic ? "bottom-left" : "bottom-right"} />
         </NextIntlClientProvider>
       </body>

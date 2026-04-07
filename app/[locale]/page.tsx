@@ -5,6 +5,7 @@ import Image from "next/image";
 import { categories, products, getLocalizedProduct } from "@/data/products";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { Newsletter } from "@/components/home/Newsletter";
+import { AnimatedHero } from "@/components/home/AnimatedHero";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,7 +27,7 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <HeroSection />
+      <AnimatedHero />
       <CategoriesSection locale={loc} />
       <BestSellersSection products={bestSellers} />
       <BrandStorySection />

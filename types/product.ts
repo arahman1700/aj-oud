@@ -1,4 +1,4 @@
-export type CategoryId = "musk" | "oud" | "gift-sets";
+export type CategoryId = "musk" | "oud" | "gift-sets" | "bakhoor" | "oils" | "home";
 
 export interface ProductSize {
   id: string;
