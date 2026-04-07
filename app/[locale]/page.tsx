@@ -62,7 +62,8 @@ function HeroSection() {
             alt="AJoud"
             width={80}
             height={100}
-            className="mx-auto h-20 md:h-28 w-auto brightness-0 invert opacity-90"
+            className="mx-auto h-20 md:h-28 w-auto"
+            style={{ filter: "brightness(0) invert(1) sepia(0.15) saturate(0.4) brightness(1.6)" }}
             priority
           />
         </div>
@@ -180,7 +181,8 @@ function BrandStorySection() {
           alt="AJoud"
           width={56}
           height={70}
-          className="mx-auto h-14 w-auto brightness-0 invert opacity-80"
+          className="mx-auto h-14 w-auto"
+          style={{ filter: "brightness(0) invert(1) sepia(0.15) saturate(0.4) brightness(1.6)" }}
         />
         <h2 className="text-3xl md:text-4xl font-heading text-brand-beige mt-6 mb-6">
           {t("brandStoryTitle")}
