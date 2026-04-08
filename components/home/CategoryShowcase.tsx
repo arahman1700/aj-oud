@@ -42,7 +42,7 @@ function CategoryCard({
         delay: index * 0.1,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
-      className="group relative overflow-hidden rounded-sm aspect-[3/4] md:aspect-[4/3]"
+      className="group relative overflow-hidden rounded-sm aspect-[16/9] sm:aspect-[3/4] md:aspect-[4/3]"
     >
       <Link
         href={`/products?category=${category.id}` as any}
@@ -64,16 +64,16 @@ function CategoryCard({
         <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-gold/40 transition-colors duration-500 rounded-sm" />
 
         {/* Content pinned to bottom */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col p-6 md:p-8">
+        <div className="absolute inset-x-0 bottom-0 flex flex-col p-4 sm:p-6 md:p-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
           >
-            <h3 className="text-2xl md:text-3xl font-heading text-brand-beige mb-2">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-heading text-brand-beige mb-1 sm:mb-2">
               {category.name[locale]}
             </h3>
-            <p className="text-sm md:text-base text-brand-beige/70 mb-4 max-w-md">
+            <p className="text-xs sm:text-sm md:text-base text-brand-beige/70 mb-3 sm:mb-4 max-w-md line-clamp-2">
               {category.description[locale]}
             </p>
             <span className="inline-flex items-center gap-2 text-brand-gold text-sm font-medium group-hover:gap-3 transition-all duration-300">
@@ -106,7 +106,7 @@ export function CategoryShowcase() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section ref={ref} className="max-w-7xl mx-auto px-4 md:px-6 py-20">
+    <section ref={ref} className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

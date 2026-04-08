@@ -7,6 +7,14 @@ import { ShoppingBag, Truck, Shield, Gift } from "lucide-react";
 import { useCartStore } from "@/store/cart";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import {
+  MadaIcon,
+  VisaIcon,
+  MastercardIcon,
+  ApplePayIcon,
+  TabbyIcon,
+  TamaraIcon,
+} from "@/components/icons/PaymentIcons";
 import { toast } from "sonner";
 import { assetPath } from "@/lib/basePath";
 import type { LocalizedProduct } from "@/types/product";
@@ -73,8 +81,8 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
   const installmentAmount = Math.ceil(currentSize.price / 4);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-      {/* Image Gallery */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+      {/* Image Gallery — shows first on mobile (natural DOM order = single column) */}
       <div className="space-y-4">
         <div className="relative aspect-square overflow-hidden rounded-sm bg-card">
           <Image
@@ -166,7 +174,7 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
                 <button
                   key={size.id}
                   onClick={() => setSelectedSize(i)}
-                  className={`px-4 py-2.5 rounded-sm border text-sm transition-all ${
+                  className={`px-3 sm:px-4 py-2 sm:py-2.5 rounded-sm border text-xs sm:text-sm transition-all ${
                     i === selectedSize
                       ? "bg-brand-gold text-brand-green-dark border-brand-gold font-semibold"
                       : "bg-transparent text-foreground border-border hover:border-brand-gold/50"
@@ -229,15 +237,13 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
         </div>
 
         {/* Payment method icons */}
-        <div className="flex flex-wrap gap-2">
-          {["Mada", "Visa", "MC", "Apple Pay", "Tabby", "Tamara"].map((m) => (
-            <span
-              key={m}
-              className="bg-muted/50 rounded-sm px-2.5 py-1 text-[10px] text-muted-foreground font-medium border border-border/50"
-            >
-              {m}
-            </span>
-          ))}
+        <div className="flex flex-wrap items-center gap-2">
+          <MadaIcon className="h-7 w-auto rounded-sm border border-border/50" />
+          <VisaIcon className="h-7 w-auto rounded-sm border border-border/50" />
+          <MastercardIcon className="h-7 w-auto rounded-sm border border-border/50" />
+          <ApplePayIcon className="h-7 w-auto rounded-sm border border-border/50" />
+          <TabbyIcon className="h-7 w-auto rounded-sm border border-border/50" />
+          <TamaraIcon className="h-7 w-auto rounded-sm border border-border/50" />
         </div>
 
         <Separator className="bg-border" />
@@ -247,7 +253,7 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
           <h3 className="text-lg font-heading text-foreground">
             {t("fragranceNotes")}
           </h3>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4">
             {(["top", "heart", "base"] as const).map((tier) => (
               <div key={tier} className="text-center space-y-2">
                 <p className="text-xs font-semibold uppercase tracking-wider text-brand-gold">

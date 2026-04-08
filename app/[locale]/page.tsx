@@ -151,9 +151,9 @@ function BestSellersSection({
   const t = useTranslations("Home");
 
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-6 py-16">
-      <div className="flex items-center justify-between mb-10">
-        <h2 className="text-3xl font-heading text-brand-gold animate-fade-in-up">
+    <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-16">
+      <div className="flex items-center justify-between mb-6 md:mb-10">
+        <h2 className="text-2xl md:text-3xl font-heading text-brand-gold animate-fade-in-up">
           {t("bestSellersTitle")}
         </h2>
         <Link
@@ -172,12 +172,12 @@ function BrandStorySection() {
   const t = useTranslations("Home");
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-14 md:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-brand-green-dark to-brand-green" />
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent" />
 
-      <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 md:px-6 text-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={assetPath("/images/brand/logo-light.png")}
@@ -211,9 +211,9 @@ function NewArrivalsSection({
   if (products.length === 0) return null;
 
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-6 py-16">
-      <div className="flex items-center justify-between mb-10">
-        <h2 className="text-3xl font-heading text-brand-gold animate-fade-in-up">
+    <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-16">
+      <div className="flex items-center justify-between mb-6 md:mb-10">
+        <h2 className="text-2xl md:text-3xl font-heading text-brand-gold animate-fade-in-up">
           {t("newArrivalsTitle")}
         </h2>
         <Link

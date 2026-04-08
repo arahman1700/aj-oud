@@ -12,7 +12,7 @@ export function AnimatedHero() {
   const pt = useTranslations("Product");
 
   return (
-    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -38,15 +38,15 @@ export function AnimatedHero() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/brand/logo-light.png"
+            src={assetPath("/images/brand/logo-light.png")}
             alt="AJoud"
-            className="mx-auto h-24 md:h-36 w-auto drop-shadow-2xl"
+            className="mx-auto h-16 sm:h-24 md:h-36 w-auto drop-shadow-2xl"
           />
         </motion.div>
 
         {/* Title with letter stagger */}
         <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-heading text-brand-beige mb-6 leading-tight"
+          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-heading text-brand-beige mb-6 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -56,7 +56,7 @@ export function AnimatedHero() {
 
         {/* Subtitle */}
         <motion.p
-          className="text-lg md:text-xl text-brand-gold-light mb-10 max-w-2xl mx-auto"
+          className="text-sm sm:text-lg md:text-xl text-brand-gold-light mb-8 sm:mb-10 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -87,7 +87,7 @@ export function AnimatedHero() {
 
         {/* Trust signals */}
         <motion.div
-          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-brand-beige/60"
+          className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-brand-beige/60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}

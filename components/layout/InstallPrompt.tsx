@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, Download } from "lucide-react";
+import { X, Download, Share } from "lucide-react";
 import { useLocale } from "next-intl";
 import { assetPath } from "@/lib/basePath";
 
@@ -9,11 +9,17 @@ export function InstallPrompt() {
   const locale = useLocale();
   const [show, setShow] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
     // Check if already installed or dismissed
     if (window.matchMedia("(display-mode: standalone)").matches) return;
     if (sessionStorage.getItem("ajoud-install-dismissed")) return;
+
+    const iosDevice =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+      !(window as any).MSStream;
+    setIsIOS(iosDevice);
 
     const handler = (e: Event) => {
       e.preventDefault();
@@ -24,10 +30,7 @@ export function InstallPrompt() {
     window.addEventListener("beforeinstallprompt", handler);
 
     // Show iOS install hint after 3 seconds
-    const isIOS =
-      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-      !(window as any).MSStream;
-    if (isIOS) {
+    if (iosDevice) {
       const timer = setTimeout(() => setShow(true), 3000);
       return () => {
         clearTimeout(timer);
@@ -37,14 +40,14 @@ export function InstallPrompt() {
 
     // Show Android/Chrome install after 2 seconds
     const timer = setTimeout(() => {
-      if (!deferredPrompt) setShow(true);
+      setShow(true);
     }, 2000);
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener("beforeinstallprompt", handler);
     };
-  }, [deferredPrompt]);
+  }, []);
 
   const handleInstall = async () => {
     if (deferredPrompt && "prompt" in deferredPrompt) {
@@ -81,13 +84,22 @@ export function InstallPrompt() {
               : "Browse faster with a better experience"}
           </p>
 
-          <button
-            onClick={handleInstall}
-            className="mt-2 inline-flex items-center gap-1.5 bg-brand-gold text-brand-green-dark text-xs font-semibold px-4 py-1.5 rounded-sm hover:bg-brand-gold-light transition-colors"
-          >
-            <Download className="h-3.5 w-3.5" />
-            {locale === "ar" ? "تحميل" : "Install"}
-          </button>
+          {isIOS ? (
+            <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+              <Share className="inline h-3.5 w-3.5 me-1 text-brand-gold align-text-bottom" />
+              {locale === "ar"
+                ? "اضغط على زر المشاركة ⬆️ ثم 'إضافة إلى الشاشة الرئيسية'"
+                : "Tap the share button ⬆️ then 'Add to Home Screen'"}
+            </p>
+          ) : (
+            <button
+              onClick={handleInstall}
+              className="mt-2 inline-flex items-center gap-1.5 bg-brand-gold text-brand-green-dark text-xs font-semibold px-4 py-1.5 rounded-sm hover:bg-brand-gold-light transition-colors"
+            >
+              <Download className="h-3.5 w-3.5" />
+              {locale === "ar" ? "تحميل" : "Install"}
+            </button>
+          )}
         </div>
 
         <button

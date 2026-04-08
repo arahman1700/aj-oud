@@ -4,9 +4,10 @@ import { useState, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { X, User, Package, Search, Droplets, TreePine, Gift } from "lucide-react";
+import { X, User, Package, Search, Droplets, TreePine, Gift, Globe } from "lucide-react";
 import { products, getLocalizedProduct } from "@/data/products";
 import { assetPath } from "@/lib/basePath";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import {
   Sheet,
   SheetContent,
@@ -178,6 +179,11 @@ export function MobileNav({ open, onClose, links }: MobileNavProps) {
             <Package className="h-4 w-4" />
             {t("orders")}
           </Link>
+        </div>
+
+        {/* Language Switcher (visible only on mobile nav) */}
+        <div className="px-4 mt-2">
+          <LanguageSwitcher />
         </div>
 
         {/* Social Links + WhatsApp */}

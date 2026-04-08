@@ -105,11 +105,13 @@ export function Header() {
 
               <div className="hidden md:block w-px h-5 bg-border/50" />
 
-              <LanguageSwitcher />
+              <div className="hidden md:block">
+                <LanguageSwitcher />
+              </div>
 
               <button
                 onClick={() => setSearchOpen(true)}
-                className="text-muted-foreground hover:text-brand-gold transition-colors p-1.5"
+                className="hidden md:flex text-muted-foreground hover:text-brand-gold transition-colors p-1.5"
                 aria-label={t("search")}
               >
                 <Search className="h-4.5 w-4.5" />
