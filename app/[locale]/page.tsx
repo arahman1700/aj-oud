@@ -49,7 +49,7 @@ function HeroSection() {
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background: actual product image */}
       <Image
-        src="/images/hero/hero-main.png"
+        src={assetPath("/images/hero/hero-main.png")}
         alt="AJoud Collection"
         fill
         priority
@@ -121,7 +121,7 @@ function CategoriesSection({ locale }: { locale: "ar" | "en" }) {
             className={`group relative aspect-[4/3] overflow-hidden rounded-sm animate-fade-in-up delay-${(index + 1) * 100}`}
           >
             <Image
-              src={cat.image}
+              src={assetPath(cat.image)}
               alt={cat.name[locale]}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"

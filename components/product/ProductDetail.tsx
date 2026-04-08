@@ -8,6 +8,7 @@ import { useCartStore } from "@/store/cart";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
+import { assetPath } from "@/lib/basePath";
 import type { LocalizedProduct } from "@/types/product";
 
 interface ProductDetailProps {
@@ -77,7 +78,7 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
       <div className="space-y-4">
         <div className="relative aspect-square overflow-hidden rounded-sm bg-card">
           <Image
-            src={product.images[selectedImage]}
+            src={assetPath(product.images[selectedImage])}
             alt={product.name}
             fill
             priority
@@ -119,7 +120,7 @@ export function ProductDetail({ product, locale }: ProductDetailProps) {
                 }`}
               >
                 <Image
-                  src={img}
+                  src={assetPath(img)}
                   alt=""
                   fill
                   sizes="80px"

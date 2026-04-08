@@ -7,6 +7,7 @@ import { ShoppingBag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useCartStore } from "@/store/cart";
 import { toast } from "sonner";
+import { assetPath } from "@/lib/basePath";
 import type { LocalizedProduct } from "@/types/product";
 
 interface ProductCardProps {
@@ -46,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="relative aspect-square overflow-hidden rounded-sm bg-card">
           {/* Product image */}
           <Image
-            src={product.images[0]}
+            src={assetPath(product.images[0])}
             alt={product.name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -56,7 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Second image on hover — like Oud Al Hashmi */}
           {product.images.length > 1 && (
             <Image
-              src={product.images[1]}
+              src={assetPath(product.images[1])}
               alt={product.name}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

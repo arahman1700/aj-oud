@@ -5,6 +5,7 @@ import { motion, useInView } from "motion/react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { assetPath } from "@/lib/basePath";
 import { categories } from "@/data/products";
 
 const categoryImages: Record<string, string> = {
@@ -49,7 +50,7 @@ function CategoryCard({
       >
         {/* Background image */}
         <Image
-          src={imageSrc}
+          src={assetPath(imageSrc)}
           alt={category.name[locale]}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

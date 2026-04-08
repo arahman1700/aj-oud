@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { useCartStore } from "@/store/cart";
 import { Separator } from "@/components/ui/separator";
+import { assetPath } from "@/lib/basePath";
 
 export default function CartPage() {
   const t = useTranslations("Cart");
@@ -46,7 +47,7 @@ export default function CartPage() {
               >
                 <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-sm overflow-hidden shrink-0">
                   <Image
-                    src={item.image}
+                    src={assetPath(item.image)}
                     alt={item.name}
                     fill
                     sizes="96px"

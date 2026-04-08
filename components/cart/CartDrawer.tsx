@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Minus, Plus, X } from "lucide-react";
 import { useCartStore } from "@/store/cart";
+import { assetPath } from "@/lib/basePath";
 import {
   Sheet,
   SheetContent,
@@ -62,7 +63,7 @@ export function CartDrawer({ children }: CartDrawerProps) {
                 >
                   <div className="relative w-16 h-16 rounded-sm overflow-hidden shrink-0 bg-card">
                     <Image
-                      src={item.image}
+                      src={assetPath(item.image)}
                       alt={item.name}
                       fill
                       sizes="64px"

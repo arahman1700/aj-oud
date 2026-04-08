@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import { assetPath } from "@/lib/basePath";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,7 +34,7 @@ function AboutContent() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
         <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
           <Image
-            src="/images/brand/brand-photo.jpeg"
+            src={assetPath("/images/brand/brand-photo.jpeg")}
             alt="AJoud"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

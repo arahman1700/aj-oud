@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Search, X } from "lucide-react";
 import { products, getLocalizedProduct } from "@/data/products";
+import { assetPath } from "@/lib/basePath";
 import {
   Dialog,
   DialogContent,
@@ -115,7 +116,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                     {/* Thumbnail */}
                     <div className="relative w-14 h-14 rounded-sm overflow-hidden bg-card shrink-0">
                       <Image
-                        src={product.images[0]}
+                        src={assetPath(product.images[0])}
                         alt={product.name}
                         fill
                         sizes="56px"
