@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { X, Download } from "lucide-react";
 import { useLocale } from "next-intl";
+import { assetPath } from "@/lib/basePath";
 
 export function InstallPrompt() {
   const locale = useLocale();
@@ -65,7 +66,7 @@ export function InstallPrompt() {
         {/* App icon */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/brand/icon-192.png"
+          src={assetPath("/images/brand/icon-192.png")}
           alt="AJoud"
           className="w-12 h-12 rounded-xl shrink-0"
         />

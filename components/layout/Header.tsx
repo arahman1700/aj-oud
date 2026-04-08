@@ -8,6 +8,7 @@ import { useCartStore } from "@/store/cart";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileNav } from "./MobileNav";
 import { SearchModal } from "./SearchModal";
+import { assetPath } from "@/lib/basePath";
 
 export function Header() {
   const t = useTranslations("Nav");
@@ -79,7 +80,7 @@ export function Header() {
             <Link href="/" className="flex flex-col items-center gap-1">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/brand/logo-light.png"
+                src={assetPath("/images/brand/logo-light.png")}
                 alt="AJoud"
                 className="h-10 md:h-14 w-auto"
               />

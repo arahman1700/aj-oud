@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Separator } from "@/components/ui/separator";
+import { assetPath } from "@/lib/basePath";
 import {
   MadaIcon,
   VisaIcon,
@@ -38,7 +39,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/brand/logo-light.png"
+                src={assetPath("/images/brand/logo-light.png")}
                 alt="AJoud"
                 className="h-10 w-auto"
               />

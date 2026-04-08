@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const nextConfig: NextConfig = {
   output: "export",
   basePath: "/AJ-oud",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "/AJ-oud",
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     unoptimized: true,

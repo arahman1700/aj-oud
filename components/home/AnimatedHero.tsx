@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { GoldParticles } from "@/components/ui/gold-particles";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import { assetPath } from "@/lib/basePath";
 
 export function AnimatedHero() {
   const t = useTranslations("Home");
@@ -15,7 +16,7 @@ export function AnimatedHero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/images/hero/hero-main.png)" }}
+        style={{ backgroundImage: `url(${assetPath("/images/hero/hero-main.png")})` }}
       />
 
       {/* Gradient overlays */}

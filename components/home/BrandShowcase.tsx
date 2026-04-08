@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { useTranslations } from "next-intl";
+import { assetPath } from "@/lib/basePath";
 
 export function BrandShowcase() {
   const t = useTranslations("Home");
@@ -18,7 +19,7 @@ export function BrandShowcase() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: "url(/images/brand/luxury-scene.jpg)",
+          backgroundImage: `url(${assetPath("/images/brand/luxury-scene.jpg")})`,
         }}
       />
 

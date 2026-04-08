@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { assetPath } from "@/lib/basePath";
 import { categories, products, getLocalizedProduct } from "@/data/products";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { Newsletter } from "@/components/home/Newsletter";
@@ -63,7 +64,7 @@ function HeroSection() {
         <div className="mb-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/brand/logo-light.png"
+            src={assetPath("/images/brand/logo-light.png")}
             alt="AJoud"
             className="mx-auto h-20 md:h-28 w-auto"
           />
@@ -179,7 +180,7 @@ function BrandStorySection() {
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/brand/logo-light.png"
+          src={assetPath("/images/brand/logo-light.png")}
           alt="AJoud"
           className="mx-auto h-14 w-auto animate-fade-in"
         />

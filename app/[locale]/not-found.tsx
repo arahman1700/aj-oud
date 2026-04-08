@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { assetPath } from "@/lib/basePath";
 
 export default function NotFound() {
   const t = useTranslations("Common");
@@ -10,7 +11,7 @@ export default function NotFound() {
         {/* Logo */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/brand/logo-light.png"
+          src={assetPath("/images/brand/logo-light.png")}
           alt="AJoud"
           className="mx-auto h-16 w-auto mb-8"
         />
